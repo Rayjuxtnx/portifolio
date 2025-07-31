@@ -5,10 +5,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const testimonials = [
   {
     quote: "Phillip's creativity and dedication to our project were outstanding. He delivered results that exceeded our expectations.",
-    name: "Jane Doe",
-    title: "CEO, Shop Za Kenya",
+    name: "Debbie Smiles",
+    title: "Nana Kids Furniture",
     avatar: "https://placehold.co/100x100.png",
-    avatar_fallback: "JD"
+    avatar_fallback: "DS"
   },
   {
     quote: "The new website Phillip designed is not only beautiful but also highly functional. Our booking rates have soared since the launch!",
