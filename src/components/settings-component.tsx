@@ -13,27 +13,30 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSub,
   DropdownMenuSubTrigger,
-  DropdownMenuSubContent
+  DropdownMenuSubContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem
 } from "@/components/ui/dropdown-menu"
-import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star } from "lucide-react"
+import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star, Palette } from "lucide-react"
 import { Label } from "./ui/label"
-import { Switch } from "./ui/switch"
-import { useState, useEffect } from "react"
 
 export function SettingsComponent() {
   const { setTheme, theme } = useTheme();
-  const [fontSize, setFontSize] = useState(16);
-  const [mounted, setMounted] = useState(false);
+  const [fontSize, setFontSize] = React.useState(16);
+  const [mounted, setMounted] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setMounted(true);
     const storedFontSize = localStorage.getItem('fontSize');
     if (storedFontSize) {
-      setFontSize(Number(storedFontSize));
+      const parsedSize = Number(storedFontSize);
+      if(!isNaN(parsedSize)) {
+        setFontSize(parsedSize);
+      }
     }
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (mounted) {
       const root = window.document.documentElement;
       root.style.fontSize = `${fontSize}px`;
@@ -69,25 +72,27 @@ export function SettingsComponent() {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56" align="end">
             <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-            <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-                <div className="flex items-center justify-between w-full">
-                    <Label htmlFor="dark-mode" className="flex items-center gap-2 cursor-pointer">
-                        {theme === 'dark' ? <Moon/> : <Sun/>}
-                        Dark Mode
-                    </Label>
-                    <Switch
-                        id="dark-mode"
-                        checked={theme === 'dark'}
-                        onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-                    />
-                </div>
-            </DropdownMenuItem>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                  <Palette />
+                  <span>Color Theme</span>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent>
+                <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
+                  <DropdownMenuRadioItem value="light">Default Light</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="dark">Default Dark</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="theme-tech-blue">Tech Blue</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="theme-pastel">Pastel</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="theme-gold-charcoal">Gold & Charcoal</DropdownMenuRadioItem>
+                </DropdownMenuRadioGroup>
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
              <DropdownMenuSub>
                 <DropdownMenuSubTrigger>
                     <Baseline />
                     <span>Font Size</span>
                 </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
+                <DropdownMenuSubContent alignOffset={-5}>
                     <DropdownMenuItem onSelect={decreaseFontSize}>
                         Decrease
                     </DropdownMenuItem>
