@@ -1,21 +1,23 @@
 "use client";
 
-import { Code, Home, User, Briefcase, Star, Mail } from "lucide-react";
+import { Code, Home, User, Briefcase, Star, Mail, Bot } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { AiAssistant } from "./ai-assistant";
 
 const navItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/about", label: "About", icon: User },
     { href: "/skills", label: "Skills", icon: Star },
     { href: "/projects", label: "Projects", icon: Briefcase },
-    { href: "/contact", label: "Contact", icon: Mail },
 ];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const pathname = usePathname();
+  const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
 
   return (
     <>
@@ -40,8 +42,16 @@ const Footer = () => {
                       <span>{label}</span>
                   </Link>
               ))}
+               <button
+                  onClick={() => setIsAiAssistantOpen(true)}
+                  className="flex flex-col items-center justify-center gap-1 w-full h-full text-xs font-medium transition-colors text-muted-foreground hover:text-primary"
+                >
+                  <Bot className="w-5 h-5" />
+                  <span>AI Assistant</span>
+                </button>
           </div>
       </nav>
+      <AiAssistant open={isAiAssistantOpen} onOpenChange={setIsAiAssistantOpen} />
     </>
   );
 };
