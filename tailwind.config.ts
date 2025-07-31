@@ -95,14 +95,50 @@ export default {
             transform: 'translateY(0)',
           },
         },
-        'text-glow-gold': {
-          '0%, 100%': {
-            'color': 'hsl(var(--primary-foreground))',
-            'text-shadow': '0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--primary))',
+        'hacker-glitch': {
+          '0%': {
+            transform: 'translate(0)',
+            textShadow: 'none',
+          },
+          '10%': {
+            transform: 'translate(-2px, -3px)',
+            textShadow: '2px 2px 2px #ff0000, -2px -2px 2px #00ff00'
+          },
+          '20%': {
+            transform: 'translate(2px, 3px)',
+            textShadow: '2px 2px 2px #00ff00, -2px -2px 2px #0000ff'
+          },
+          '30%': {
+            transform: 'skewX(10deg) translate(0, 0)',
+            textShadow: 'none',
+          },
+          '40%': {
+            transform: 'skewX(0deg) translate(-1px, 1px)',
+            textShadow: '2px 2px 2px #ff0000, -2px -2px 2px #00ff00'
           },
           '50%': {
-            'color': '#FFD700',
-            'text-shadow': '0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700, 0 0 60px #FFD700, 0 0 70px #FFD700',
+            transform: 'skewX(0deg) translate(0, 0)',
+            textShadow: '2px 2px 2px #00ff00, -2px -2px 2px #0000ff'
+          },
+          '60%': {
+            transform: 'skewX(-10deg) translate(0, 0)',
+            textShadow: 'none',
+          },
+          '70%': {
+            transform: 'skewX(0deg) translate(1px, -1px)',
+            textShadow: '2px 2px 2px #ff0000, -2px -2px 2px #00ff00'
+          },
+          '80%': {
+            transform: 'skewX(0deg) translate(0,0)',
+            textShadow: '2px 2px 2px #00ff00, -2px -2px 2px #0000ff'
+          },
+          '90%': {
+            transform: 'translate(0, 0)',
+            textShadow: 'none'
+          },
+          '100%': {
+            transform: 'translate(0, 0)',
+            textShadow: 'none'
           },
         }
       },
@@ -110,7 +146,7 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
-        'text-glow-gold': 'text-glow-gold 4s ease-in-out infinite',
+        'hacker-glitch': 'hacker-glitch 3s ease-in-out infinite',
       },
     },
   },

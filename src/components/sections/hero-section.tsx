@@ -12,7 +12,7 @@ const HeroSection = () => {
             <AvatarFallback>PO</AvatarFallback>
           </Avatar>
           <div className="space-y-2">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter animate-text-glow-gold" style={{animationDelay: "0.4s"}}>Phillip Otieno</h1>
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter animate-hacker-glitch" style={{animationDelay: "0.4s"}}>Phillip Otieno</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.6s"}}>
               Digital Marketer | Web & Graphic Designer | Sales & Tech Enthusiast
             </p>
