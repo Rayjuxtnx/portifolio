@@ -1,10 +1,14 @@
 
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail } from "lucide-react";
+import { Mail, Phone, MessageSquare, Facebook, Instagram } from "lucide-react";
+
+const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M12 12a4 4 0 1 0 4 4V8a8 8 0 1 1-8-8c0 4.42 3.58 8 8 8z"></path></svg>
+  );
 
 const ContactSection = () => {
   return (
@@ -13,9 +17,48 @@ const ContactSection = () => {
         <Card className="max-w-2xl mx-auto shadow-lg">
           <CardHeader className="text-center">
             <CardTitle className="font-headline text-3xl md:text-4xl">Get in Touch</CardTitle>
+            <CardDescription>Choose your preferred way to connect with me.</CardDescription>
           </CardHeader>
-          <form action="https://formspree.io/f/manovezj" method="POST">
-            <CardContent className="space-y-6">
+          <CardContent className="space-y-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <Button variant="outline" asChild>
+                    <a href="mailto:phillipotieno577@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <Mail className="mr-2"/> Gmail
+                    </a>
+                </Button>
+                <Button variant="outline" asChild>
+                    <a href="tel:0714955458">
+                        <Phone className="mr-2"/> Phone Call
+                    </a>
+                </Button>
+                <Button variant="outline" asChild>
+                    <a href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
+                        <MessageSquare className="mr-2"/> WhatsApp
+                    </a>
+                </Button>
+                 <Button variant="outline" asChild>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <Facebook className="mr-2"/> Facebook
+                    </a>
+                </Button>
+                 <Button variant="outline" asChild>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+                        <TikTokIcon className="mr-2"/> TikTok
+                    </a>
+                </Button>
+                 <Button variant="outline" disabled>
+                    <Instagram className="mr-2"/> Instagram
+                </Button>
+            </div>
+            <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                    <span className="w-full border-t" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                    <span className="bg-background px-2 text-muted-foreground">Or send a message</span>
+                </div>
+            </div>
+             <form action="https://formspree.io/f/manovezj" method="POST" className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
@@ -30,14 +73,14 @@ const ContactSection = () => {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" name="message" placeholder="Your message" required rows={5} />
               </div>
-            </CardContent>
-            <CardFooter className="flex justify-center">
-              <Button type="submit" size="lg">
-                <Mail className="mr-2 h-4 w-4" />
-                Send Message
-              </Button>
-            </CardFooter>
-          </form>
+               <CardFooter className="flex justify-center p-0">
+                <Button type="submit" size="lg">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Send Message
+                </Button>
+                </CardFooter>
+            </form>
+          </CardContent>
         </Card>
       </div>
     </section>
