@@ -23,7 +23,8 @@ Skills:
 - Basic Tech: HTML, CSS, JavaScript, Python, React, Tailwind, Node.js, Next.js, APIs, Databases
 
 Projects:
-${projects.map(p => `- ${p.title}: ${p.description} (Role: ${p.role}, Tools: ${p.tools.join(', ')}, Results: ${p.results})`).join('\n')}
+Each project is listed with its title, a description of the project, the role Phillip played, the tools used, and the results achieved.
+${projects.map(p => `- Title: ${p.title}\n  Description: ${p.description}\n  Role: ${p.role}\n  Tools: ${p.tools.join(', ')}\n  Results: ${p.results}`).join('\n\n')}
 
 Contact Information:
 - Email: phillipotieno577@gmail.com
