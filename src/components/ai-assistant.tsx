@@ -32,7 +32,7 @@ export function AiAssistant({ open, onOpenChange }: AiAssistantProps) {
     setIsLoading(true);
 
     try {
-      const response = await askPortfolioAssistant(input);
+      const response = await askPortfolioAssistant({ question: input });
       const assistantMessage: Message = { role: 'assistant', content: response };
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (error) {

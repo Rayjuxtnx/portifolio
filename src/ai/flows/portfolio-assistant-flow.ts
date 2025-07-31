@@ -32,14 +32,16 @@ Contact Information:
 - GitHub: https://github.com/Rayjuxtnx
 `;
 
-const PortfolioAssistantInputSchema = z.string();
+const PortfolioAssistantInputSchema = z.object({
+  question: z.string().describe("The user's question about Phillip Otieno."),
+});
 export type PortfolioAssistantInput = z.infer<typeof PortfolioAssistantInputSchema>;
 
 const PortfolioAssistantOutputSchema = z.string();
 export type PortfolioAssistantOutput = z.infer<typeof PortfolioAssistantOutputSchema>;
 
 export async function askPortfolioAssistant(
-  input: PortfolioAssistantInput
+  input: PortfolioAssistantInput,
 ): Promise<PortfolioAssistantOutput> {
   return portfolioAssistantFlow(input);
 }
@@ -57,7 +59,7 @@ const prompt = ai.definePrompt({
   ${portfolioContext}
 
   User Question:
-  {{{prompt}}}
+  {{{question}}}
   `,
 });
 
