@@ -25,7 +25,7 @@ const HeroSection = () => {
               </Link>
             </Button>
             <Button variant="outline" asChild>
-              <a href="tel:+1234567890">
+              <a href="tel:0714955458">
                 <Phone className="mr-2 h-4 w-4" /> Phone
               </a>
             </Button>
