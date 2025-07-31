@@ -15,7 +15,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuSubContent
 } from "@/components/ui/dropdown-menu"
-import { Settings, Moon, Sun, Shield, FlaskConical, Baseline } from "lucide-react"
+import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star } from "lucide-react"
 import { Label } from "./ui/label"
 import { Switch } from "./ui/switch"
 import { useState, useEffect } from "react"
@@ -99,6 +99,18 @@ export function SettingsComponent() {
 
             <DropdownMenuSeparator />
             <DropdownMenuLabel>About</DropdownMenuLabel>
+             <DropdownMenuItem asChild>
+                <Link href="/resume">
+                    <FileText />
+                    <span>Resume</span>
+                </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+                <Link href="/testimonials">
+                    <Star />
+                    <span>Testimonials</span>
+                </Link>
+            </DropdownMenuItem>
              <DropdownMenuItem asChild>
                 <Link href="/privacy-policy">
                     <Shield />
