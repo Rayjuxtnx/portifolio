@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Github, Dribbble, Globe } from "lucide-react";
+import { Mail, Phone, Github, Dribbble, Globe, MoreHorizontal, MessageCircle, ThumbsUp, Share2 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
+import { projects } from "@/lib/projects";
+import Image from "next/image";
 
 const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
@@ -23,51 +26,119 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const HeroSection = () => {
   return (
-    <section id="home" className="w-full flex-1 flex items-center justify-center bg-background py-12 animate-fade-in-up">
-      <div className="container mx-auto px-4 md:px-6 text-center">
-        <div className="flex flex-col items-center space-y-6">
-          <Avatar className="w-32 h-32 border-4 border-primary shadow-lg animate-fade-in-up" style={{animationDelay: "0.2s"}}>
-            <AvatarImage src="https://placehold.co/200x200.png" alt="Phillip Otieno" data-ai-hint="man portrait" />
-            <AvatarFallback>PO</AvatarFallback>
-          </Avatar>
-          <div className="space-y-2">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter animate-hacker-glitch" style={{animationDelay: "0.4s"}}>Phillip Otieno</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.6s"}}>
-              Digital Marketer | Web & Graphic Designer | Sales & Tech Enthusiast
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-4 animate-fade-in-up" style={{animationDelay: "0.8s"}}>
-            <Button variant="outline" asChild>
-              <Link href="/contact">
-                <Mail className="mr-2 h-4 w-4" /> Email
-              </Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="tel:0714955458">
-                <Phone className="mr-2 h-4 w-4" /> Phone
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-               <a href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
-                <WhatsappIcon className="mr-2 h-4 w-4" /> WhatsApp
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Personal Website">
-                <Globe className="h-5 w-5" />
-              </a>
-            </Button>
-             <Button variant="ghost" size="icon" asChild>
-               <a href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-             <Button variant="ghost" size="icon" asChild>
-               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">
-                <Dribbble className="h-5 w-5" />
-              </a>
-            </Button>
-          </div>
+    <section id="home" className="w-full flex-1 bg-secondary/30 py-8">
+      <div className="container mx-auto px-4 md:px-6 max-w-2xl">
+        <Card className="mb-8 shadow-md">
+            <CardHeader className="flex flex-row items-center gap-4">
+                 <Avatar className="w-16 h-16 border-2 border-primary">
+                    <AvatarImage src="https://placehold.co/200x200.png" alt="Phillip Otieno" data-ai-hint="man portrait" />
+                    <AvatarFallback>PO</AvatarFallback>
+                </Avatar>
+                <div>
+                    <CardTitle className="font-headline text-2xl">Phillip Otieno</CardTitle>
+                    <CardDescription>Digital Marketer | Web & Graphic Designer | Sales & Tech Enthusiast</CardDescription>
+                </div>
+            </CardHeader>
+            <CardContent>
+                <div className="flex flex-wrap items-center gap-2">
+                    <Button variant="outline" size="sm" asChild>
+                    <Link href="/contact">
+                        <Mail className="mr-2 h-4 w-4" /> Email
+                    </Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                    <a href="tel:0714955458">
+                        <Phone className="mr-2 h-4 w-4" /> Phone
+                    </a>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                    <a href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
+                        <WhatsappIcon className="mr-2 h-4 w-4" /> WhatsApp
+                    </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Personal Website">
+                        <Globe className="h-5 w-5" />
+                    </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                    <a href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <Github className="h-5 w-5" />
+                    </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">
+                        <Dribbble className="h-5 w-5" />
+                    </a>
+                    </Button>
+                </div>
+            </CardContent>
+        </Card>
+
+        <div className="space-y-8">
+            {projects.slice(0, 3).map((project) => (
+                <Card key={project.slug} className="shadow-md">
+                    <CardHeader>
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <Avatar className="w-10 h-10 border">
+                                    <AvatarImage src="https://placehold.co/200x200.png" alt="Phillip Otieno" data-ai-hint="man portrait" />
+                                    <AvatarFallback>PO</AvatarFallback>
+                                </Avatar>
+                                <div>
+                                    <p className="font-semibold">Phillip Otieno</p>
+                                    <p className="text-xs text-muted-foreground">Posted a new project</p>
+                                </div>
+                            </div>
+                            <Button variant="ghost" size="icon">
+                                <MoreHorizontal className="h-5 w-5" />
+                            </Button>
+                        </div>
+                    </CardHeader>
+                    <CardContent>
+                        <h3 className="font-headline text-lg mb-2">{project.title}</h3>
+                        <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
+                         <Link href={`/projects/${project.slug}`}>
+                            <div className="relative w-full h-64 rounded-lg overflow-hidden border">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    style={{ objectFit: "cover" }}
+                                    className="hover:scale-105 transition-transform duration-300"
+                                    data-ai-hint={project.imageHint}
+                                />
+                            </div>
+                        </Link>
+                    </CardContent>
+                    <CardFooter className="flex justify-between items-center border-t pt-4">
+                       <div className="flex gap-4 text-muted-foreground">
+                            <Button variant="ghost" size="sm">
+                                <ThumbsUp className="mr-2" />
+                                Like
+                            </Button>
+                            <Button variant="ghost" size="sm">
+                                <MessageCircle className="mr-2" />
+                                Comment
+                            </Button>
+                            <Button variant="ghost" size="sm">
+                                <Share2 className="mr-2" />
+                                Share
+                            </Button>
+                       </div>
+                        <Button variant="link" size="sm" asChild>
+                            <Link href={`/projects/${project.slug}`}>
+                                View Project
+                            </Link>
+                        </Button>
+                    </CardFooter>
+                </Card>
+            ))}
+             <div className="text-center">
+                <Button asChild>
+                    <Link href="/projects">View All Projects</Link>
+                </Button>
+             </div>
         </div>
       </div>
     </section>

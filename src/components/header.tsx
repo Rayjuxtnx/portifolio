@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Menu, Code } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SettingsComponent } from "./settings-component";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -50,21 +51,24 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6">
           <NavItems />
         </nav>
-        <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right">
-            <div className="grid gap-4 p-4">
-              <nav className="grid gap-4">
-                <NavItems />
-              </nav>
-            </div>
-          </SheetContent>
-        </Sheet>
+        <div className="flex items-center gap-2">
+            <SettingsComponent />
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+                <div className="grid gap-4 p-4">
+                <nav className="grid gap-4">
+                    <NavItems />
+                </nav>
+                </div>
+            </SheetContent>
+            </Sheet>
+        </div>
       </div>
     </header>
   );
