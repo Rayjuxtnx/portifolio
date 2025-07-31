@@ -53,9 +53,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <p className="text-muted-foreground">{project.results}</p>
             </div>
           </CardContent>
-          <CardFooter>
-            <Button disabled>View Live Project (Coming Soon)</Button>
-          </CardFooter>
         </Card>
       </div>
     </section>
