@@ -19,14 +19,30 @@ import { useState, useEffect } from "react"
 export function SettingsComponent() {
   const { setTheme, theme } = useTheme();
   const [fontSize, setFontSize] = useState(16);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.style.fontSize = `${fontSize}px`;
-  }, [fontSize]);
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      const root = window.document.documentElement;
+      root.style.fontSize = `${fontSize}px`;
+    }
+  }, [fontSize, mounted]);
 
   const increaseFontSize = () => setFontSize(prev => Math.min(prev + 2, 24));
   const decreaseFontSize = () => setFontSize(prev => Math.max(prev - 2, 12));
+
+  if (!mounted) {
+    return (
+      <Button variant="ghost" size="icon">
+        <Settings className="h-[1.2rem] w-[1.2rem]"/>
+        <span className="sr-only">Settings</span>
+      </Button>
+    );
+  }
   
 
   return (
