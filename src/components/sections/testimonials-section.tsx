@@ -12,10 +12,10 @@ const testimonials = [
   },
   {
     quote: "The new website Phillip designed is not only beautiful but also highly functional. Our booking rates have soared since the launch!",
-    name: "John Smith",
-    title: "Owner, Clean Sparkle Outlook",
+    name: "Valeta Jones",
+    title: "Owner, Powersparkle Australia",
     avatar: "https://placehold.co/100x100.png",
-    avatar_fallback: "JS"
+    avatar_fallback: "VJ"
   },
   {
     quote: "Working with Phillip was a breeze. His communication is excellent, and his marketing insights were invaluable to our campaign.",
