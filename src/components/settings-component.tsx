@@ -2,16 +2,20 @@
 
 import * as React from "react"
 import { useTheme } from "next-themes"
-
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent
 } from "@/components/ui/dropdown-menu"
-import { Moon, Sun, Settings, FontSize } from "lucide-react"
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover"
+import { Settings, Moon, Sun, Shield, FlaskConical, TextFontSize } from "lucide-react"
 import { Label } from "./ui/label"
 import { Switch } from "./ui/switch"
 import { useState, useEffect } from "react"
@@ -23,17 +27,28 @@ export function SettingsComponent() {
 
   useEffect(() => {
     setMounted(true);
+    const storedFontSize = localStorage.getItem('fontSize');
+    if (storedFontSize) {
+      setFontSize(Number(storedFontSize));
+    }
   }, []);
 
   useEffect(() => {
     if (mounted) {
       const root = window.document.documentElement;
       root.style.fontSize = `${fontSize}px`;
+      localStorage.setItem('fontSize', fontSize.toString());
     }
   }, [fontSize, mounted]);
 
-  const increaseFontSize = () => setFontSize(prev => Math.min(prev + 2, 24));
-  const decreaseFontSize = () => setFontSize(prev => Math.max(prev - 2, 12));
+  const increaseFontSize = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setFontSize(prev => Math.min(prev + 2, 24))
+  };
+  const decreaseFontSize = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setFontSize(prev => Math.max(prev - 2, 12))
+  };
 
   if (!mounted) {
     return (
@@ -43,47 +58,60 @@ export function SettingsComponent() {
       </Button>
     );
   }
-  
 
   return (
-    <Popover>
-        <PopoverTrigger asChild>
+    <DropdownMenu>
+        <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon">
                 <Settings className="h-[1.2rem] w-[1.2rem]"/>
                 <span className="sr-only">Settings</span>
             </Button>
-        </PopoverTrigger>
-        <PopoverContent className="w-60">
-            <div className="grid gap-4">
-                <div className="space-y-2">
-                    <h4 className="font-medium leading-none">Settings</h4>
-                    <p className="text-sm text-muted-foreground">
-                        Adjust theme and font size.
-                    </p>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-56" align="end">
+            <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+            <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
+                <div className="flex items-center justify-between w-full">
+                    <Label htmlFor="dark-mode" className="flex items-center gap-2 cursor-pointer">
+                        {theme === 'dark' ? <Moon/> : <Sun/>}
+                        Dark Mode
+                    </Label>
+                    <Switch
+                        id="dark-mode"
+                        checked={theme === 'dark'}
+                        onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+                    />
                 </div>
-                <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                        <Label htmlFor="dark-mode">Dark Mode</Label>
-                        <Switch
-                            id="dark-mode"
-                            checked={theme === 'dark'}
-                            onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-                        />
-                    </div>
-                    <div className="flex items-center justify-between">
-                         <Label>Font Size</Label>
-                         <div className="flex items-center gap-2">
-                            <Button variant="outline" size="icon" className="h-8 w-8" onClick={decreaseFontSize}>
-                                <span className="text-xs">A-</span>
-                            </Button>
-                            <Button variant="outline" size="icon" className="h-8 w-8" onClick={increaseFontSize}>
-                                <span className="text-lg">A+</span>
-                            </Button>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </PopoverContent>
-    </Popover>
+            </DropdownMenuItem>
+             <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
+                    <TextFontSize />
+                    <span>Font Size</span>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                    <DropdownMenuItem onSelect={decreaseFontSize}>
+                        Decrease
+                    </DropdownMenuItem>
+                     <DropdownMenuItem onSelect={increaseFontSize}>
+                        Increase
+                    </DropdownMenuItem>
+                </DropdownMenuSubContent>
+            </DropdownMenuSub>
+
+            <DropdownMenuSeparator />
+            <DropdownMenuLabel>About</DropdownMenuLabel>
+             <DropdownMenuItem asChild>
+                <Link href="/privacy-policy">
+                    <Shield />
+                    <span>Privacy Policy</span>
+                </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+                <Link href="/future-projects">
+                    <FlaskConical />
+                    <span>Future Projects</span>
+                </Link>
+            </DropdownMenuItem>
+        </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
