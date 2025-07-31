@@ -29,7 +29,7 @@ const skills = {
   },
   "Basic Tech": {
     icon: <Code className="w-8 h-8 text-primary" />,
-    items: ["HTML", "CSS", "Python", "Firebase integration"],
+    items: ["HTML", "CSS", "JavaScript", "Python", "React", "Tailwind", "Node.js", "Next.js", "APIs", "Databases"],
   },
 };
 
