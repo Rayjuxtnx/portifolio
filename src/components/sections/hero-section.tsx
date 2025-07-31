@@ -112,12 +112,12 @@ const HeroSection = () => {
                         </Link>
                     </CardContent>
                     <CardFooter className="flex justify-between items-center border-t pt-4">
-                       <div className="flex gap-4 text-muted-foreground">
+                       <div className="flex gap-1 sm:gap-2 text-muted-foreground flex-wrap">
                             <Button variant="ghost" size="sm">
                                 <ThumbsUp className="mr-2" />
-                                Like
+                                20k Likes
                             </Button>
-                            <Button variant="ghost" size="sm">
+                            <Button variant="ghost" size="sm" disabled>
                                 <MessageCircle className="mr-2" />
                                 Comment
                             </Button>
