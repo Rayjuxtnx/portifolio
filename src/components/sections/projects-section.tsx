@@ -14,8 +14,8 @@ const ProjectsSection = () => {
           Featured Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+          {projects.map((project) => (
+            <Card key={project.slug} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
               <div className="relative w-full h-48">
                 <Image 
                   src={project.image}

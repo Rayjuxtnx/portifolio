@@ -7,7 +7,8 @@ export const projects = [
       tools: ["Next.js", "React", "Node.js", "SEO Tools", "Google Analytics"],
       results: "Achieved a 200% increase in organic search traffic within the first three months and a 50% boost in online sales.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "kids furniture"
+      imageHint: "kids furniture",
+      tags: ["Web Developer", "Digital Marketer"],
     },
     {
       slug: "powersparkle-australia",
@@ -17,7 +18,8 @@ export const projects = [
       tools: ["Meta Ads Manager", "Canva", "Hootsuite", "Google Analytics"],
       results: "Generated a 40% increase in lead generation through targeted social media campaigns and improved brand engagement by 60%.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "cleaning services"
+      imageHint: "cleaning services",
+      tags: ["Digital Marketer"],
     },
     {
       slug: "cleansparkle-kenya",
@@ -27,7 +29,8 @@ export const projects = [
       tools: ["Figma", "Canva", "WordPress", "Calendly"],
       results: "The new website led to a 30% increase in online bookings, and the rebrand contributed to a 25% rise in customer acquisition.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "sparkling clean"
+      imageHint: "sparkling clean",
+      tags: ["Web Developer"],
     },
     {
       slug: "rental-management-system",
@@ -37,7 +40,8 @@ export const projects = [
       tools: ["Next.js", "React", "Node.js", "MongoDB", "Stripe API"],
       results: "Reduced administrative tasks for property managers by 50% and improved tenant satisfaction through a centralized communication portal.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "property management"
+      imageHint: "property management",
+      tags: ["Web Developer", "Product Manager"],
     },
     {
       slug: "shop-a-africa",
@@ -47,6 +51,7 @@ export const projects = [
       tools: ["React", "Node.js", "Express", "PostgreSQL", "AWS S3"],
       results: "Successfully onboarded over 100 artisans in the first six months and facilitated cross-border sales to 15+ countries.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "ecommerce africa"
+      imageHint: "ecommerce africa",
+      tags: ["Web Developer", "Product Manager"],
     },
   ];
