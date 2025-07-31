@@ -4,7 +4,7 @@ export const projects = [
       title: "Nana Kids Furniture Kenya",
       role: "Web Developer & SEO Specialist",
       description: "Developed a fully responsive e-commerce website for a children's furniture brand in Kenya. Implemented a complete SEO strategy to improve online visibility and drive organic traffic, leading to significant growth in customer engagement.",
-      tools: ["WordPress", "WooCommerce", "SEO Tools", "Google Analytics"],
+      tools: ["Next.js", "React", "Node.js", "SEO Tools", "Google Analytics"],
       results: "Achieved a 200% increase in organic search traffic within the first three months and a 50% boost in online sales.",
       image: "https://placehold.co/600x400.png",
       imageHint: "kids furniture"
