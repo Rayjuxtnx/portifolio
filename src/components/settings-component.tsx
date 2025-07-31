@@ -17,11 +17,14 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem
 } from "@/components/ui/dropdown-menu"
-import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star, Palette } from "lucide-react"
+import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star, Palette, Sparkles, Accessibility } from "lucide-react"
 import { Label } from "./ui/label"
+import { useInteractiveMode } from "./interactive-provider"
+import { Switch } from "./ui/switch"
 
 export function SettingsComponent() {
   const { setTheme, theme } = useTheme();
+  const { isInteractive, toggleInteractive } = useInteractiveMode();
   const [fontSize, setFontSize] = React.useState(16);
   const [mounted, setMounted] = React.useState(false);
 
@@ -51,6 +54,11 @@ export function SettingsComponent() {
   const decreaseFontSize = (e: React.MouseEvent) => {
     e.preventDefault();
     setFontSize(prev => Math.max(prev - 2, 12))
+  };
+  
+  const handleInteractiveToggle = (e: React.MouseEvent) => {
+    e.preventDefault();
+    toggleInteractive();
   };
 
   if (!mounted) {
@@ -87,12 +95,13 @@ export function SettingsComponent() {
                 </DropdownMenuRadioGroup>
               </DropdownMenuSubContent>
             </DropdownMenuSub>
+            <DropdownMenuLabel>Accessibility</DropdownMenuLabel>
              <DropdownMenuSub>
                 <DropdownMenuSubTrigger>
                     <Baseline />
                     <span>Font Size</span>
                 </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent alignOffset={-5}>
+                <DropdownMenuSubContent>
                     <DropdownMenuItem onSelect={decreaseFontSize}>
                         Decrease
                     </DropdownMenuItem>
@@ -101,7 +110,11 @@ export function SettingsComponent() {
                     </DropdownMenuItem>
                 </DropdownMenuSubContent>
             </DropdownMenuSub>
-
+             <DropdownMenuItem onSelect={handleInteractiveToggle}>
+                <Sparkles />
+                <span>Interactive Mode</span>
+                <Switch checked={isInteractive} className="ml-auto pointer-events-none" />
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuLabel>About</DropdownMenuLabel>
              <DropdownMenuItem asChild>

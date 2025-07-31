@@ -16,15 +16,40 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { AnimatePresence, motion } from "framer-motion";
+import { useInteractiveMode } from "@/components/interactive-provider";
 
 const roles = ["All Roles", "Web Developer", "Digital Marketer", "Product Manager"];
 
 export default function ProjectsPage() {
   const [selectedRole, setSelectedRole] = useState("All Roles");
+  const { isInteractive } = useInteractiveMode();
 
   const filteredProjects = selectedRole === "All Roles"
     ? projects
     : projects.filter(p => p.tags?.includes(selectedRole));
+
+    const MotionCard = ({ children, project }: { children: React.ReactNode, project: (typeof projects)[0] }) => {
+        if (!isInteractive) {
+            return (
+                <div key={project.slug} className="flex">
+                    {children}
+                </div>
+            )
+        }
+        return (
+             <motion.div
+                key={project.slug}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+                className="flex"
+              >
+                {children}
+            </motion.div>
+        )
+    }
 
   return (
     <section id="projects" className="w-full flex-1 py-12 bg-secondary/30">
@@ -44,19 +69,11 @@ export default function ProjectsPage() {
               </SelectContent>
             </Select>
         </div>
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout={isInteractive} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
             {filteredProjects.map((project) => (
-              <motion.div
-                key={project.slug}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-                className="flex"
-              >
-                <Card className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
+              <MotionCard project={project} key={project.slug}>
+                <Card className="flex flex-col shadow-lg static:shadow-none hover:shadow-xl transition-shadow duration-300 overflow-hidden w-full">
                   <div className="relative w-full h-48">
                     <Image
                       src={project.image}
@@ -89,7 +106,7 @@ export default function ProjectsPage() {
                     </Button>
                   </CardFooter>
                 </Card>
-              </motion.div>
+              </MotionCard>
             ))}
           </AnimatePresence>
         </motion.div>

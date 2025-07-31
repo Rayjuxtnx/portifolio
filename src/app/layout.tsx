@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
+import { InteractiveModeProvider } from '@/components/interactive-provider';
 
 export const metadata: Metadata = {
   title: 'PO FOLIO',
@@ -29,10 +30,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="flex-1 overflow-y-auto pt-16 pb-16 md:pb-0">{children}</main>
-          <Footer />
-          <Toaster />
+          <InteractiveModeProvider>
+            <Header />
+            <main className="flex-1 overflow-y-auto pt-16 pb-16 md:pb-0">{children}</main>
+            <Footer />
+            <Toaster />
+          </InteractiveModeProvider>
         </ThemeProvider>
       </body>
     </html>
