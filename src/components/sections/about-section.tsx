@@ -10,7 +10,7 @@ const AboutSection = () => {
           </CardHeader>
           <CardContent>
             <p className="text-center text-lg text-muted-foreground leading-relaxed">
-              I am a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web design, and visual content creation. With hands-on experience in sales, graphic design, and a growing interest in PLC programming and automation, I bring a multidisciplinary approach to solving problems and delivering impactful digital experiences.
+              I am a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web design, and visual content creation. With hands-on experience in sales, graphic design, and a growing interest in app development, system development, database integration and APIs, I bring a multidisciplinary approach to solving problems and delivering impactful digital experiences.
             </p>
           </CardContent>
         </Card>
