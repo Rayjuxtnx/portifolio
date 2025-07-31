@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="w-full min-h-screen flex items-center justify-center bg-background py-24 animate-fade-in-up">
+    <section id="home" className="w-full flex-1 flex items-center justify-center bg-background py-12 animate-fade-in-up">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="flex flex-col items-center space-y-6">
           <Avatar className="w-32 h-32 border-4 border-primary shadow-lg animate-fade-in-up" style={{animationDelay: "0.2s"}}>

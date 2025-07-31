@@ -3,7 +3,7 @@ import { Mail, Phone, Linkedin, Github, Dribbble, Globe } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
+    <section id="contact" className="w-full flex-1 flex items-center justify-center py-12 border-t">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">

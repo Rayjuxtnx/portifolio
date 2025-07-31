@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 
 const ResumeSection = () => {
   return (
-    <section id="resume" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="resume" className="w-full flex-1 flex items-center justify-center py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-4">

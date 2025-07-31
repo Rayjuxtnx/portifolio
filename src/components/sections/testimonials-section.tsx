@@ -28,7 +28,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/30">
+    <section id="testimonials" className="w-full flex-1 flex items-center justify-center py-12 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">
           What My Clients Say
