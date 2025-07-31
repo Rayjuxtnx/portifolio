@@ -1,82 +1,52 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Menu, Code } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#resume", label: "Resume" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/skills", label: "Skills" },
+  { href: "/projects", label: "Projects" },
+  { href: "/resume", label: "Resume" },
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-
-      const sections = navLinks.map(link => document.getElementById(link.href.substring(1)));
-      let currentSection = "";
-      for (const section of sections) {
-        if (section && window.scrollY >= section.offsetTop - 100) {
-          currentSection = section.id;
-        }
-      }
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-    setActiveSection(href.substring(1));
-    setIsMenuOpen(false);
-  };
-  
   const NavItems = () => (
     <>
       {navLinks.map(({ href, label }) => (
-        <a
+        <Link
           key={href}
           href={href}
-          onClick={(e) => handleLinkClick(e, href)}
-          className={`text-sm font-medium transition-colors hover:text-primary ${
-            activeSection === href.substring(1) ? "text-primary" : "text-muted-foreground"
-          }`}
+          onClick={() => setIsMenuOpen(false)}
+          className={cn(
+            "text-sm font-medium transition-colors hover:text-primary",
+            pathname === href ? "text-primary" : "text-muted-foreground"
+          )}
         >
           {label}
-        </a>
+        </Link>
       ))}
     </>
   );
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full border-b backdrop-blur-sm transition-all ${
-        isScrolled ? "bg-background/80 border-border" : "bg-transparent border-transparent"
-      }`}
-    >
+    <header className="sticky top-0 z-50 w-full border-b backdrop-blur-sm bg-background/80 border-border">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Code className="h-6 w-6 text-primary" />
           <span className="font-headline text-lg font-semibold">PortfolioPro</span>
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center gap-6">
           <NavItems />
         </nav>
