@@ -38,7 +38,7 @@ const Header = () => {
   );
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b backdrop-blur-sm bg-background/80 border-border">
+    <header className="fixed md:sticky top-0 z-40 w-full border-b backdrop-blur-sm bg-background/80 border-border">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Code className="h-6 w-6 text-primary" />

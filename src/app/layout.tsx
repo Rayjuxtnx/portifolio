@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Literata:opsz,wght@24..144,400;500;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased flex flex-col min-h-dvh bg-background">
+      <body className="font-body antialiased flex flex-col h-dvh bg-background">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,7 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex-1 flex flex-col pb-16 md:pb-0">{children}</main>
+          <main className="flex-1 overflow-y-auto pt-16 md:pt-0 pb-16 md:pb-0">{children}</main>
           <Footer />
           <Toaster />
         </ThemeProvider>
