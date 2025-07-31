@@ -140,13 +140,22 @@ export default {
             transform: 'translate(0, 0)',
             textShadow: 'none'
           },
-        }
+        },
+        'text-glow': {
+          '0%, 100%': {
+            'text-shadow': '0 0 0.5px hsl(var(--foreground)), 0 0 1px hsl(var(--foreground))',
+          },
+          '50%': {
+            'text-shadow': '0 0 2px hsl(var(--foreground)), 0 0 3px hsl(var(--foreground)), 0 0 5px hsl(var(--accent))',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'hacker-glitch': 'hacker-glitch 3s ease-in-out infinite',
+        'text-glow': 'text-glow 3s ease-in-out infinite alternate',
       },
     },
   },
