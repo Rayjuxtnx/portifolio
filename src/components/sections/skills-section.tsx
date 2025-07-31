@@ -23,10 +23,6 @@ const skills = {
     icon: <Megaphone className="w-8 h-8 text-primary" />,
     items: ["SEO", "email campaigns", "social media strategy"],
   },
-  "Communication": {
-    icon: <Presentation className="w-8 h-8 text-primary" />,
-    items: ["Client management", "team collaboration", "stakeholder reporting"],
-  },
   "Basic Tech": {
     icon: <Code className="w-8 h-8 text-primary" />,
     items: ["HTML", "CSS", "JavaScript", "Python", "React", "Tailwind", "Node.js", "Next.js", "APIs", "Databases"],
