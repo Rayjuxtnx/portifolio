@@ -75,8 +75,8 @@ const ProjectsSection = () => {
                 <Image 
                   src={project.image}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{objectFit: "cover"}}
                   data-ai-hint={project.imageHint}
                 />
               </div>
