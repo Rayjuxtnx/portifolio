@@ -87,7 +87,7 @@ export function SettingsComponent() {
                     <Baseline />
                     <span>Font Size</span>
                 </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent sideOffset={-5} alignOffset={-5}>
+                <DropdownMenuSubContent>
                     <DropdownMenuItem onSelect={decreaseFontSize}>
                         Decrease
                     </DropdownMenuItem>
