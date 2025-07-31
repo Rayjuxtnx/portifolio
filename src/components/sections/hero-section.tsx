@@ -40,7 +40,7 @@ const HeroSection = () => {
               </a>
             </Button>
              <Button variant="ghost" size="icon" asChild>
-               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+               <a href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
