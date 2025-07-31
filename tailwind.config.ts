@@ -141,12 +141,12 @@ export default {
             textShadow: 'none'
           },
         },
-        'text-glow': {
+        'star-shimmer': {
           '0%, 100%': {
-            'text-shadow': '0 0 0.5px hsl(var(--foreground)), 0 0 1px hsl(var(--foreground))',
+            'text-shadow': '0 0 1px hsl(var(--accent)), 0 0 2px hsl(var(--accent))'
           },
           '50%': {
-            'text-shadow': '0 0 2px hsl(var(--foreground)), 0 0 3px hsl(var(--foreground)), 0 0 5px hsl(var(--accent))',
+            'text-shadow': '0 0 1px hsl(var(--accent)), 0 0 3px hsl(var(--primary))'
           },
         },
       },
@@ -155,7 +155,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'hacker-glitch': 'hacker-glitch 3s ease-in-out infinite',
-        'text-glow': 'text-glow 3s ease-in-out infinite alternate',
+        'star-shimmer': 'star-shimmer 3s ease-in-out infinite alternate',
       },
     },
   },
