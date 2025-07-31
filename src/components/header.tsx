@@ -42,7 +42,7 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Code className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-semibold">PortfolioPro</span>
+          <span className="font-headline text-lg font-semibold">PO FOLIO</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <NavItems />

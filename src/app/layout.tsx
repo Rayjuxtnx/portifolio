@@ -6,7 +6,7 @@ import Footer from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'PortfolioPro',
+  title: 'PO FOLIO',
   description: 'Portfolio of Phillip Otieno',
 };
 
