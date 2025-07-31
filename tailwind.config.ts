@@ -94,12 +94,23 @@ export default {
             opacity: '1',
             transform: 'translateY(0)',
           },
+        },
+        'text-glow-gold': {
+          '0%, 100%': {
+            'color': 'hsl(var(--primary-foreground))',
+            'text-shadow': '0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--primary))',
+          },
+          '50%': {
+            'color': '#FFD700',
+            'text-shadow': '0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700, 0 0 60px #FFD700, 0 0 70px #FFD700',
+          },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+        'text-glow-gold': 'text-glow-gold 4s ease-in-out infinite',
       },
     },
   },
