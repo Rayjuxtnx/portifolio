@@ -1,63 +1,52 @@
 export const projects = [
     {
-      slug: "agile-project-management-syncup",
-      title: "Agile Project Management for 'SyncUp' App",
-      role: "Product Coordinator",
-      description: "Led the project lifecycle for a new productivity app, 'SyncUp', from ideation to launch using Agile methodologies. Managed backlogs, sprints, and stakeholder communication.",
-      tools: ["Jira", "Trello", "Notion", "Miro"],
-      results: "Successfully launched the MVP on time, resulting in a 20% increase in team productivity.",
+      slug: "nana-kids-furniture-kenya",
+      title: "Nana Kids Furniture Kenya",
+      role: "Web Developer & SEO Specialist",
+      description: "Developed a fully responsive e-commerce website for a children's furniture brand in Kenya. Implemented a complete SEO strategy to improve online visibility and drive organic traffic, leading to significant growth in customer engagement.",
+      tools: ["WordPress", "WooCommerce", "SEO Tools", "Google Analytics"],
+      results: "Achieved a 200% increase in organic search traffic within the first three months and a 50% boost in online sales.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "app interface"
+      imageHint: "kids furniture"
     },
     {
-      slug: "ux-redesign-connectnow",
-      title: "UX Redesign for 'ConnectNow' Social Platform",
-      role: "UX Researcher & Designer",
-      description: "Conducted comprehensive user research, including surveys and usability tests, to identify pain points. Redesigned the user flow and interface for better engagement.",
-      tools: ["Figma", "Adobe XD", "User Surveys"],
-      results: "Improved user satisfaction by 35% and increased session duration by 15%.",
+      slug: "powersparkle-australia",
+      title: "Powersparkle Australia",
+      role: "Digital Marketing Consultant",
+      description: "Managed social media marketing campaigns and created engaging content for a cleaning services company based in Australia. Developed a targeted ad strategy to increase brand awareness and generate qualified leads.",
+      tools: ["Meta Ads Manager", "Canva", "Hootsuite", "Google Analytics"],
+      results: "Generated a 40% increase in lead generation through targeted social media campaigns and improved brand engagement by 60%.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "user experience"
+      imageHint: "cleaning services"
     },
     {
-      slug: "interactive-prototype-fintrack",
-      title: "Interactive Prototype for 'FinTrack' App",
-      role: "UI/UX Designer",
-      description: "Created high-fidelity, interactive prototypes and wireframes for a new financial tracking mobile app. Focused on intuitive navigation and a clean user interface.",
-      tools: ["Figma", "Canva"],
-      results: "Secured stakeholder buy-in and provided a clear blueprint for the development team.",
+      slug: "cleansparkle-kenya",
+      title: "Cleansparkle Kenya",
+      role: "Web & Graphic Designer",
+      description: "Designed and developed a new website with an integrated booking system for a local cleaning company. Created a fresh brand identity, including a new logo and marketing materials, to enhance their market presence.",
+      tools: ["Figma", "Canva", "WordPress", "Calendly"],
+      results: "The new website led to a 30% increase in online bookings, and the rebrand contributed to a 25% rise in customer acquisition.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "mobile app"
+      imageHint: "sparkling clean"
     },
     {
-      slug: "marketing-analysis-ecowear",
-      title: "Marketing Campaign Analysis for 'EcoWear'",
-      role: "Data Analyst",
-      description: "Analyzed marketing campaign performance using Google Analytics and Meta Ads Manager. Identified key trends and provided data-driven recommendations for optimization.",
-      tools: ["Google Analytics", "Meta Ads Manager"],
-      results: "Increased campaign ROI by 25% by reallocating budget to top-performing channels.",
-      image: "https://placehold.co/600x400.png",
-      imageHint: "charts analytics"
-    },
-    {
-      slug: "growth-strategy-artisan-goods",
-      title: "Growth Strategy for 'Artisan Goods' E-commerce",
-      role: "Digital Marketing Strategist",
-      description: "Developed and executed a multi-channel growth strategy focusing on SEO, email marketing, and social media to increase online visibility and drive sales.",
-      tools: ["SEO Tools", "Mailchimp", "Social Media"],
-      results: "Achieved a 50% increase in organic traffic and grew the email subscriber list by 30% in 6 months.",
-      image: "https://placehold.co/600x400.png",
-      imageHint: "marketing strategy"
-    },
-    {
-      slug: "full-stack-portfolio",
-      title: "Full-Stack Portfolio Website (This Site!)",
+      slug: "rental-management-system",
+      title: "Rental Management System",
       role: "Full-Stack Developer",
-      description: "Designed and developed this personal portfolio website from scratch. Built with a modern tech stack to showcase my skills in web development, API integration, and database management.",
-      tools: ["Next.js", "React", "Tailwind CSS", "Node.js", "APIs"],
-      results: "A fully responsive, high-performance web application to serve as my digital resume.",
+      description: "Engineered a comprehensive rental management system from the ground up. The platform features tenant and property management, automated payment processing, and maintenance request tracking to streamline operations for landlords.",
+      tools: ["Next.js", "React", "Node.js", "MongoDB", "Stripe API"],
+      results: "Reduced administrative tasks for property managers by 50% and improved tenant satisfaction through a centralized communication portal.",
       image: "https://placehold.co/600x400.png",
-      imageHint: "web design"
+      imageHint: "property management"
+    },
+    {
+      slug: "shop-a-africa",
+      title: "Shop a Africa E-commerce Platform",
+      role: "Lead Developer",
+      description: "Led the development of a multi-vendor e-commerce platform connecting African artisans with a global market. The system includes features like vendor dashboards, inventory management, and secure international payments.",
+      tools: ["React", "Node.js", "Express", "PostgreSQL", "AWS S3"],
+      results: "Successfully onboarded over 100 artisans in the first six months and facilitated cross-border sales to 15+ countries.",
+      image: "https://placehold.co/600x400.png",
+      imageHint: "ecommerce africa"
     },
   ];
-  
