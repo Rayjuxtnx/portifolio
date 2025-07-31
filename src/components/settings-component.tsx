@@ -15,7 +15,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuSubContent
 } from "@/components/ui/dropdown-menu"
-import { Settings, Moon, Sun, Shield, FlaskConical, TextFontSize } from "lucide-react"
+import { Settings, Moon, Sun, Shield, FlaskConical, Baseline } from "lucide-react"
 import { Label } from "./ui/label"
 import { Switch } from "./ui/switch"
 import { useState, useEffect } from "react"
@@ -84,7 +84,7 @@ export function SettingsComponent() {
             </DropdownMenuItem>
              <DropdownMenuSub>
                 <DropdownMenuSubTrigger>
-                    <TextFontSize />
+                    <Baseline />
                     <span>Font Size</span>
                 </DropdownMenuSubTrigger>
                 <DropdownMenuSubContent>
