@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { Menu, Code } from "lucide-react";
+import { Code } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SettingsComponent } from "./settings-component";
 
@@ -20,7 +18,6 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const NavItems = () => (
@@ -29,7 +26,6 @@ const Header = () => {
         <Link
           key={href}
           href={href}
-          onClick={() => setIsMenuOpen(false)}
           className={cn(
             "text-sm font-medium transition-colors hover:text-primary",
             pathname === href ? "text-primary" : "text-muted-foreground"
@@ -42,7 +38,7 @@ const Header = () => {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b backdrop-blur-sm bg-background/80 border-border">
+    <header className="sticky top-0 z-40 w-full border-b backdrop-blur-sm bg-background/80 border-border">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Code className="h-6 w-6 text-primary" />
@@ -53,21 +49,6 @@ const Header = () => {
         </nav>
         <div className="flex items-center gap-2">
             <SettingsComponent />
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-                </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-                <div className="grid gap-4 p-4">
-                <nav className="grid gap-4">
-                    <NavItems />
-                </nav>
-                </div>
-            </SheetContent>
-            </Sheet>
         </div>
       </div>
     </header>
