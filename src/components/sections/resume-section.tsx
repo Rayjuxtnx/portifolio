@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Download } from "lucide-react";
+import { Download, FileText, FileCode, FileType } from "lucide-react";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
 
 const ResumeSection = () => {
   return (
@@ -20,12 +28,39 @@ const ResumeSection = () => {
                     <h1 className="font-headline text-3xl font-bold">Phillip Otieno</h1>
                     <p className="text-muted-foreground">Digital Marketer | Web & Graphic Designer | Sales & Tech Enthusiast</p>
                 </div>
-                <Button variant="default" asChild className="w-full md:w-auto">
-                    <a href="/placeholder-resume.pdf" download>
-                        <Download className="mr-2 h-4 w-4"/>
-                        Download
-                    </a>
-                </Button>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="default" className="w-full md:w-auto">
+                            <Download className="mr-2 h-4 w-4"/>
+                            Download Resume
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                        <DropdownMenuLabel>Select Format</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild>
+                             <a href="/placeholder-resume.pdf" download>
+                                <FileText className="mr-2"/> PDF
+                            </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                             <a href="/placeholder-resume.docx" download>
+                                <FileType className="mr-2"/> DOCX
+                            </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                             <a href="/placeholder-resume.md" download>
+                                <FileCode className="mr-2"/> Markdown
+                            </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild>
+                            <a href="/placeholder-resume-ats.pdf" download>
+                                <FileText className="mr-2"/> ATS-Optimized
+                            </a>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
             </header>
             <Separator className="my-8" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
