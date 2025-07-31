@@ -53,9 +53,15 @@ const ResumeSection = () => {
                 </section>
                 <section>
                   <h3 className="font-headline text-xl font-semibold mb-4 border-b pb-2">Education</h3>
-                   <div>
-                      <h4 className="font-semibold">Bachelor of Science in Marketing</h4>
-                      <p className="text-sm text-muted-foreground">University of Example | 2015 - 2019</p>
+                   <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold">Computer Science</h4>
+                        <p className="text-sm text-muted-foreground">East Africa Institute of Certified Studies</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold">Digital Marketing</h4>
+                        <p className="text-sm text-muted-foreground">Finland Creative Industries</p>
+                      </div>
                     </div>
                 </section>
               </div>
