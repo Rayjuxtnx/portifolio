@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Linkedin, Github, Dribbble, Globe } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -19,9 +20,9 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-4 animate-fade-in-up" style={{animationDelay: "0.8s"}}>
             <Button variant="outline" asChild>
-              <a href="mailto:phillip.otieno@example.com">
+              <Link href="/contact">
                 <Mail className="mr-2 h-4 w-4" /> Email
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" asChild>
               <a href="tel:+1234567890">
