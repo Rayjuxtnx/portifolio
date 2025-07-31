@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-import { Code } from "lucide-react";
+import { Code, Bot } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SettingsComponent } from "./settings-component";
+import { Button } from "./ui/button";
+import { AiAssistant } from "./ai-assistant";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,6 +21,7 @@ const navLinks = [
 
 const Header = () => {
   const pathname = usePathname();
+  const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
 
   const NavItems = () => (
     <>
@@ -38,20 +41,27 @@ const Header = () => {
   );
 
   return (
-    <header className="fixed md:sticky top-0 z-40 w-full border-b backdrop-blur-sm bg-background/80 border-border">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <Code className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-semibold">PO FOLIO</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <NavItems />
-        </nav>
-        <div className="flex items-center gap-2">
-            <SettingsComponent />
+    <>
+      <header className="fixed md:sticky top-0 z-40 w-full border-b backdrop-blur-sm bg-background/80 border-border">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+          <Link href="/" className="flex items-center gap-2">
+            <Code className="h-6 w-6 text-primary" />
+            <span className="font-headline text-lg font-semibold">PO FOLIO</span>
+          </Link>
+          <nav className="hidden md:flex items-center gap-6">
+            <NavItems />
+          </nav>
+          <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" className="hidden md:inline-flex" onClick={() => setIsAiAssistantOpen(true)}>
+                <Bot />
+                SPK AI
+              </Button>
+              <SettingsComponent />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <AiAssistant open={isAiAssistantOpen} onOpenChange={setIsAiAssistantOpen} />
+    </>
   );
 };
 

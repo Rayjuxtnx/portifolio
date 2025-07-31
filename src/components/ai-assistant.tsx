@@ -57,7 +57,7 @@ export function AiAssistant({ open, onOpenChange }: AiAssistantProps) {
       <SheetContent side="bottom" className="h-[80vh] flex flex-col">
         <SheetHeader>
           <SheetTitle className="flex items-center gap-2 font-headline">
-            <Bot /> AI Assistant
+            <Bot /> SPK AI
           </SheetTitle>
           <SheetDescription>
             Ask me anything about Phillip Otieno and his portfolio.

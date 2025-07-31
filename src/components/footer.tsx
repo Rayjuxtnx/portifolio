@@ -47,7 +47,7 @@ const Footer = () => {
                   className="flex flex-col items-center justify-center gap-1 w-full h-full text-xs font-medium transition-colors text-muted-foreground hover:text-primary"
                 >
                   <Bot className="w-5 h-5" />
-                  <span>AI Assistant</span>
+                  <span>SPK AI</span>
                 </button>
           </div>
       </nav>

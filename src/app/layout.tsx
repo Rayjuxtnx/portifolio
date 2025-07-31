@@ -30,7 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex-1 overflow-y-auto pt-16 md:pt-0 pb-16 md:pb-0">{children}</main>
+          <main className="flex-1 overflow-y-auto pt-16 pb-16 md:pb-0">{children}</main>
           <Footer />
           <Toaster />
         </ThemeProvider>
