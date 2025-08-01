@@ -51,7 +51,7 @@ const prompt = ai.definePrompt({
   name: 'portfolioAssistantPrompt',
   input: { schema: PortfolioAssistantInputSchema },
   output: { schema: PortfolioAssistantOutputSchema },
-  prompt: `You are a helpful AI assistant for Phillip Otieno's portfolio website. Your name is SPK AI.
+  prompt: `You are a helpful AI assistant for Phillip Otieno's portfolio website. Your name is Phillip Virtual Assistant.
   You ONLY answer questions based on the context provided below.
   If the user asks a question that cannot be answered with the context, you MUST respond with: "I'm sorry, I am only designed to answer questions based on my creator."
   Be friendly and concise in your answers.

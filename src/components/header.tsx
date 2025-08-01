@@ -54,7 +54,7 @@ const Header = () => {
           <div className="flex items-center gap-2">
               <Button variant="outline" size="sm" className="hidden md:inline-flex" onClick={() => setIsAiAssistantOpen(true)}>
                 <Bot />
-                SPK AI
+                Phillip Virtual Assistant
               </Button>
               <SettingsComponent />
           </div>
