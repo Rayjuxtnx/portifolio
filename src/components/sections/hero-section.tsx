@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Github, Dribbble, Globe, MoreHorizontal, MessageCircle, ThumbsUp, Share2 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -5,6 +7,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
 import { projects } from "@/lib/projects";
 import Image from "next/image";
+import { useToast } from "@/hooks/use-toast";
 
 const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
@@ -25,6 +28,38 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
   );
 
 const HeroSection = () => {
+  const { toast } = useToast();
+
+  const handleShare = async (project: (typeof projects)[0]) => {
+    const projectUrl = `${window.location.origin}/projects/${project.slug}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: project.title,
+          text: project.description,
+          url: projectUrl,
+        });
+      } catch (error) {
+        console.error('Error sharing:', error);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(projectUrl);
+        toast({
+          title: 'Link Copied!',
+          description: 'The project link has been copied to your clipboard.',
+        });
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+        toast({
+            variant: "destructive",
+            title: 'Error',
+            description: 'Failed to copy project link.',
+          });
+      }
+    }
+  };
+
   return (
     <section id="home" className="w-full flex-1 bg-secondary/30 py-8">
       <div className="container mx-auto px-4 md:px-6 max-w-2xl">
@@ -121,7 +156,7 @@ const HeroSection = () => {
                                 <MessageCircle className="mr-2" />
                                 Comment
                             </Button>
-                            <Button variant="ghost" size="sm">
+                            <Button variant="ghost" size="sm" onClick={() => handleShare(project)}>
                                 <Share2 className="mr-2" />
                                 Share
                             </Button>
