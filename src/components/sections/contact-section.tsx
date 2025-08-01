@@ -38,7 +38,7 @@ const ContactSection = () => {
                     </a>
                 </Button>
                  <Button variant="outline" asChild>
-                    <a href="https://t.me/your-telegram-username" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/+254714955458" target="_blank" rel="noopener noreferrer">
                         <Send className="mr-2"/> Telegram
                     </a>
                 </Button>
