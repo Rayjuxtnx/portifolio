@@ -18,7 +18,7 @@ const ContactSection = () => {
           <CardContent className="space-y-8">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <Button variant="outline" asChild>
-                    <a href="mailto:phillipotieno577@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <a href="mailto:onyangophilip244@gmail.com" target="_blank" rel="noopener noreferrer">
                         <Mail className="mr-2"/> Gmail
                     </a>
                 </Button>

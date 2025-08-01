@@ -27,7 +27,7 @@ Each project is listed with its title, a description of the project, the role Ph
 ${projects.map(p => `- Title: ${p.title}\n  Description: ${p.description}\n  Role: ${p.role}\n  Tools: ${p.tools.join(', ')}\n  Results: ${p.results}`).join('\n\n')}
 
 Contact Information:
-- Email: phillipotieno577@gmail.com
+- Email: onyangophilip244@gmail.com
 - Phone: 0714955458
 - WhatsApp: +254714955458
 - GitHub: https://github.com/Rayjuxtnx
