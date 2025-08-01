@@ -17,7 +17,7 @@ const HeroSection = () => {
     setMounted(true);
   }, []);
 
-  const isDarkTheme = theme === 'dark' || theme === 'theme-tech-blue' || theme === 'theme-gold-charcoal';
+  const isDarkTheme = mounted && (theme === 'dark' || theme === 'theme-tech-blue' || theme === 'theme-gold-charcoal');
 
   if (!mounted) {
     return (
@@ -69,6 +69,13 @@ const HeroSection = () => {
                 </Button>
             </div>
             <DigitalClock />
+            <div className="max-w-xl mx-auto text-sm text-muted-foreground mt-4">
+                <p>Animated Digital Clock (Matrix / Cyberpunk Theme) ⏱️ Stylized Clock</p>
+                <p>Create a digital clock or countdown styled like a sci-fi or terminal UI.</p>
+                <p>Option 1: Clean 24hr digital clock</p>
+                <p>Option 2: "Matrix rain" style numbers</p>
+                <p>Option 3: Countdown to your next big release</p>
+            </div>
         </div>
     </section>
   );
