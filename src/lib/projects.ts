@@ -9,6 +9,7 @@ export const projects = [
       image: "https://placehold.co/600x400.png",
       imageHint: "kids furniture",
       tags: ["Web Developer", "Digital Marketer"],
+      link: "https://nanaskidsfurniture.site/",
     },
     {
       slug: "powersparkle-australia",

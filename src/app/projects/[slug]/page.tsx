@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -53,6 +53,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <p className="text-muted-foreground">{project.results}</p>
             </div>
           </CardContent>
+          {project.link && (
+            <CardFooter>
+              <Button asChild>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  View Live Site <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </CardFooter>
+          )}
         </Card>
       </div>
     </section>
