@@ -18,8 +18,13 @@ interface Message {
   content: string;
 }
 
+const defaultMessage: Message = {
+    role: 'assistant',
+    content: "Hello! Phillip is currently busy, but feel free to ask me anything about his work or leave a message for him here. I'll make sure he gets it."
+}
+
 export function AiAssistant({ open, onOpenChange }: AiAssistantProps) {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([defaultMessage]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
