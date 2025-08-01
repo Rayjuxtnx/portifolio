@@ -32,6 +32,7 @@ export const projects = [
       image: "https://placehold.co/600x400.png",
       imageHint: "sparkling clean",
       tags: ["Web Developer"],
+      link: "https://cleansparkle.site/",
     },
     {
       slug: "rental-management-system",
