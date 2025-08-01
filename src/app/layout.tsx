@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Literata:opsz,wght@24..144,400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Literata:opsz,wght@24..144,400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased flex flex-col h-dvh bg-background">
         <ThemeProvider
@@ -32,7 +32,7 @@ export default function RootLayout({
         >
           <InteractiveModeProvider>
             <Header />
-            <main className="flex-1 overflow-y-auto pt-16 pb-16 md:pb-0">{children}</main>
+            <main className="flex-1 overflow-y-auto pt-16 pb-16 md:pb-0 flex flex-col">{children}</main>
             <Footer />
             <Toaster />
           </InteractiveModeProvider>

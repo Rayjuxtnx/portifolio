@@ -19,7 +19,7 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Literata', 'serif'],
-        code: ['monospace'],
+        code: ['"Roboto Mono"', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -102,11 +102,11 @@ export default {
           },
           '10%': {
             transform: 'translate(-2px, -3px)',
-            textShadow: '2px 2px 2px #ff0000, -2px -2px 2px #00ff00'
+            textShadow: '1px 1px 1px hsl(var(--accent)), -1px -1px 1px hsl(var(--primary))'
           },
           '20%': {
             transform: 'translate(2px, 3px)',
-            textShadow: '2px 2px 2px #00ff00, -2px -2px 2px #0000ff'
+            textShadow: '1px 1px 1px hsl(var(--accent)), -1px -1px 1px hsl(var(--primary))'
           },
           '30%': {
             transform: 'skewX(10deg) translate(0, 0)',
@@ -114,11 +114,11 @@ export default {
           },
           '40%': {
             transform: 'skewX(0deg) translate(-1px, 1px)',
-            textShadow: '2px 2px 2px #ff0000, -2px -2px 2px #00ff00'
+            textShadow: '1px 1px 1px hsl(var(--accent)), -1px -1px 1px hsl(var(--primary))'
           },
           '50%': {
             transform: 'skewX(0deg) translate(0, 0)',
-            textShadow: '2px 2px 2px #00ff00, -2px -2px 2px #0000ff'
+            textShadow: '1px 1px 1px hsl(var(--accent)), -1px -1px 1px hsl(var(--primary))'
           },
           '60%': {
             transform: 'skewX(-10deg) translate(0, 0)',
@@ -126,11 +126,11 @@ export default {
           },
           '70%': {
             transform: 'skewX(0deg) translate(1px, -1px)',
-            textShadow: '2px 2px 2px #ff0000, -2px -2px 2px #00ff00'
+            textShadow: '1px 1px 1px hsl(var(--accent)), -1px -1px 1px hsl(var(--primary))'
           },
           '80%': {
             transform: 'skewX(0deg) translate(0,0)',
-            textShadow: '2px 2px 2px #00ff00, -2px -2px 2px #0000ff'
+            textShadow: '1px 1px 1px hsl(var(--accent)), -1px -1px 1px hsl(var(--primary))'
           },
           '90%': {
             transform: 'translate(0, 0)',
@@ -142,11 +142,11 @@ export default {
           },
         },
         'star-shimmer': {
-          '0%, 100%': {
-            'text-shadow': '0 0 1px hsl(var(--accent)), 0 0 2px hsl(var(--accent))'
+          '0%': {
+            transform: 'translateY(0px)',
           },
-          '50%': {
-            'text-shadow': '0 0 1px hsl(var(--accent)), 0 0 3px hsl(var(--primary))'
+          '100%': {
+            transform: 'translateY(-550px)'
           },
         },
       },
@@ -154,8 +154,8 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
-        'hacker-glitch': 'hacker-glitch 3s ease-in-out infinite',
-        'star-shimmer': 'star-shimmer 3s ease-in-out infinite alternate',
+        'hacker-glitch': 'hacker-glitch 2s ease-in-out infinite',
+        'star-shimmer': 'star-shimmer 25s linear infinite',
       },
     },
   },
