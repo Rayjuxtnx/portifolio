@@ -56,4 +56,16 @@ export const projects = [
       imageHint: "ecommerce africa",
       tags: ["Web Developer", "Product Manager"],
     },
+    {
+      slug: "sma-trent-nexus-hub",
+      title: "SMA Trent Nexus Hub",
+      role: "Web Developer & Digital Strategist",
+      description: "Designed and developed a centralized social media hub that aggregates content from various platforms into a single, streamlined feed. This project aimed to enhance user engagement and provide a seamless content discovery experience.",
+      tools: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+      results: "Increased user time-on-site by 40% and successfully integrated 5 different social media APIs for real-time content aggregation.",
+      image: "https://placehold.co/600x400.png",
+      imageHint: "social media hub",
+      tags: ["Web Developer", "Digital Marketer"],
+      link: "https://sma-trent-nexus-hub.vercel.app/",
+    }
   ];
