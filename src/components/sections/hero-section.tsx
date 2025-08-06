@@ -6,7 +6,7 @@ import DigitalClock from "@/components/digital-clock";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, MessageSquare } from "lucide-react";
+import { Github, Phone, Mail, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -53,8 +53,8 @@ const HeroSection = () => {
                     </Link>
                 </Button>
                  <Button variant="outline" asChild>
-                    <Link href="https://www.linkedin.com/in/phillip-otieno-a241ba255/" target="_blank" rel="noopener noreferrer">
-                        <Linkedin /> LinkedIn
+                    <Link href="tel:0714955458">
+                        <Phone /> Phone
                     </Link>
                 </Button>
                 <Button variant="outline" asChild>
