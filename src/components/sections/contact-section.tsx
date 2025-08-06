@@ -28,12 +28,12 @@ const ContactSection = () => {
                     </a>
                 </Button>
                 <Button variant="outline" asChild>
-                    <a href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/+254714955458" target="_blank" rel="noopener noreferrer">
                         <MessageSquare className="mr-2"/> WhatsApp
                     </a>
                 </Button>
                  <Button variant="outline" asChild>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://facebook.com/philipogana" target="_blank" rel="noopener noreferrer">
                         <Facebook className="mr-2"/> Facebook
                     </a>
                 </Button>
@@ -42,8 +42,10 @@ const ContactSection = () => {
                         <Send className="mr-2"/> Telegram
                     </a>
                 </Button>
-                 <Button variant="outline" disabled>
-                    <Instagram className="mr-2"/> Instagram
+                 <Button variant="outline" asChild>
+                    <a href="https://instagram.com/movie_guru" target="_blank" rel="noopener noreferrer">
+                        <Instagram className="mr-2"/> Instagram
+                    </a>
                 </Button>
             </div>
             <div className="relative">
