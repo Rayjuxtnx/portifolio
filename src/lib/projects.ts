@@ -44,6 +44,7 @@ export const projects = [
       image: "https://placehold.co/600x400.png",
       imageHint: "property management",
       tags: ["Web Developer", "Product Manager"],
+      link: "https://vercel.com/rayjuxtnxs-projects/modern-christian",
     },
     {
       slug: "shop-a-africa",
