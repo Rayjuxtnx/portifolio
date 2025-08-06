@@ -37,7 +37,7 @@ const skills = {
   },
   "Event DJ": {
     icon: <Disc className="w-8 h-8 text-primary" />,
-    items: ["Weddings", "Corporate Events", "Private Parties", "Serato DJ Pro"],
+    items: ["Weddings", "Corporate Events", "Private Parties", "Virtual DJ"],
   },
   "Event Decoration": {
     icon: <PartyPopper className="w-8 h-8 text-primary" />,
