@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Megaphone, Brush, Code, Handshake, Cpu, Target, Users, Bot, BarChart, Presentation, Lightbulb } from "lucide-react";
+import { Megaphone, Code, Target, Users, Bot, BarChart, ShieldCheck, Network, Disc, PartyPopper } from "lucide-react";
 
 const skills = {
   "Product Management Tools": {
@@ -27,6 +27,22 @@ const skills = {
     icon: <Code className="w-8 h-8 text-primary" />,
     items: ["HTML", "CSS", "JavaScript", "Python", "React", "Tailwind", "Node.js", "Next.js", "APIs", "Databases"],
   },
+  "Cyber Security": {
+    icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+    items: ["Nmap", "Wireshark", "Hashcat", "Metasploit", "Kali Linux"],
+  },
+   "Networking": {
+    icon: <Network className="w-8 h-8 text-primary" />,
+    items: ["TCP/IP", "DNS", "DHCP", "Routing", "Switching"],
+  },
+  "Event DJ": {
+    icon: <Disc className="w-8 h-8 text-primary" />,
+    items: ["Weddings", "Corporate Events", "Private Parties", "Serato DJ Pro"],
+  },
+  "Event Decoration": {
+    icon: <PartyPopper className="w-8 h-8 text-primary" />,
+    items: ["Weddings", "Themed Parties", "Corporate Functions", "Floral Arrangements"],
+  }
 };
 
 const SkillsSection = () => {
