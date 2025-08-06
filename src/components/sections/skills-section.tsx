@@ -56,7 +56,9 @@ const SkillsSection = () => {
           {Object.entries(skills).map(([category, { icon, items }]) => (
             <Card key={category} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="flex flex-row items-center gap-4">
-                {icon}
+                <div className="animate-glow">
+                    {icon}
+                </div>
                 <CardTitle className="font-headline">{category}</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-wrap gap-2">

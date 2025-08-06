@@ -149,6 +149,16 @@ export default {
             transform: 'translateY(-550px)'
           },
         },
+        'glow': {
+          '0%, 100%': {
+            filter: 'drop-shadow(0 0 2px hsl(var(--primary)))',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            filter: 'drop-shadow(0 0 8px hsl(var(--primary)))',
+             transform: 'scale(1.05)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -156,6 +166,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'hacker-glitch': 'hacker-glitch 2s ease-in-out infinite',
         'star-shimmer': 'star-shimmer 25s linear infinite',
+        'glow': 'glow 2.5s ease-in-out infinite',
       },
     },
   },
