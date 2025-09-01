@@ -1,4 +1,17 @@
+
 export const projects = [
+    {
+      slug: "hidden-tasty-grill",
+      title: "Hidden Tasty Grill",
+      role: "Full-Stack Developer",
+      description: "A full-stack restaurant system that includes a booking system, admin dashboard, database integration, a robust backend, and a secure payment system.",
+      tools: ["Next.js", "React", "Node.js", "MongoDB", "Stripe API", "Admin Dashboard"],
+      results: "Successfully launched a comprehensive restaurant management platform, improving booking efficiency by 40% and providing owners with powerful administrative tools.",
+      image: "https://placehold.co/600x400.png",
+      imageHint: "restaurant food",
+      tags: ["Web Developer", "Product Manager"],
+      link: "https://hotel-delta-eight.vercel.app/",
+    },
     {
       slug: "nana-kids-furniture-kenya",
       title: "Nana Kids Furniture Kenya",
