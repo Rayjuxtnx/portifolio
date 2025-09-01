@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Volume2, Loader } from "lucide-react";
 import { convertTextToSpeech } from "@/ai/flows/text-to-speech-flow";
 
-const professionalSummary = "I am a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web design, and visual content creation. With hands-on experience in sales, graphic design, and a growing interest in app development, system development, database integration and APIs, I bring a multidisciplinary approach to solving problems and delivering impactful digital experiences.";
+const professionalSummary = "I am a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web development, and visual content creation. With hands-on experience in sales, graphic design, and professional in app development, system development, database integration and APIs, I bring a multidisciplinary approach to solving problems and delivering impactful digital experiences.";
 
 const AboutSection = () => {
     const [isGeneratingSpeech, setIsGeneratingSpeech] = useState(false);

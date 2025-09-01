@@ -12,7 +12,7 @@ import { z } from 'zod';
 import { projects } from '@/lib/projects';
 
 const portfolioContext = `
-Phillip Otieno is a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web design, and visual content creation. With hands-on experience in sales, graphic design, and a growing interest in app development, system development, database integration and APIs, he brings a multidisciplinary approach to solving problems and delivering impactful digital experiences.
+Phillip Otieno is a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web development, and visual content creation. With hands-on experience in sales, graphic design, and professional in app development, system development, database integration and APIs, he brings a multidisciplinary approach to solving problems and delivering impactful digital experiences.
 
 Skills:
 - Product Management Tools: Trello, Notion, Jira, Miro
