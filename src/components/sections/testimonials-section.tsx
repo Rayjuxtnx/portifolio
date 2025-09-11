@@ -7,21 +7,21 @@ const testimonials = [
     quote: "Phillip's creativity and dedication to our project were outstanding. He delivered results that exceeded our expectations.",
     name: "Debbie Smiles",
     title: "Nana Kids Furniture",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBmYWNlfGVufDB8fHx8MTc1NzYyMDg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     avatar_fallback: "DS"
   },
   {
     quote: "The new website Phillip designed is not only beautiful but also highly functional. Our booking rates have soared since the launch!",
     name: "Valeta Jones",
     title: "Owner, Powersparkle Australia",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBmYWNlfGVufDB8fHx8MTc1NzYyMDg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     avatar_fallback: "VJ"
   },
   {
     quote: "Working with Phillip was a breeze. His communication is excellent, and his marketing insights were invaluable to our campaign.",
     name: "Emily White",
     title: "Marketing Manager, Mamanina Furniture",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://images.unsplash.com/photo-1517462964-21fdcec3f25b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBmYWNlfGVufDB8fHx8MTc1NzYyMDg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     avatar_fallback: "EW"
   },
 ];
