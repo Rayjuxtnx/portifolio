@@ -52,9 +52,11 @@ const Header = () => {
             <NavItems />
           </nav>
           <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" className="hidden md:inline-flex" onClick={() => setIsAiAssistantOpen(true)}>
-                <Bot />
-                Phillip Virtual Assistant
+              <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
+                <Link href="https://sunny-kitten-7e360d.netlify.app/chat" target="_blank" rel="noopener noreferrer">
+                    <Bot />
+                    Phillip Virtual Assistant
+                </Link>
               </Button>
               <SettingsComponent />
           </div>
