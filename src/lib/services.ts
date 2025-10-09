@@ -1,4 +1,5 @@
-import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Smartphone, Palette, Puzzle, MousePointerClick, Rocket, AppWindow, Shield, GitBranch, TestTube, Framer, CodeXml, Scaling, Monitor, DatabaseZap, Mail, MapPin, Briefcase, Wifi, Users } from "lucide-react";
+import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor } from "lucide-react";
+import { Mail, MapPin, Briefcase, Wifi, Users } from "lucide-react";
 
 export type ServiceItem = { 
   title: string; 
@@ -38,27 +39,63 @@ export const services: Record<string, Service> = {
     icon: Code,
     description: "Creating beautiful, responsive, and user-friendly interfaces that provide a seamless user experience across all devices.",
     details: "I specialize in building modern, interactive, and high-performance user interfaces. From the initial design concept to the final deployment, I ensure your web application is not only visually stunning but also accessible, fast, and SEO-friendly.",
-    items: [
-        { title: "Responsive Web Design", description: "Builds that look and work great on any device, from mobile phones to desktops.", price: "8,000 – 20,000", icon: Smartphone },
-        { title: "Interactive UI", description: "Engaging user interfaces with dynamic elements like forms, sliders, and animations.", price: "5,000 – 15,000", icon: MousePointerClick },
-        { title: "Landing Pages", description: "Compelling landing pages designed to convert visitors into customers.", price: "6,000 – 18,000", icon: Rocket },
-        { title: "Navigation & Menus", description: "Intuitive navigation menus, headers, and footers for seamless user flow.", price: "3,000 – 8,000", icon: Framer },
-        { title: "Product/Service Listings", description: "Clean and attractive layouts for showcasing products or services.", price: "5,000 – 15,000", icon: Layers },
-        { title: "Contact Forms", description: "Custom contact forms with real-time validation to capture user inquiries.", price: "2,000 – 6,000", icon: Mail },
-        { title: "Image Galleries & Sliders", description: "Visually appealing galleries and sliders to showcase your portfolio or products.", price: "3,000 – 8,000", icon: Palette },
-        { title: "Blog Layouts", description: "Well-structured and readable layouts for your blog or news section.", price: "4,000 – 10,000", icon: CodeXml },
-        { title: "Custom Animations", description: "Smooth, modern animations and transitions to enhance user experience.", price: "4,000 – 12,000", icon: Framer },
-        { title: "SEO-Friendly Code", description: "Clean, semantic HTML structured for optimal search engine visibility.", price: "3,000 – 7,000", icon: CodeXml },
-        { title: "API Integration", description: "Connecting your frontend to backend services for dynamic, real-time data.", price: "6,000 – 20,000", icon: Puzzle },
-        { title: "Custom CSS & Theming", description: "Tailored styling and themes that match your brand identity perfectly.", price: "4,000 – 10,000", icon: Palette },
-        { title: "Admin Dashboards", description: "Powerful and intuitive admin interfaces for managing your application.", price: "10,000 – 25,000", icon: AppWindow },
-        { title: "Dark/Light Mode", description: "A modern toggle for user-preferred viewing modes.", price: "2,000 – 5,000", icon: Monitor },
-        { title: "Accessibility (A11y)", description: "Ensuring your website is usable by people with disabilities.", price: "3,000 – 8,000", icon: Shield },
-        { title: "Page Speed Optimization", description: "Improving load times and performance for a better user experience.", price: "3,000 – 9,000", icon: Rocket },
-        { title: "SPA Development", description: "Building fast, reliable Single-Page Apps.", price: "10,000 – 25,000", icon: AppWindow },
-        { title: "PWA Development", description: "Creating app-like experiences on the web with Progressive Web Apps.", price: "15,000 – 35,000", icon: AppWindow },
-        { title: "Testing & Debugging", description: "Thorough testing to ensure a bug-free and smooth user experience.", price: "3,000 – 8,000", icon: TestTube },
-        { title: "Deployment & Git Flow", description: "Setting up version control and deployment pipelines for your project.", price: "2,000 – 6,000", icon: GitBranch },
+    packages: [
+      {
+        title: "🟢 Basic Package",
+        price: "Ksh 20,000 – 50,000",
+        bestFor: "Startups, small businesses, or personal portfolios.",
+        includes: [
+          "Up to 4 responsive pages (Home, About, Services, Contact)",
+          "Clean, mobile-friendly layout (HTML, CSS, JS)",
+          "Simple animations (hover, transitions)",
+          "Navigation menu, header, and footer",
+          "Contact form (basic validation)",
+          "SEO-friendly HTML structure",
+          "Deployment (Netlify or GitHub Pages)",
+          "1-month free support",
+        ],
+      },
+      {
+        title: "🟡 Standard Package",
+        price: "Ksh 60,000 – 120,000",
+        bestFor: "Growing companies, small e-commerce, and service-based websites.",
+        includes: [
+          "Everything in Basic +",
+          "Dynamic content with JavaScript or React",
+          "Product/service listing pages",
+          "Custom CSS theme and branding",
+          "Image gallery or slider section",
+          "Blog or news layout page",
+          "Form validation and API integration (contact/order forms)",
+          "Page speed optimization",
+          "Accessibility-friendly design (A11y)",
+          "Light/dark mode toggle",
+          "2 months of support & minor revisions",
+        ],
+      },
+      {
+        title: "🔵 Premium Package",
+        price: "Ksh 150,000 – 300,000+",
+        bestFor: "Large organizations, SaaS platforms, and interactive web applications.",
+        includes: [
+          "Everything in Standard +",
+          "Full Single Page Application (SPA) using React, Vue, or Next.js",
+          "Advanced animations and transitions (GSAP, Framer Motion, etc.)",
+          "Admin/dashboard interface (frontend side)",
+          "Progressive Web App (PWA) frontend setup",
+          "Real-time updates (API-driven data, live stats)",
+          "SEO structure & analytics integration",
+          "Frontend testing (Cypress/Jest)",
+          "Continuous deployment setup (GitHub + Netlify/Vercel)",
+          "3-month premium support & maintenance",
+        ],
+      },
+    ],
+    addOns: [
+        { title: "Custom animated hero section", price: "Ksh 5,000–10,000" },
+        { title: "Chat widget or chatbot integration", price: "Ksh 5,000–15,000" },
+        { title: "Multi-language support", price: "Ksh 5,000–10,000" },
+        { title: "UI/UX design system or brand guideline", price: "Ksh 8,000–20,000" },
     ],
   },
   "backend-development": {
@@ -89,7 +126,7 @@ export const services: Record<string, Service> = {
             price: "Ksh 100,000 – 180,000",
             bestFor: "E-commerce platforms, company dashboards, and growing startups.",
             includes: [
-                "Everything in Basic",
+                "Everything in Basic +",
                 "Advanced authentication (JWT, password hashing, sessions)",
                 "Payment gateway integration (MPesa, PayPal, or Stripe)",
                 "Role-based access control (Admin, User, Vendor)",
@@ -107,7 +144,7 @@ export const services: Record<string, Service> = {
             price: "Ksh 200,000 – 350,000+",
             bestFor: "Large-scale systems, SaaS platforms, and enterprise-level applications.",
             includes: [
-                "Everything in Standard",
+                "Everything in Standard +",
                 "Scalable microservices or modular architecture",
                 "Real-time backend features (WebSockets, live chat, notifications)",
                 "Advanced analytics & reporting system",
@@ -157,7 +194,7 @@ export const services: Record<string, Service> = {
             price: "Ksh 120,000 – 200,000",
             bestFor: "Growing businesses, e-commerce startups, and dynamic web apps.",
             includes: [
-                "Everything in Basic",
+                "Everything in Basic +",
                 "Dynamic content with API integration",
                 "User authentication (login/register)",
                 "Product or service listing pages",
@@ -176,7 +213,7 @@ export const services: Record<string, Service> = {
             price: "Ksh 250,000 – 400,000+",
             bestFor: "Established companies, SaaS platforms, or advanced e-commerce systems.",
             includes: [
-                "Everything in Standard",
+                "Everything in Standard +",
                 "Full e-commerce backend (cart, checkout, orders)",
                 "Real-time features (chat, notifications, sockets)",
                 "Progressive Web App (PWA) capabilities",
@@ -234,7 +271,7 @@ export const services: Record<string, Service> = {
     details: "I create and execute data-driven digital marketing strategies to increase your online presence, generate leads, and drive sales. From social media to email, I cover all aspects of your digital footprint.",
     items: [
         { title: "Social Media Marketing", description: "Managing and growing your brand's presence on social platforms.", price: "Contact for Quote", icon: Megaphone },
-        { title: "Content Strategy", description: "Creating valuable content to attract and engage your target audience.", price: "Contact for Quote", icon: CodeXml },
+        { title: "Content Strategy", description: "Creating valuable content to attract and engage your target audience.", price: "Contact for Quote", icon: Code },
         { title: "Email Campaigns", description: "Designing and running effective email marketing campaigns.", price: "Contact for Quote", icon: Mail },
         { title: "Paid Advertising", description: "Managing Google Ads and Meta Ads to drive targeted traffic.", price: "Contact for Quote", icon: Rocket },
     ],
@@ -248,7 +285,7 @@ export const services: Record<string, Service> = {
     details: "I implement comprehensive SEO strategies to improve your website's visibility on search engines like Google. By focusing on technical SEO, on-page optimization, and quality content, I help you attract more organic traffic.",
     items: [
       { title: "Keyword Research", description: "Identifying the best keywords to target for your business.", price: "Contact for Quote", icon: Search },
-      { title: "On-Page & Technical SEO", description: "Optimizing your site's structure and content for search engines.", price: "Contact for Quote", icon: CodeXml },
+      { title: "On-Page & Technical SEO", description: "Optimizing your site's structure and content for search engines.", price: "Contact for Quote", icon: Code },
       { title: "Link Building", description: "Building high-quality backlinks to improve your domain authority.", price: "Contact for Quote", icon: Cable },
       { title: "Local SEO", description: "Optimizing your online presence to attract local customers.", price: "Contact for Quote", icon: MapPin },
     ],
@@ -275,7 +312,7 @@ export const services: Record<string, Service> = {
     details: "I offer full-service event design and decoration, transforming any space into a beautiful and immersive environment. From concept to execution, I handle all the details to create a stunning backdrop for your special occasion.",
     items: [
       { title: "Wedding & Ceremony Decor", description: "Elegant and beautiful decorations to make your wedding unforgettable.", price: "Contact for Quote", icon: PartyPopper },
-      { title: "Themed Party Decorations", description: "Creative decor to bring your party's theme to life.", price: "Contact for Quote", icon: Palette },
+      { title: "Themed Party Decorations", description: "Creative decor to bring your party's theme to life.", price: "Contact for Quote", icon: Layers },
       { title: "Corporate Function Styling", description: "Professional and stylish decor for corporate events and functions.", price: "Contact for Quote", icon: Briefcase },
     ],
     pricing: "Contact for Quote"
