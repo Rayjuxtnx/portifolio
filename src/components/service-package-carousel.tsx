@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import { Badge } from "./ui/badge";
 import { CheckCircle2 } from "lucide-react";
 import { ScrollArea } from "./ui/scroll-area";
+import { Skeleton } from "./ui/skeleton";
 
 type ServicePackageInfo = {
   serviceTitle: string;
@@ -46,6 +47,24 @@ const ServicePackageCarousel = () => {
   }
 
   const currentPackage = allPackages[currentIndex];
+
+  if (!currentPackage) {
+    return (
+        <div className="h-96 w-full max-w-sm flex items-center justify-center">
+            <Card className="w-full h-full shadow-lg bg-secondary/50 flex flex-col p-4 space-y-4">
+                <Skeleton className="h-6 w-1/3" />
+                <Skeleton className="h-8 w-3/4" />
+                <Skeleton className="h-4 w-1/2" />
+                <div className="flex-1 space-y-2">
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-5/6" />
+                    <Skeleton className="h-4 w-2/3" />
+                </div>
+            </Card>
+        </div>
+    );
+  }
 
   return (
     <div className="h-96 w-full max-w-sm flex items-center justify-center">
