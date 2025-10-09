@@ -42,12 +42,14 @@ export default function ServicesPage() {
         </h2>
         <motion.div layout={isInteractive} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-                {Object.values(services).map((service) => (
+                {Object.values(services).map((service) => {
+                  const Icon = service.icon;
+                  return (
                     <MotionCard service={service} key={service.slug}>
                         <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col w-full">
                         <CardHeader className="flex flex-row items-center gap-4">
                             <div className="animate-glow">
-                                {service.icon}
+                                <Icon className="w-8 h-8 text-primary" />
                             </div>
                             <CardTitle className="font-headline">{service.title}</CardTitle>
                         </CardHeader>
@@ -63,7 +65,7 @@ export default function ServicesPage() {
                         </CardFooter>
                         </Card>
                     </MotionCard>
-                ))}
+                )})}
             </AnimatePresence>
         </motion.div>
       </div>

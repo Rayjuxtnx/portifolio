@@ -13,6 +13,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   if (!service) {
     notFound();
   }
+  const Icon = service.icon;
 
   return (
     <section className="w-full flex-1 flex items-center justify-center py-12 bg-secondary/30">
@@ -27,7 +28,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </Button>
             <div className="flex items-center gap-4">
                <div className="animate-glow">
-                    {service.icon}
+                    <Icon className="w-8 h-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline text-3xl md:text-4xl">{service.title}</CardTitle>
             </div>
