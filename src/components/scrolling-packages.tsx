@@ -25,7 +25,7 @@ const allPackages: ServicePackageInfo[] = Object.values(services).flatMap(
 ).filter(p => p.packageTitle);
 
 const PackageCard = ({ aPackage }: { aPackage: ServicePackageInfo }) => (
-    <Card className="w-[300px] h-[350px] shadow-lg bg-secondary/50 flex flex-col flex-shrink-0 mx-4">
+    <Card className="w-[300px] h-[350px] shadow-lg bg-secondary/30 flex flex-col flex-shrink-0 mx-4 animate-glow">
         <CardHeader className="p-4">
            <Badge variant="outline" className="w-fit mb-2">{aPackage.serviceTitle}</Badge>
           <CardTitle className="text-lg font-headline">{aPackage.packageTitle}</CardTitle>

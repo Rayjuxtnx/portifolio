@@ -33,7 +33,7 @@ const HeroSection = () => {
     <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
        
-       <div className="absolute inset-0 blur-sm opacity-10 dark:opacity-5">
+       <div className="absolute inset-0 blur-[2px] opacity-15 dark:opacity-10">
         <ScrollingPackages />
        </div>
 
