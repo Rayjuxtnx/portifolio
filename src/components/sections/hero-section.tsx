@@ -38,11 +38,11 @@ const HeroSection = () => {
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
                     <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
                         <Image
-                            src="https://placehold.co/200x200.png"
+                            src="https://picsum.photos/seed/hacker/200/200"
                             alt="Phillip Otieno"
                             fill
                             style={{ objectFit: 'cover' }}
-                            data-ai-hint="professional headshot"
+                            data-ai-hint="hacker man"
                         />
                     </div>
                     <div className="space-y-2">
