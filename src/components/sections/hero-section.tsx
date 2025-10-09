@@ -53,9 +53,10 @@ const HeroSection = () => {
                     <div className="space-y-2">
                         <h1 className={cn(
                           "text-4xl md:text-5xl font-bold",
-                          isDarkTheme ? "font-code animate-hacker-glitch" : "font-headline"
+                          isDarkTheme ? "font-code" : "font-headline"
                         )}>
-                          Phillip Otieno
+                          <span className="text-accent">Phillip</span>
+                          <span className="text-primary">Otieno</span>
                         </h1>
                         <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
                     </div>
