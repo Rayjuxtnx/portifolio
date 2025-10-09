@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Phone, Mail, MessageSquare, Calendar } from "lucide-react";
 import Link from "next/link";
 import { ScrollingPackages } from "../scrolling-packages";
+import { cn } from "@/lib/utils";
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -33,7 +34,7 @@ const HeroSection = () => {
     <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
        
-       <div className="absolute inset-0 blur-[2px] opacity-15 dark:opacity-10">
+       <div className="absolute inset-0 blur-sm opacity-5 dark:opacity-[0.03]">
         <ScrollingPackages />
        </div>
 
@@ -50,7 +51,12 @@ const HeroSection = () => {
                         />
                     </div>
                     <div className="space-y-2">
-                        <h1 className="font-headline text-4xl md:text-5xl font-bold">Phillip Otieno</h1>
+                        <h1 className={cn(
+                          "text-4xl md:text-5xl font-bold",
+                          isDarkTheme ? "font-code animate-hacker-glitch" : "font-headline"
+                        )}>
+                          Phillip Otieno
+                        </h1>
                         <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-2">
