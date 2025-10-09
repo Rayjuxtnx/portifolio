@@ -1,6 +1,18 @@
 import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network } from "lucide-react";
 
-export const services = {
+export type ServiceItem = string | { task: string; price: string };
+
+export type Service = {
+  slug: string;
+  title: string;
+  icon: React.ElementType;
+  description: string;
+  details: string;
+  items: ServiceItem[];
+  pricing?: string;
+};
+
+export const services: Record<string, Service> = {
   "frontend-development": {
     slug: "frontend-development",
     title: "Frontend Development",
@@ -8,28 +20,28 @@ export const services = {
     description: "Creating beautiful, responsive, and user-friendly interfaces that provide a seamless user experience across all devices.",
     details: "I specialize in building modern, interactive, and high-performance user interfaces. From the initial design concept to the final deployment, I ensure your web application is not only visually stunning but also accessible, fast, and SEO-friendly.",
     items: [
-      "Responsive website design (mobile, tablet, desktop)",
-      "Interactive user interfaces (buttons, forms, sliders)",
-      "Landing pages and homepages",
-      "Navigation menus and footers",
-      "Product/service listing pages",
-      "Contact forms with validation",
-      "Image galleries and sliders",
-      "Blog & news page layouts",
-      "Custom animations & transitions",
-      "SEO-friendly HTML structure",
-      "API Integration for dynamic data",
-      "Custom CSS themes or brand styling",
-      "Dashboard & admin interfaces",
-      "Dark/light mode toggle",
-      "Accessibility-friendly design (A11y)",
-      "Page speed optimization",
-      "Single-Page Applications (SPAs)",
-      "Progressive Web Apps (PWAs)",
-      "Frontend testing & debugging",
-      "Deployment & version control (Git, GitHub)",
+        { task: "Responsive website design (mobile, tablet, desktop)", price: "8,000 – 20,000" },
+        { task: "Interactive user interface (buttons, forms, sliders, animations)", price: "5,000 – 15,000" },
+        { task: "Landing pages and homepages", price: "6,000 – 18,000" },
+        { task: "Navigation menus and headers/footers", price: "3,000 – 8,000" },
+        { task: "Product or service listing pages", price: "5,000 – 15,000" },
+        { task: "Contact forms with validation", price: "2,000 – 6,000" },
+        { task: "Image galleries and sliders", price: "3,000 – 8,000" },
+        { task: "Blog or news page layout", price: "4,000 – 10,000" },
+        { task: "Custom animations and transitions", price: "4,000 – 12,000" },
+        { task: "SEO-friendly HTML structure", price: "3,000 – 7,000" },
+        { task: "Integration with APIs (for dynamic data)", price: "6,000 – 20,000" },
+        { task: "Custom CSS themes or brand styling", price: "4,000 – 10,000" },
+        { task: "Dashboard or admin interface", price: "10,000 – 25,000" },
+        { task: "Dark/light mode toggle", price: "2,000 – 5,000" },
+        { task: "Accessibility-friendly design (A11y)", price: "3,000 – 8,000" },
+        { task: "Page speed optimization", price: "3,000 – 9,000" },
+        { task: "Single-page application (SPA) setup", price: "10,000 – 25,000" },
+        { task: "Progressive Web App (PWA) frontend", price: "15,000 – 35,000" },
+        { task: "Frontend testing and debugging", price: "3,000 – 8,000" },
+        { task: "Code deployment and version control setup (GitHub, Netlify, etc.)", price: "2,000 – 6,000" },
     ],
-    pricing: "Starting at $1,500"
+    pricing: "Custom"
   },
   "backend-development": {
     slug: "backend-development",
@@ -122,5 +134,3 @@ export const services = {
     pricing: "Contact for Quote"
   }
 };
-
-export type Service = (typeof services)[keyof typeof services];

@@ -1,19 +1,22 @@
 import { services, Service } from "@/lib/services";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = Object.values(services).find((s) => s.slug === params.slug) as Service | undefined;
+  const service = services[params.slug];
 
   if (!service) {
     notFound();
   }
   const Icon = service.icon;
+
+  const hasPricingTable = service.items.every(item => typeof item === 'object' && 'task' in item && 'price' in item);
 
   return (
     <section className="w-full flex-1 flex items-center justify-center py-12 bg-secondary/30">
@@ -37,18 +40,41 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <CardContent className="space-y-6">
             <div>
               <h4 className="font-semibold mb-4 text-md">What's included:</h4>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {service.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 mt-1 text-green-500 shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {hasPricingTable ? (
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Task / Deliverable</TableHead>
+                      <TableHead className="text-right">Estimated Price Range (Ksh)</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {service.items.map((item) => (
+                        typeof item === 'object' && (
+                            <TableRow key={item.task}>
+                                <TableCell className="font-medium">{item.task}</TableCell>
+                                <TableCell className="text-right">{item.price}</TableCell>
+                            </TableRow>
+                        )
+                    ))}
+                  </TableBody>
+                </Table>
+              ) : (
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {service.items.map((item) => (
+                    typeof item === 'string' && (
+                        <li key={item} className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 mt-1 text-green-500 shrink-0" />
+                            <span className="text-muted-foreground">{item}</span>
+                        </li>
+                    )
+                  ))}
+                </ul>
+              )}
             </div>
           </CardContent>
             <CardFooter className="bg-muted/50 p-6 rounded-b-lg flex flex-col sm:flex-row items-center justify-between gap-4">
-                {service.pricing && service.pricing.toLowerCase().includes('contact') ? (
+                {service.pricing && (service.pricing.toLowerCase().includes('contact') || service.pricing.toLowerCase().includes('custom')) ? (
                     <>
                         <p className="font-semibold text-lg">Interested in this service?</p>
                         <Button asChild size="lg">
@@ -82,3 +108,4 @@ export async function generateStaticParams() {
       slug,
     }));
   }
+
