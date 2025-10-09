@@ -321,7 +321,7 @@ export const services: Record<string, Service> = {
         ],
       },
       {
-        title: "🔵 Standard Package",
+        title: "🟡 Standard Package",
         price: "Ksh 25,000 – 60,000",
         bestFor: "Ideal for: Businesses needing secure and well-structured APIs.",
         includes: [
@@ -336,7 +336,7 @@ export const services: Record<string, Service> = {
         ],
       },
        {
-        title: "🟣 Premium Package",
+        title: "🔵 Premium Package",
         price: "Ksh 70,000 – 150,000+",
         bestFor: "Ideal for: Scalable apps, SaaS, or full e-commerce systems.",
         includes: [
@@ -360,45 +360,53 @@ export const services: Record<string, Service> = {
     details: "I architect and build complete software systems from the ground up, including custom business logic, data processing, and user management, to solve your unique challenges.",
     packages: [
       {
-        title: "🟢 Basic System Package",
-        price: "Ksh 80,000 - 150,000",
-        bestFor: "Small businesses or startups needing a custom internal tool or application.",
+        title: "🟢 Basic Package",
+        price: "Ksh 40,000 – 90,000",
+        bestFor: "Small businesses or startups that need a simple management system. Example: Inventory tracker, student record system, booking system.",
         includes: [
-          "Requirement analysis and system design",
-          "Custom application with a focused feature set",
-          "Database design and implementation",
-          "User authentication and basic roles",
-          "Deployment to a single server environment",
-          "1 month of post-launch support",
+          "User authentication (login/signup/reset)",
+          "Admin dashboard with data overview",
+          "CRUD operations (Create, Read, Update, Delete)",
+          "Basic database integration (MySQL, PostgreSQL, or Firebase)",
+          "Responsive user interface",
+          "Simple reporting or data export (CSV, PDF)",
+          "Deployment setup (Netlify, Render, or shared hosting)",
+          "Basic documentation and user guide",
         ],
       },
       {
-        title: "🟡 Standard System Package",
-        price: "Ksh 160,000 - 300,000",
-        bestFor: "Growing businesses needing a more complex system with integrations.",
+        title: "🟡 Standard Package",
+        price: "Ksh 100,000 – 250,000",
+        bestFor: "Medium-sized organizations or SMEs needing a scalable, multi-user platform. Example: School management system, HR system, POS, or CRM.",
         includes: [
-          "Everything in Basic +",
-          "Advanced feature development",
-          "Integration with third-party services (payment, email, etc.)",
-          "Admin dashboard for system management",
-          "Automated testing and QA",
-          "Scalable architecture design",
-          "2 months of post-launch support",
+          "Everything in Basic, plus:",
+          "Multi-role access control (Admin, Staff, Users)",
+          "API development & integration (MPesa, Email, SMS, etc.)",
+          "Advanced reporting & analytics dashboards",
+          "Notifications system (email or in-app alerts)",
+          "File uploads and media management",
+          "Modern UI/UX design (React, Next.js, or Vue)",
+          "Database optimization and security setup",
+          "Cloud hosting setup (AWS, Railway, Render)",
+          "System testing and debugging",
         ],
       },
       {
-        title: "🔵 Premium System Package",
-        price: "Ksh 320,000+",
-        bestFor: "Enterprises requiring a robust, scalable, and secure software solution.",
+        title: "🔵 Premium Package",
+        price: "Ksh 300,000 – 700,000+",
+        bestFor: "Corporates, SaaS platforms, or enterprise-level solutions. Example: E-commerce platforms, ERP systems, hospital systems, or financial management systems.",
         includes: [
-          "Everything in Standard +",
-          "Microservices architecture",
-          "High availability and load balancing",
-          "Comprehensive security audit and implementation",
-          "CI/CD pipeline for automated deployment",
-          "Advanced monitoring and logging",
-          "Detailed technical documentation",
-          "3 months of premium support and maintenance",
+          "Everything in Standard, plus:",
+          "Full-stack architecture (frontend + backend + database)",
+          "Advanced analytics & dashboards with charts",
+          "Real-time data sync (WebSockets/Firebase)",
+          "Payment integration (MPesa, PayPal, Stripe)",
+          "Role-based and modular access system",
+          "Mobile app integration (Android/iOS API support)",
+          "Custom API gateway and microservice architecture",
+          "Automated backups & scalability setup",
+          "Comprehensive testing (unit, integration, and security)",
+          "Long-term maintenance & technical support",
         ],
       },
     ],
@@ -425,7 +433,7 @@ export const services: Record<string, Service> = {
           ],
       },
       {
-          title: "🔵 Standard Package",
+          title: "🟡 Standard Package",
           price: "Ksh 30,000 – 70,000/month",
           bestFor: "Growing brands that need consistent, high-quality engagement.",
           includes: [
@@ -441,7 +449,7 @@ export const services: Record<string, Service> = {
           ],
       },
       {
-          title: "🟣 Premium Package",
+          title: "🔵 Premium Package",
           price: "Ksh 80,000 – 200,000+/month",
           bestFor: "Established brands, e-commerce businesses, or campaigns needing full digital strategy.",
           includes: [
@@ -613,5 +621,3 @@ export const services: Record<string, Service> = {
     pricing: "Contact for Quote"
   }
 };
-
-    
