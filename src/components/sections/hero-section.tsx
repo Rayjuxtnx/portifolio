@@ -8,13 +8,22 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Github, Phone, Mail, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { services } from "@/lib/services";
+import { AnimatePresence, motion } from "framer-motion";
+
+const serviceTitles = Object.values(services).map(s => s.title);
 
 const HeroSection = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
 
   useEffect(() => {
     setMounted(true);
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prevIndex) => (prevIndex + 1) % serviceTitles.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   const isDarkTheme = mounted && (theme === 'dark' || theme === 'theme-tech-blue' || theme === 'theme-gold-charcoal');
@@ -44,7 +53,19 @@ const HeroSection = () => {
             </div>
             <div className="space-y-2">
                 <h1 className="font-headline text-4xl md:text-5xl font-bold">Phillip Otieno</h1>
-                <p className="text-muted-foreground text-lg md:text-xl">Digital Marketer | Web & Graphic Designer | Sales & Tech Enthusiast</p>
+                <div className="text-muted-foreground text-lg md:text-xl h-8">
+                  <AnimatePresence mode="wait">
+                    <motion.p
+                      key={currentServiceIndex}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {serviceTitles[currentServiceIndex]}
+                    </motion.p>
+                  </AnimatePresence>
+                </div>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
                 <Button variant="outline" asChild>
