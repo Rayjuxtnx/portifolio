@@ -308,9 +308,9 @@ export const services: Record<string, Service> = {
     details: "I build and integrate custom APIs to connect your applications with third-party services or to create a robust backend for your frontend. I focus on creating well-documented, secure, and easy-to-use APIs.",
     packages: [
       {
-        title: "🟢 Basic Package",
+        title: "🔵 Basic Package",
         price: "Ksh 8,000 – 20,000",
-        bestFor: "Ideal for: Simple projects needing one or two basic APIs.",
+        bestFor: "Simple projects needing one or two basic APIs.",
         includes: [
           "Basic REST API setup",
           "CRUD endpoints (Create, Read, Update, Delete)",
@@ -321,9 +321,9 @@ export const services: Record<string, Service> = {
         ],
       },
       {
-        title: "🟡 Standard Package",
+        title: "🔵 Standard Package",
         price: "Ksh 25,000 – 60,000",
-        bestFor: "Ideal for: Businesses needing secure and well-structured APIs.",
+        bestFor: "Businesses needing secure and well-structured APIs.",
         includes: [
           "Everything in Basic, plus:",
           "JWT or OAuth2 authentication",
@@ -336,9 +336,9 @@ export const services: Record<string, Service> = {
         ],
       },
        {
-        title: "🔵 Premium Package",
+        title: "🟣 Premium Package",
         price: "Ksh 70,000 – 150,000+",
-        bestFor: "Ideal for: Scalable apps, SaaS, or full e-commerce systems.",
+        bestFor: "Scalable apps, SaaS, or full e-commerce systems.",
         includes: [
           "Everything in Standard, plus:",
           "Complex multi-API integration (e.g., MPesa + Email + Analytics)",
@@ -527,41 +527,47 @@ export const services: Record<string, Service> = {
     details: "I specialize in creating, managing, and optimizing paid advertising campaigns on platforms like Google Ads to maximize your return on investment and reach the right audience.",
     packages: [
       {
-        title: "🟢 Basic SEM Package",
-        price: "Ksh 15,000 - 30,000/month",
-        bestFor: "Small businesses new to paid advertising.",
+        title: "🟢 Basic Package",
+        price: "Ksh 10,000 – 25,000/month",
+        bestFor: "Small businesses starting out with Google Ads.",
         includes: [
-          "Keyword research and selection",
-          "Campaign setup on Google Ads",
-          "Ad copywriting for up to 2 ad groups",
-          "Budget management recommendations",
-          "Monthly performance reporting",
+          "Google Ads account setup",
+          "1–2 ad campaigns (Search or Display)",
+          "Keyword research & targeting",
+          "Ad copywriting (2–3 variations)",
+          "Budget guidance (client funds ads separately)",
+          "Conversion tracking setup (Google Analytics or Pixel)",
+          "Monthly performance report",
         ],
       },
       {
-        title: "🟡 Standard SEM Package",
-        price: "Ksh 35,000 - 70,000/month",
-        bestFor: "Businesses looking to optimize and scale their ad spend.",
+        title: "🔵 Standard Package",
+        price: "Ksh 30,000 – 60,000/month",
+        bestFor: "Growing brands that want consistent leads and visibility.",
         includes: [
-          "Everything in Basic +",
-          "A/B testing for ad copy and landing pages",
-          "Conversion tracking setup",
-          "Negative keyword management",
-          "Ad extension optimization",
-          "Bi-weekly performance reports and analysis",
+          "Everything in Basic, plus:",
+          "Up to 5 active campaigns (Search, Display, YouTube, or Shopping)",
+          "Competitor analysis & negative keyword setup",
+          "A/B testing for ad creatives and landing pages",
+          "Custom audience targeting (age, location, interests)",
+          "Retargeting ads setup",
+          "Campaign optimization (CTR, CPC, and conversions)",
+          "Weekly monitoring & performance updates",
         ],
       },
       {
-        title: "🔵 Premium SEM Package",
-        price: "Ksh 80,000+/month",
-        bestFor: "Companies with a significant ad budget requiring comprehensive management.",
+        title: "🟣 Premium Package",
+        price: "Ksh 70,000 – 150,000+/month",
+        bestFor: "Established businesses or e-commerce brands running large-scale ad campaigns.",
         includes: [
-          "Everything in Standard +",
-          "Advanced campaign strategies (RLSA, Dynamic Search Ads)",
-          "Landing page optimization and creation",
-          "Competitor ad analysis",
-          "Google Analytics integration and analysis",
-          "Weekly performance calls and strategy sessions",
+          "Everything in Standard, plus:",
+          "Unlimited campaign management (Search, Display, YouTube, Discovery)",
+          "Full funnel strategy (awareness → conversion → remarketing)",
+          "Advanced conversion tracking with Google Tag Manager",
+          "Dynamic search ads & shopping feeds integration",
+          "Competitor ad intelligence & bidding optimization",
+          "Monthly ROI and growth strategy report",
+          "Dedicated SEM manager & priority support",
         ],
       },
     ],
@@ -621,3 +627,5 @@ export const services: Record<string, Service> = {
     pricing: "Contact for Quote"
   }
 };
+
+    
