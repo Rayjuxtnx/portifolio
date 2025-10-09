@@ -1,5 +1,5 @@
-import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor } from "lucide-react";
-import { Mail, MapPin, Briefcase, Wifi, Users } from "lucide-react";
+
+import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor, Mail, MapPin, Briefcase, Wifi, Users } from "lucide-react";
 
 export type ServiceItem = { 
   title: string; 
@@ -306,13 +306,51 @@ export const services: Record<string, Service> = {
     icon: Cable,
     description: "Designing and integrating APIs to connect services, automate workflows, and extend application functionality.",
     details: "I build and integrate custom APIs to connect your applications with third-party services or to create a robust backend for your frontend. I focus on creating well-documented, secure, and easy-to-use APIs.",
-    items: [
-      { title: "Custom API Design", description: "Designing and building custom RESTful or GraphQL APIs.", price: "Contact for Quote", icon: Puzzle },
-      { title: "Third-Party Integrations", description: "Integrating with external services like payment gateways or social media.", price: "Contact for Quote", icon: Puzzle },
-      { title: "API Security", description: "Implementing secure authentication and authorization (OAuth, JWT).", price: "Contact for Quote", icon: Shield },
-      { title: "Real-time APIs", description: "Building real-time communication features using WebSockets or Webhooks.", price: "Contact for Quote", icon: Monitor },
-    ],
-    pricing: "Starting at $1,200"
+    packages: [
+      {
+        title: "🟢 Basic Package",
+        price: "Ksh 8,000 – 20,000",
+        bestFor: "Ideal for: Simple projects needing one or two basic APIs.",
+        includes: [
+          "Basic REST API setup",
+          "CRUD endpoints (Create, Read, Update, Delete)",
+          "Connection to a local or cloud database",
+          "JSON response formatting",
+          "Basic authentication (API key or token)",
+          "API documentation (Postman or Swagger)",
+        ],
+      },
+      {
+        title: "🔵 Standard Package",
+        price: "Ksh 25,000 – 60,000",
+        bestFor: "Ideal for: Businesses needing secure and well-structured APIs.",
+        includes: [
+          "Everything in Basic, plus:",
+          "JWT or OAuth2 authentication",
+          "Integration with external APIs (e.g., payment, SMS, or email)",
+          "User roles and permissions",
+          "Data validation and error handling",
+          "API versioning and optimization",
+          "Hosting or cloud deployment setup",
+          "Real-time data support (WebSockets or Firebase integration)",
+        ],
+      },
+       {
+        title: "🟣 Premium Package",
+        price: "Ksh 70,000 – 150,000+",
+        bestFor: "Ideal for: Scalable apps, SaaS, or full e-commerce systems.",
+        includes: [
+          "Everything in Standard, plus:",
+          "Complex multi-API integration (e.g., MPesa + Email + Analytics)",
+          "Microservice or modular architecture",
+          "GraphQL or advanced API gateway setup",
+          "API performance monitoring and analytics dashboard",
+          "Automated testing (Postman/Newman, CI/CD pipeline)",
+          "Enterprise-level security & scalability setup",
+          "Custom reporting and logs management",
+        ],
+      },
+    ]
   },
   "digital-marketing": {
     slug: "digital-marketing",
