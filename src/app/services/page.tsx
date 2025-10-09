@@ -5,7 +5,28 @@ import { Disc, PartyPopper, ShieldCheck, Network, Code, Server, Layers, Database
 const services = {
   "Frontend Development": {
     icon: <Code className="w-8 h-8 text-primary" />,
-    items: ["React", "Next.js", "Tailwind CSS", "Figma", "UX/UI"],
+    items: [
+        "Responsive website design",
+        "Interactive user interfaces",
+        "Landing pages & homepages",
+        "Navigation menus & footers",
+        "Product/service listing pages",
+        "Contact forms with validation",
+        "Image galleries & sliders",
+        "Blog & news page layouts",
+        "Custom animations & transitions",
+        "SEO-friendly HTML structure",
+        "API Integration",
+        "Custom CSS themes",
+        "Dashboard & admin interfaces",
+        "Dark/light mode toggle",
+        "Accessibility-friendly design",
+        "Page speed optimization",
+        "Single-Page Applications (SPA)",
+        "Progressive Web Apps (PWA)",
+        "Frontend testing & debugging",
+        "Deployment & version control",
+    ],
     description: "Creating beautiful, responsive, and user-friendly interfaces that provide a seamless user experience across all devices."
   },
   "Backend Development": {
