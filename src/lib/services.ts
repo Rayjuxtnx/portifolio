@@ -1,6 +1,11 @@
-import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network } from "lucide-react";
+import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Smartphone, Palette, Puzzle, MousePointerClick, Rocket, AppWindow, Shield, GitBranch, TestTube, Framer, CodeXml, Scaling, Monitor, DatabaseZap } from "lucide-react";
 
-export type ServiceItem = string | { task: string; price: string };
+export type ServiceItem = { 
+  title: string; 
+  description: string;
+  price: string; 
+  icon: React.ElementType 
+};
 
 export type Service = {
   slug: string;
@@ -20,26 +25,19 @@ export const services: Record<string, Service> = {
     description: "Creating beautiful, responsive, and user-friendly interfaces that provide a seamless user experience across all devices.",
     details: "I specialize in building modern, interactive, and high-performance user interfaces. From the initial design concept to the final deployment, I ensure your web application is not only visually stunning but also accessible, fast, and SEO-friendly.",
     items: [
-        { task: "Responsive website design (mobile, tablet, desktop)", price: "8,000 – 20,000" },
-        { task: "Interactive user interface (buttons, forms, sliders, animations)", price: "5,000 – 15,000" },
-        { task: "Landing pages and homepages", price: "6,000 – 18,000" },
-        { task: "Navigation menus and headers/footers", price: "3,000 – 8,000" },
-        { task: "Product or service listing pages", price: "5,000 – 15,000" },
-        { task: "Contact forms with validation", price: "2,000 – 6,000" },
-        { task: "Image galleries and sliders", price: "3,000 – 8,000" },
-        { task: "Blog or news page layout", price: "4,000 – 10,000" },
-        { task: "Custom animations and transitions", price: "4,000 – 12,000" },
-        { task: "SEO-friendly HTML structure", price: "3,000 – 7,000" },
-        { task: "Integration with APIs (for dynamic data)", price: "6,000 – 20,000" },
-        { task: "Custom CSS themes or brand styling", price: "4,000 – 10,000" },
-        { task: "Dashboard or admin interface", price: "10,000 – 25,000" },
-        { task: "Dark/light mode toggle", price: "2,000 – 5,000" },
-        { task: "Accessibility-friendly design (A11y)", price: "3,000 – 8,000" },
-        { task: "Page speed optimization", price: "3,000 – 9,000" },
-        { task: "Single-page application (SPA) setup", price: "10,000 – 25,000" },
-        { task: "Progressive Web App (PWA) frontend", price: "15,000 – 35,000" },
-        { task: "Frontend testing and debugging", price: "3,000 – 8,000" },
-        { task: "Code deployment and version control setup (GitHub, Netlify, etc.)", price: "2,000 – 6,000" },
+        { title: "Responsive Web Design", description: "Builds that look and work great on any device, from mobile phones to desktops.", price: "8,000 – 20,000", icon: Smartphone },
+        { title: "Interactive UI", description: "Engaging user interfaces with dynamic elements like forms, sliders, and animations.", price: "5,000 – 15,000", icon: MousePointerClick },
+        { title: "Landing Pages", description: "Compelling landing pages designed to convert visitors into customers.", price: "6,000 – 18,000", icon: Rocket },
+        { title: "Custom Animations", description: "Smooth, modern animations and transitions to enhance user experience.", price: "4,000 – 12,000", icon: Framer },
+        { title: "SEO-Friendly Code", description: "Clean, semantic HTML structured for optimal search engine visibility.", price: "3,000 – 7,000", icon: CodeXml },
+        { title: "API Integration", description: "Connecting your frontend to backend services for dynamic, real-time data.", price: "6,000 – 20,000", icon: Puzzle },
+        { title: "Custom CSS & Theming", description: "Tailored styling and themes that match your brand identity perfectly.", price: "4,000 – 10,000", icon: Palette },
+        { title: "Admin Dashboards", description: "Powerful and intuitive admin interfaces for managing your application.", price: "10,000 – 25,000", icon: AppWindow },
+        { title: "Accessibility (A11y)", description: "Ensuring your website is usable by people with disabilities.", price: "3,000 – 8,000", icon: Shield },
+        { title: "Page Speed Optimization", description: "Improving load times and performance for a better user experience.", price: "3,000 – 9,000", icon: Rocket },
+        { title: "SPA/PWA Development", description: "Building fast, reliable Single-Page Apps and Progressive Web Apps.", price: "15,000 – 35,000", icon: AppWindow },
+        { title: "Testing & Debugging", description: "Thorough testing to ensure a bug-free and smooth user experience.", price: "3,000 – 8,000", icon: TestTube },
+        { title: "Deployment & Git Flow", description: "Setting up version control and deployment pipelines for your project.", price: "2,000 – 6,000", icon: GitBranch },
     ],
     pricing: "Custom"
   },
@@ -49,7 +47,13 @@ export const services: Record<string, Service> = {
     icon: Server,
     description: "Building robust and scalable server-side applications, ensuring high performance and data security.",
     details: "I develop secure and efficient backend systems that power your web applications. My focus is on creating scalable architectures, reliable APIs, and secure data handling to support your business logic.",
-    items: ["Custom server-side logic with Node.js & Python", "Building RESTful APIs and GraphQL endpoints", "User authentication and authorization systems", "Server setup and deployment", "Performance monitoring and optimization"],
+    items: [
+      { title: "Custom Business Logic", description: "Implementing server-side logic in Node.js & Python to meet your needs.", price: "Contact for Quote", icon: Code },
+      { title: "REST & GraphQL APIs", description: "Building well-structured and documented APIs for your applications.", price: "Contact for Quote", icon: Puzzle },
+      { title: "User Authentication", description: "Secure user authentication and authorization systems (e.g., JWT, OAuth).", price: "Contact for Quote", icon: Shield },
+      { title: "Server Deployment", description: "Deploying and managing your backend on cloud platforms like Vercel or AWS.", price: "Contact for Quote", icon: Rocket },
+      { title: "Performance Tuning", description: "Monitoring and optimizing your server for speed and scalability.", price: "Contact for Quote", icon: Scaling },
+    ],
     pricing: "Starting at $2,000"
   },
   "full-stack-development": {
@@ -58,7 +62,13 @@ export const services: Record<string, Service> = {
     icon: Layers,
     description: "Developing complete web applications from the ground up, managing both client-side and server-side logic.",
     details: "From the database to the user interface, I provide end-to-end development services to bring your entire project to life. I handle system architecture, database design, backend logic, and frontend development to deliver a cohesive and complete product.",
-    items: ["End-to-end application development (MERN, Next.js)", "System architecture and design", "Database schema design and management", "CI/CD and DevOps pipeline setup", "Full-stack testing and quality assurance"],
+    items: [
+      { title: "End-to-End Development", description: "Full application development using frameworks like MERN or Next.js.", price: "Contact for Quote", icon: Layers },
+      { title: "System Architecture", description: "Designing scalable and robust architectures for your application.", price: "Contact for Quote", icon: GitBranch },
+      { title: "Database Schema Design", description: "Creating efficient and scalable database schemas.", price: "Contact for Quote", icon: Database },
+      { title: "CI/CD & DevOps", description: "Setting up continuous integration and deployment pipelines.", price: "Contact for Quote", icon: Rocket },
+      { title: "Full-Stack QA", description: "Comprehensive testing across the entire stack to ensure quality.", price: "Contact for Quote", icon: TestTube },
+    ],
     pricing: "Starting at $3,500"
   },
   "database-integration": {
@@ -67,7 +77,12 @@ export const services: Record<string, Service> = {
     icon: Database,
     description: "Integrating and managing databases to ensure data is stored efficiently, securely, and is easily accessible.",
     details: "I design and integrate databases that are optimized for performance, scalability, and security. Whether you need a relational (SQL) or non-relational (NoSQL) database, I ensure your data is structured and managed effectively.",
-    items: ["Database design and modeling (MongoDB, PostgreSQL, Firebase)", "Data migration and synchronization", "Query optimization and performance tuning", "Backup and recovery solutions", "Secure data access and management"],
+    items: [
+      { title: "Database Design", description: "Modeling and designing databases like MongoDB, PostgreSQL, or Firebase.", price: "Contact for Quote", icon: Database },
+      { title: "Data Migration", description: "Seamlessly migrating and synchronizing data between different systems.", price: "Contact for Quote", icon: DatabaseZap },
+      { title: "Query Optimization", description: "Tuning database queries for maximum performance and speed.", price: "Contact for Quote", icon: Rocket },
+      { title: "Backup & Recovery", description: "Implementing robust backup and recovery solutions to protect your data.", price: "Contact for Quote", icon: Shield },
+    ],
     pricing: "Starting at $1,000"
   },
   "apis": {
@@ -76,7 +91,12 @@ export const services: Record<string, Service> = {
     icon: Cable,
     description: "Designing and integrating APIs to connect services, automate workflows, and extend application functionality.",
     details: "I build and integrate custom APIs to connect your applications with third-party services or to create a robust backend for your frontend. I focus on creating well-documented, secure, and easy-to-use APIs.",
-    items: ["Custom REST API and GraphQL API design", "Third-party API integration (e.g., payment gateways, social media)", "Authentication and security (OAuth, JWT)", "Real-time communication with Webhooks", "API documentation and testing"],
+    items: [
+      { title: "Custom API Design", description: "Designing and building custom RESTful or GraphQL APIs.", price: "Contact for Quote", icon: Puzzle },
+      { title: "Third-Party Integrations", description: "Integrating with external services like payment gateways or social media.", price: "Contact for Quote", icon: Puzzle },
+      { title: "API Security", description: "Implementing secure authentication and authorization (OAuth, JWT).", price: "Contact for Quote", icon: Shield },
+      { title: "Real-time APIs", description: "Building real-time communication features using WebSockets or Webhooks.", price: "Contact for Quote", icon: Monitor },
+    ],
     pricing: "Starting at $1,200"
   },
   "digital-marketing": {
@@ -85,7 +105,12 @@ export const services: Record<string, Service> = {
     icon: Megaphone,
     description: "Driving brand growth through strategic online marketing campaigns and engaging content tailored to your target audience.",
     details: "I create and execute data-driven digital marketing strategies to increase your online presence, generate leads, and drive sales. From social media to email, I cover all aspects of your digital footprint.",
-    items: ["Social Media Marketing (SMM)", "Content creation and strategy", "Email marketing campaigns", "Paid advertising (Meta Ads, Google Ads)", "Analytics and performance tracking"],
+    items: [
+        { title: "Social Media Marketing", description: "Managing and growing your brand's presence on social platforms.", price: "Contact for Quote", icon: Megaphone },
+        { title: "Content Strategy", description: "Creating valuable content to attract and engage your target audience.", price: "Contact for Quote", icon: CodeXml },
+        { title: "Email Campaigns", description: "Designing and running effective email marketing campaigns.", price: "Contact for Quote", icon: Mail },
+        { title: "Paid Advertising", description: "Managing Google Ads and Meta Ads to drive targeted traffic.", price: "Contact for Quote", icon: Rocket },
+    ],
     pricing: "Contact for Quote"
   },
   "seo": {
@@ -94,7 +119,12 @@ export const services: Record<string, Service> = {
     icon: Search,
     description: "Optimizing your website to rank higher in search engine results, increasing organic traffic and online visibility.",
     details: "I implement comprehensive SEO strategies to improve your website's visibility on search engines like Google. By focusing on technical SEO, on-page optimization, and quality content, I help you attract more organic traffic.",
-    items: ["Keyword research and analysis", "On-page SEO optimization", "Technical SEO audits and fixes", "Link building and backlink strategy", "Local SEO and Google My Business optimization"],
+    items: [
+      { title: "Keyword Research", description: "Identifying the best keywords to target for your business.", price: "Contact for Quote", icon: Search },
+      { title: "On-Page & Technical SEO", description: "Optimizing your site's structure and content for search engines.", price: "Contact for Quote", icon: CodeXml },
+      { title: "Link Building", description: "Building high-quality backlinks to improve your domain authority.", price: "Contact for Quote", icon: Cable },
+      { title: "Local SEO", description: "Optimizing your online presence to attract local customers.", price: "Contact for Quote", icon: MapPin },
+    ],
     pricing: "Starting at $500/mo"
   },
   "event-dj": {
@@ -103,7 +133,11 @@ export const services: Record<string, Service> = {
     icon: Disc,
     description: "Bringing the right vibe to your special occasions with a professional and versatile music selection.",
     details: "With a passion for music and a professional setup, I provide the perfect soundtrack for your event. I work closely with you to understand your musical tastes and the desired atmosphere, ensuring a memorable experience for you and your guests.",
-    items: ["Weddings and receptions", "Corporate events and functions", "Private parties and birthdays", "Virtual DJ sets for online events", "Custom playlist creation"],
+    items: [
+      { title: "Weddings & Receptions", description: "Creating the perfect musical backdrop for your special day.", price: "Contact for Quote", icon: Disc },
+      { title: "Corporate Events", description: "Professional DJ services for company parties, conferences, and functions.", price: "Contact for Quote", icon: Briefcase },
+      { title: "Private Parties", description: "Bringing the energy to birthdays, anniversaries, and private gatherings.", price: "Contact for Quote", icon: PartyPopper },
+    ],
     pricing: "Starting at $400"
   },
   "event-decoration": {
@@ -112,7 +146,11 @@ export const services: Record<string, Service> = {
     icon: PartyPopper,
     description: "Transforming venues into unforgettable experiences with creative and elegant decoration solutions.",
     details: "I offer full-service event design and decoration, transforming any space into a beautiful and immersive environment. From concept to execution, I handle all the details to create a stunning backdrop for your special occasion.",
-    items: ["Wedding and ceremony decor", "Themed party decorations", "Corporate function styling", "Custom floral arrangements", "Lighting and ambiance design"],
+    items: [
+      { title: "Wedding & Ceremony Decor", description: "Elegant and beautiful decorations to make your wedding unforgettable.", price: "Contact for Quote", icon: PartyPopper },
+      { title: "Themed Party Decorations", description: "Creative decor to bring your party's theme to life.", price: "Contact for Quote", icon: Palette },
+      { title: "Corporate Function Styling", description: "Professional and stylish decor for corporate events and functions.", price: "Contact for Quote", icon: Briefcase },
+    ],
     pricing: "Contact for Quote"
   },
   "cyber-security": {
@@ -121,7 +159,12 @@ export const services: Record<string, Service> = {
     icon: ShieldCheck,
     description: "Protecting your digital assets with comprehensive security services, from identifying weaknesses to responding to threats.",
     details: "I provide expert cybersecurity consulting to help you identify vulnerabilities, protect against threats, and secure your digital infrastructure. My goal is to give you peace of mind by safeguarding your valuable data and systems.",
-    items: ["Vulnerability assessments", "Penetration testing (ethical hacking)", "Security audits and compliance checks", "Incident response planning and execution", "Security awareness training for staff"],
+    items: [
+      { title: "Vulnerability Assessments", description: "Identifying and analyzing security weaknesses in your systems.", price: "Contact for Quote", icon: ShieldCheck },
+      { title: "Penetration Testing", description: "Simulating cyber attacks to test the strength of your defenses.", price: "Contact for Quote", icon: Shield },
+      { title: "Security Audits", description: "Comprehensive reviews of your security policies and infrastructure.", price: "Contact for Quote", icon: TestTube },
+      { title: "Incident Response", description: "Planning and executing a response to security breaches.", price: "Contact for Quote", icon: Rocket },
+    ],
     pricing: "Contact for Quote"
   },
   "networking-solutions": {
@@ -130,7 +173,12 @@ export const services: Record<string, Service> = {
     icon: Network,
     description: "Building and maintaining robust and reliable network infrastructures to ensure seamless connectivity and performance.",
     details: "I offer professional networking services to design, implement, and manage secure and high-performance networks for homes and businesses. I ensure your network is reliable, scalable, and optimized for your specific needs.",
-    items: ["Network design and setup", "Router and switch configuration", "Wi-Fi optimization and troubleshooting", "Network security and firewall setup", "Performance monitoring and optimization"],
+    items: [
+        { title: "Network Design & Setup", description: "Designing and implementing secure and scalable network infrastructures.", price: "Contact for Quote", icon: GitBranch },
+        { title: "Router & Switch Config", description: "Configuring network hardware for optimal performance and security.", price: "Contact for Quote", icon: Server },
+        { title: "Wi-Fi Optimization", description: "Troubleshooting and optimizing your wireless network for better coverage.", price: "Contact for Quote", icon: Wifi },
+        { title: "Network Security", description: "Implementing firewalls and other measures to secure your network.", price: "Contact for Quote", icon: Shield },
+    ],
     pricing: "Contact for Quote"
   }
 };

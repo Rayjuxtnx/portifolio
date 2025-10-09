@@ -1,11 +1,9 @@
-import { services, Service } from "@/lib/services";
+import { services } from "@/lib/services";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
@@ -15,8 +13,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     notFound();
   }
   const Icon = service.icon;
-
-  const hasPricingTable = service.items.every(item => typeof item === 'object' && 'task' in item && 'price' in item);
 
   return (
     <section className="w-full flex-1 flex items-center justify-center py-12 bg-secondary/30">
@@ -39,63 +35,35 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <h4 className="font-semibold mb-4 text-md">What's included:</h4>
-              {hasPricingTable ? (
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Task / Deliverable</TableHead>
-                      <TableHead className="text-right">Estimated Price Range (Ksh)</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {service.items.map((item) => (
-                        typeof item === 'object' && (
-                            <TableRow key={item.task}>
-                                <TableCell className="font-medium">{item.task}</TableCell>
-                                <TableCell className="text-right">{item.price}</TableCell>
-                            </TableRow>
-                        )
-                    ))}
-                  </TableBody>
-                </Table>
-              ) : (
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {service.items.map((item) => (
-                    typeof item === 'string' && (
-                        <li key={item} className="flex items-start gap-2">
-                            <CheckCircle className="w-5 h-5 mt-1 text-green-500 shrink-0" />
-                            <span className="text-muted-foreground">{item}</span>
-                        </li>
+              <h4 className="font-semibold mb-4 text-xl">What's included:</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {service.items.map((item) => {
+                    const ItemIcon = item.icon;
+                    return (
+                        <Card key={item.title} className="flex flex-col">
+                            <CardHeader className="flex-row items-start gap-4">
+                                <ItemIcon className="w-6 h-6 text-accent mt-1" />
+                                <div>
+                                    <h5 className="font-semibold">{item.title}</h5>
+                                    <p className="text-sm text-primary font-semibold">{item.price}</p>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <p className="text-sm text-muted-foreground">{item.description}</p>
+                            </CardContent>
+                        </Card>
                     )
-                  ))}
-                </ul>
-              )}
+                  })}
+                </div>
             </div>
           </CardContent>
             <CardFooter className="bg-muted/50 p-6 rounded-b-lg flex flex-col sm:flex-row items-center justify-between gap-4">
-                {service.pricing && (service.pricing.toLowerCase().includes('contact') || service.pricing.toLowerCase().includes('custom')) ? (
-                    <>
-                        <p className="font-semibold text-lg">Interested in this service?</p>
-                        <Button asChild size="lg">
-                            <Link href="/contact">
-                            <Mail className="mr-2 h-4 w-4" /> Contact for Quote
-                            </Link>
-                        </Button>
-                    </>
-                ) : (
-                    <>
-                        <div className="text-center sm:text-left">
-                            <p className="font-semibold text-lg">{service.title} Pricing</p>
-                            <p className="text-2xl font-bold text-primary">{service.pricing}</p>
-                        </div>
-                        <Button asChild size="lg">
-                            <Link href="/contact">
-                            <Mail className="mr-2 h-4 w-4" /> Get Started
-                            </Link>
-                        </Button>
-                    </>
-                )}
+                <p className="font-semibold text-lg text-center sm:text-left">Ready to get started or have questions?</p>
+                <Button asChild size="lg">
+                    <Link href="/contact">
+                    <Mail className="mr-2 h-4 w-4" /> Contact Me
+                    </Link>
+                </Button>
             </CardFooter>
         </Card>
       </div>
@@ -108,4 +76,3 @@ export async function generateStaticParams() {
       slug,
     }));
   }
-
