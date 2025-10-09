@@ -1,5 +1,5 @@
 
-import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor, Mail, MapPin, Briefcase, Wifi, Users, CodeXml } from "lucide-react";
+import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor, Mail, MapPin, Briefcase, Wifi, Users, CodeXml, BrainCircuit } from "lucide-react";
 
 export type ServiceItem = { 
   title: string; 
@@ -572,6 +572,63 @@ export const services: Record<string, Service> = {
       },
     ],
   },
+  "ml-ai": {
+    slug: "ml-ai",
+    title: "ML & AI",
+    icon: BrainCircuit,
+    description: "Leveraging machine learning and artificial intelligence to build smart applications and drive data-driven decisions.",
+    details: "I provide end-to-end machine learning and AI services, from data collection and model development to deployment and integration, helping you unlock the power of your data.",
+    packages: [
+      {
+        title: "🟢 Basic Package",
+        price: "Ksh 40,000 – 100,000",
+        bestFor: "Small projects, startups, or prototypes needing simple ML solutions.",
+        includes: [
+          "Data collection & preprocessing (cleaning, formatting, labeling)",
+          "Exploratory data analysis (EDA) & insights",
+          "Simple predictive model (e.g., regression or classification)",
+          "Model training using Python (Scikit-learn, TensorFlow, or PyTorch)",
+          "Basic dashboard or API integration for model use",
+          "Documentation of workflow & results",
+          "1 revision or retraining session",
+        ],
+      },
+      {
+        title: "🔵 Standard Package",
+        price: "Ksh 120,000 – 300,000",
+        bestFor: "Businesses integrating AI into existing systems or building medium-scale ML apps.",
+        includes: [
+          "Everything in Basic, plus:",
+          "Advanced model development (NLP, computer vision, or deep learning)",
+          "Custom model fine-tuning with real-world data",
+          "API integration with frontend or backend system",
+          "Model evaluation (accuracy, recall, precision, confusion matrix, etc.)",
+          "Cloud deployment (AWS, Google Cloud, or Azure)",
+          "Continuous learning pipeline setup (auto-retraining)",
+          "Visualization dashboard (Streamlit, Dash, or custom web UI)",
+          "Security and data privacy setup",
+        ],
+      },
+      {
+        title: "🟣 Premium Package",
+        price: "Ksh 350,000 – 900,000+",
+        bestFor: "Corporates, SaaS platforms, or research-level AI systems.",
+        includes: [
+          "Everything in Standard, plus:",
+          "Full AI system design (data pipeline → model → API → dashboard)",
+          "Large-scale data engineering (ETL automation & big data integration)",
+
+          "Deep learning models (CNNs, RNNs, Transformers)",
+          "AI-powered automation (recommendation engines, intelligent agents)",
+          "Integration with IoT or cloud platforms",
+          "Real-time inference API setup (for live predictions)",
+          "Model explainability & bias detection",
+          "Ongoing optimization and performance tracking",
+          "Maintenance, scalability, and retraining support",
+        ],
+      },
+    ],
+  },
   "event-dj": {
     slug: "event-dj",
     title: "Event DJ",
@@ -627,5 +684,3 @@ export const services: Record<string, Service> = {
     pricing: "Contact for Quote"
   }
 };
-
-    
