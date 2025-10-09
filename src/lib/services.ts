@@ -1,5 +1,5 @@
 
-import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor, Mail, MapPin, Briefcase, Wifi, Users } from "lucide-react";
+import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Rocket, DatabaseZap, Shield, Puzzle, TestTube, GitBranch, Monitor, Mail, MapPin, Briefcase, Wifi, Users, CodeXml } from "lucide-react";
 
 export type ServiceItem = { 
   title: string; 
@@ -358,11 +358,54 @@ export const services: Record<string, Service> = {
     icon: Megaphone,
     description: "Driving brand growth through strategic online marketing campaigns and engaging content tailored to your target audience.",
     details: "I create and execute data-driven digital marketing strategies to increase your online presence, generate leads, and drive sales. From social media to email, I cover all aspects of your digital footprint.",
-    items: [
-        { title: "Social Media Marketing", description: "Managing and growing your brand's presence on social platforms.", price: "Contact for Quote", icon: Megaphone },
-        { title: "Content Strategy", description: "Creating valuable content to attract and engage your target audience.", price: "Contact for Quote", icon: Code },
-        { title: "Email Campaigns", description: "Designing and running effective email marketing campaigns.", price: "Contact for Quote", icon: Mail },
-        { title: "Paid Advertising", description: "Managing Google Ads and Meta Ads to drive targeted traffic.", price: "Contact for Quote", icon: Rocket },
+    packages: [
+      {
+          title: "🟢 Basic Package",
+          price: "Ksh 10,000 – 25,000/month",
+          bestFor: "Startups, small businesses, or individuals building online presence.",
+          includes: [
+              "Social media setup (Facebook, Instagram, X, LinkedIn)",
+              "3–4 weekly posts (images or captions provided by client)",
+              "Basic content calendar",
+              "Page optimization (bio, hashtags, SEO titles)",
+              "Engagement management (reply to comments & DMs)",
+              "Basic analytics report (reach, likes, followers)",
+              "Boosting setup guidance (client pays ad budget)",
+          ],
+      },
+      {
+          title: "🔵 Standard Package",
+          price: "Ksh 30,000 – 70,000/month",
+          bestFor: "Growing brands that need consistent, high-quality engagement.",
+          includes: [
+              "Everything in Basic, plus:",
+              "12–16 custom graphic posts per month",
+              "2 short video reels (social media ads or highlights)",
+              "Copywriting & content planning",
+              "Social media ads setup & management (Facebook, Instagram, or Google Ads)",
+              "Target audience research & A/B testing",
+              "Email marketing campaign setup (Mailchimp, Brevo, etc.)",
+              "Monthly analytics report with strategy insights",
+              "SEO optimization for website/blog",
+          ],
+      },
+      {
+          title: "🟣 Premium Package",
+          price: "Ksh 80,000 – 200,000+/month",
+          bestFor: "Established brands, e-commerce businesses, or campaigns needing full digital strategy.",
+          includes: [
+              "Everything in Standard, plus:",
+              "Full social media management (content creation, posting, engagement)",
+              "4–6 video reels or ad creatives monthly",
+              "Google Ads, Meta Ads, and YouTube Ads management",
+              "Influencer marketing coordination",
+              "Advanced SEO (on-page + off-page)",
+              "Blog/article writing (2–4 per month)",
+              "Competitor analysis & marketing automation",
+              "Conversion tracking (Pixel, Analytics, Tag Manager)",
+              "Detailed performance reports + monthly strategy meeting",
+          ],
+      },
     ],
     pricing: "Contact for Quote"
   },
@@ -372,13 +415,51 @@ export const services: Record<string, Service> = {
     icon: Search,
     description: "Optimizing your website to rank higher in search engine results, increasing organic traffic and online visibility.",
     details: "I implement comprehensive SEO strategies to improve your website's visibility on search engines like Google. By focusing on technical SEO, on-page optimization, and quality content, I help you attract more organic traffic.",
-    items: [
-      { title: "Keyword Research", description: "Identifying the best keywords to target for your business.", price: "Contact for Quote", icon: Search },
-      { title: "On-Page & Technical SEO", description: "Optimizing your site's structure and content for search engines.", price: "Contact for Quote", icon: Code },
-      { title: "Link Building", description: "Building high-quality backlinks to improve your domain authority.", price: "Contact for Quote", icon: Cable },
-      { title: "Local SEO", description: "Optimizing your online presence to attract local customers.", price: "Contact for Quote", icon: MapPin },
+    packages: [
+      {
+        title: "🟢 Basic SEO Package",
+        price: "Ksh 15,000 - 30,000/month",
+        bestFor: "Small websites, local businesses, or blogs.",
+        includes: [
+          "Keyword Research (up to 20 keywords)",
+          "On-Page SEO (Title tags, meta descriptions, headers)",
+          "Technical SEO Audit (Site speed, mobile-friendliness)",
+          "Google Analytics & Search Console Setup",
+          "Local SEO (Google Business Profile optimization)",
+          "Monthly Performance Report",
+        ],
+      },
+      {
+        title: "🟡 Standard SEO Package",
+        price: "Ksh 35,000 - 60,000/month",
+        bestFor: "Growing businesses and e-commerce stores.",
+        includes: [
+          "Everything in Basic +",
+          "Advanced Keyword Research & Mapping",
+          "Content Gap Analysis",
+          "On-Page Optimization for up to 20 pages",
+          "Schema Markup Implementation",
+          "Basic Link Building Campaign (Guest posts, directory submissions)",
+          "Competitor Analysis",
+          "Bi-weekly Performance Reports with Insights",
+        ],
+      },
+      {
+        title: "🔵 Premium SEO Package",
+        price: "Ksh 70,000+/month",
+        bestFor: "Established brands and competitive industries.",
+        includes: [
+          "Everything in Standard +",
+          "Comprehensive SEO Strategy & Roadmap",
+          "Advanced Technical SEO (Crawling, indexing, site architecture)",
+          "Content Marketing (2 blog posts per month)",
+          "Advanced Link Building & Outreach",
+          "Ongoing Competitor Monitoring",
+          "Conversion Rate Optimization (CRO) recommendations",
+          "Detailed Monthly Reports & Strategy Calls",
+        ],
+      },
     ],
-    pricing: "Starting at $500/mo"
   },
   "event-dj": {
     slug: "event-dj",
