@@ -1,4 +1,4 @@
-import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Smartphone, Palette, Puzzle, MousePointerClick, Rocket, AppWindow, Shield, GitBranch, TestTube, Framer, CodeXml, Scaling, Monitor, DatabaseZap } from "lucide-react";
+import { Code, Server, Layers, Database, Cable, Megaphone, Search, Disc, PartyPopper, ShieldCheck, Network, Smartphone, Palette, Puzzle, MousePointerClick, Rocket, AppWindow, Shield, GitBranch, TestTube, Framer, CodeXml, Scaling, Monitor, DatabaseZap, Mail, MapPin, Briefcase, Wifi } from "lucide-react";
 
 export type ServiceItem = { 
   title: string; 
