@@ -48,12 +48,28 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </div>
           </CardContent>
             <CardFooter className="bg-muted/50 p-6 rounded-b-lg flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p className="font-semibold text-lg">Interested in this service?</p>
-                <Button asChild size="lg">
-                    <Link href="/contact">
-                    <Mail className="mr-2 h-4 w-4" /> Contact for Pricing
-                    </Link>
-                </Button>
+                {service.pricing && service.pricing.toLowerCase().includes('contact') ? (
+                    <>
+                        <p className="font-semibold text-lg">Interested in this service?</p>
+                        <Button asChild size="lg">
+                            <Link href="/contact">
+                            <Mail className="mr-2 h-4 w-4" /> Contact for Quote
+                            </Link>
+                        </Button>
+                    </>
+                ) : (
+                    <>
+                        <div className="text-center sm:text-left">
+                            <p className="font-semibold text-lg">{service.title} Pricing</p>
+                            <p className="text-2xl font-bold text-primary">{service.pricing}</p>
+                        </div>
+                        <Button asChild size="lg">
+                            <Link href="/contact">
+                            <Mail className="mr-2 h-4 w-4" /> Get Started
+                            </Link>
+                        </Button>
+                    </>
+                )}
             </CardFooter>
         </Card>
       </div>
