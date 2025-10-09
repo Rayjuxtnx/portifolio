@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,7 +5,7 @@ import DigitalClock from "@/components/digital-clock";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Phone, Mail, MessageSquare } from "lucide-react";
+import { Github, Phone, Mail, MessageSquare, Calendar } from "lucide-react";
 import Link from "next/link";
 import ServicePackageCarousel from "../service-package-carousel";
 
@@ -50,6 +49,11 @@ const HeroSection = () => {
                         <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
                     </div>
                     <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <Button asChild>
+                            <Link href="/contact">
+                                <Calendar /> Book Now
+                            </Link>
+                        </Button>
                         <Button variant="outline" asChild>
                             <Link href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer">
                                 <Github /> GitHub
