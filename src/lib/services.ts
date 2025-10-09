@@ -7,13 +7,27 @@ export type ServiceItem = {
   icon: React.ElementType 
 };
 
+type ServicePackage = {
+    title: string;
+    price: string;
+    bestFor: string;
+    includes: string[];
+};
+
+type ServiceAddOn = {
+    title: string;
+    price: string;
+};
+
 export type Service = {
   slug: string;
   title: string;
   icon: React.ElementType;
   description: string;
   details: string;
-  items: ServiceItem[];
+  items?: ServiceItem[];
+  packages?: ServicePackage[];
+  addOns?: ServiceAddOn[];
   pricing?: string;
 };
 
@@ -46,7 +60,6 @@ export const services: Record<string, Service> = {
         { title: "Testing & Debugging", description: "Thorough testing to ensure a bug-free and smooth user experience.", price: "3,000 – 8,000", icon: TestTube },
         { title: "Deployment & Git Flow", description: "Setting up version control and deployment pipelines for your project.", price: "2,000 – 6,000", icon: GitBranch },
     ],
-    pricing: "Custom"
   },
   "backend-development": {
     slug: "backend-development",
@@ -76,22 +89,75 @@ export const services: Record<string, Service> = {
       { title: "Data Backup & Recovery", description: "Implementing strategies to protect your data.", price: "3,000 – 8,000", icon: DatabaseZap },
       { title: "Security Hardening", description: "Applying JWT, encryption, and other security measures.", price: "5,000 – 12,000", icon: ShieldCheck },
     ],
-    pricing: "Starting at $2,000"
   },
   "full-stack-development": {
     slug: "full-stack-development",
     title: "Full-Stack Development",
     icon: Layers,
-    description: "Developing complete web applications from the ground up, managing both client-side and server-side logic.",
-    details: "From the database to the user interface, I provide end-to-end development services to bring your entire project to life. I handle system architecture, database design, backend logic, and frontend development to deliver a cohesive and complete product.",
-    items: [
-      { title: "End-to-End Development", description: "Full application development using frameworks like MERN or Next.js.", price: "Contact for Quote", icon: Layers },
-      { title: "System Architecture", description: "Designing scalable and robust architectures for your application.", price: "Contact for Quote", icon: GitBranch },
-      { title: "Database Schema Design", description: "Creating efficient and scalable database schemas.", price: "Contact for Quote", icon: Database },
-      { title: "CI/CD & DevOps", description: "Setting up continuous integration and deployment pipelines.", price: "Contact for Quote", icon: Rocket },
-      { title: "Full-Stack QA", description: "Comprehensive testing across the entire stack to ensure quality.", price: "Contact for Quote", icon: TestTube },
+    description: "End-to-end packages covering frontend, backend, and deployment for complete web solutions.",
+    details: "From database to user interface, I offer comprehensive packages to bring your entire project to life. These bundles cover system architecture, database design, backend logic, and frontend development to deliver a cohesive and complete product.",
+    packages: [
+        {
+            title: "🟢 Basic Package",
+            price: "Ksh 60,000 – 100,000",
+            bestFor: "Small businesses, startups, or personal portfolios.",
+            includes: [
+                "Responsive website design (mobile + desktop)",
+                "3–5 pages (Home, About, Services, Contact, etc.)",
+                "Interactive UI (buttons, forms, animations)",
+                "Basic backend setup (user data, contact form storage)",
+                "Simple database (MySQL / PostgreSQL)",
+                "Email or form submission integration",
+                "SEO-friendly structure",
+                "Basic deployment (Netlify, Render, or Vercel)",
+                "Free 1-month support after delivery",
+            ],
+        },
+        {
+            title: "🟡 Standard Package",
+            price: "Ksh 120,000 – 200,000",
+            bestFor: "Growing businesses, e-commerce startups, and dynamic web apps.",
+            includes: [
+                "Everything in Basic",
+                "Dynamic content with API integration",
+                "User authentication (login/register)",
+                "Product or service listing pages",
+                "Admin dashboard (basic CRUD system)",
+                "Payment integration (MPesa, PayPal, or Stripe)",
+                "Role-based access (Admin/User)",
+                "Custom CSS theme and branding",
+                "Blog or news section",
+                "Page speed & performance optimization",
+                "Deployment + version control (GitHub setup)",
+                "2-month support after delivery",
+            ],
+        },
+        {
+            title: "🔵 Premium Package",
+            price: "Ksh 250,000 – 400,000+",
+            bestFor: "Established companies, SaaS platforms, or advanced e-commerce systems.",
+            includes: [
+                "Everything in Standard",
+                "Full e-commerce backend (cart, checkout, orders)",
+                "Real-time features (chat, notifications, sockets)",
+                "Progressive Web App (PWA) capabilities",
+                "Cloud storage (AWS/Firebase)",
+                "Security hardening (JWT, HTTPS, encryption)",
+                "Advanced analytics dashboard",
+                "API documentation (Swagger/Postman)",
+                "Automated backups & monitoring",
+                "Performance optimization & scalability setup",
+                "Continuous Deployment (CI/CD) configuration",
+                "Up to 3 months premium support & maintenance",
+            ],
+        },
     ],
-    pricing: "Starting at $3,500"
+    addOns: [
+        { title: "Custom animation or UI design", price: "Ksh 5,000–15,000" },
+        { title: "Multi-language support", price: "Ksh 5,000–10,000" },
+        { title: "SEO content optimization", price: "Ksh 5,000–20,000" },
+        { title: "Advanced reporting or analytics", price: "Ksh 10,000–25,000" },
+    ],
   },
   "database-integration": {
     slug: "database-integration",
