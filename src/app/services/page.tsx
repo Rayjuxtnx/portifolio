@@ -1,8 +1,44 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Disc, PartyPopper, ShieldCheck, Network } from "lucide-react";
+import { Disc, PartyPopper, ShieldCheck, Network, Code, Server, Layers, Database, Cable, Megaphone, Search } from "lucide-react";
 
 const services = {
+  "Frontend Development": {
+    icon: <Code className="w-8 h-8 text-primary" />,
+    items: ["React", "Next.js", "Tailwind CSS", "Figma", "UX/UI"],
+    description: "Creating beautiful, responsive, and user-friendly interfaces that provide a seamless user experience across all devices."
+  },
+  "Backend Development": {
+    icon: <Server className="w-8 h-8 text-primary" />,
+    items: ["Node.js", "Python", "Express", "REST APIs", "GraphQL"],
+    description: "Building robust and scalable server-side applications, ensuring high performance and data security."
+  },
+  "Full-Stack Development": {
+    icon: <Layers className="w-8 h-8 text-primary" />,
+    items: ["MERN Stack", "Next.js", "System Architecture", "CI/CD"],
+    description: "Developing complete web applications from the ground up, managing both the client-side and server-side logic."
+  },
+  "Database Integration": {
+    icon: <Database className="w-8 h-8 text-primary" />,
+    items: ["MongoDB", "PostgreSQL", "Firebase", "Database Design"],
+    description: "Integrating and managing databases to ensure data is stored efficiently, securely, and is easily accessible."
+  },
+  "APIs": {
+    icon: <Cable className="w-8 h-8 text-primary" />,
+    items: ["REST API Design", "Third-Party Integration", "Authentication", "Webhooks"],
+    description: "Designing and integrating APIs to connect services, automate workflows, and extend application functionality."
+  },
+
+  "Digital Marketing": {
+    icon: <Megaphone className="w-8 h-8 text-primary" />,
+    items: ["Social Media Marketing", "Content Creation", "Email Campaigns", "Meta Ads"],
+    description: "Driving brand growth through strategic online marketing campaigns and engaging content tailored to your target audience."
+  },
+  "SEO": {
+    icon: <Search className="w-8 h-8 text-primary" />,
+    items: ["Keyword Research", "On-Page SEO", "Link Building", "Technical SEO"],
+    description: "Optimizing your website to rank higher in search engine results, increasing organic traffic and online visibility."
+  },
   "Event DJ": {
     icon: <Disc className="w-8 h-8 text-primary" />,
     items: ["Weddings", "Corporate Events", "Private Parties", "Virtual DJ"],
@@ -32,7 +68,7 @@ export default function ServicesPage() {
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">
           My Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(services).map(([category, { icon, items, description }]) => (
             <Card key={category} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
               <CardHeader className="flex flex-row items-center gap-4">
