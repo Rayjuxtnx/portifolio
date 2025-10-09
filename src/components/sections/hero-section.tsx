@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Github, Phone, Mail, MessageSquare, Calendar } from "lucide-react";
 import Link from "next/link";
-import ServicePackageCarousel from "../service-package-carousel";
+import { ScrollingPackages } from "../scrolling-packages";
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -76,8 +76,10 @@ const HeroSection = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="flex flex-col items-center gap-6 order-1 lg:order-2">
-                    <ServicePackageCarousel />
+                <div className="flex flex-col items-center gap-6 order-1 lg:order-2 w-full max-w-sm lg:max-w-md mx-auto relative overflow-hidden group">
+                   <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-background to-transparent z-10"></div>
+                    <ScrollingPackages />
+                    <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-background to-transparent z-10"></div>
                     <DigitalClock />
                 </div>
             </div>
