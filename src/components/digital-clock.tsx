@@ -32,7 +32,7 @@ const DigitalClock = () => {
   // Render a placeholder or nothing until the component is mounted on the client
   if (!mounted || !time) {
     return (
-        <div className={`flex items-center justify-center font-code text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest text-transparent`}>
+        <div className={`flex items-center justify-center font-code text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest text-transparent`}>
             <span>00</span>
             <span>:</span>
             <span>00</span>
@@ -45,7 +45,7 @@ const DigitalClock = () => {
   const { hours, minutes, seconds } = formatTime(time);
 
   return (
-    <div className={`flex items-center justify-center font-code text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest ${isDarkTheme ? 'text-primary animate-hacker-glitch' : 'text-primary'}`}>
+    <div className={`flex items-center justify-center font-code text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest ${isDarkTheme ? 'text-primary animate-hacker-glitch' : 'text-primary'}`}>
       <span>{hours}</span>
       <span className="animate-pulse">:</span>
       <span>{minutes}</span>

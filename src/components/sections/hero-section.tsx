@@ -34,7 +34,7 @@ const HeroSection = () => {
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
        <div className="z-10 container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 order-2 lg:order-1">
                     <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
                         <Image
                             src="https://picsum.photos/seed/hacker/200/200"
@@ -48,7 +48,7 @@ const HeroSection = () => {
                         <h1 className="font-headline text-4xl md:text-5xl font-bold">Phillip Otieno</h1>
                         <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
                     </div>
-                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
                         <Button asChild>
                             <Link href="/contact">
                                 <Calendar /> Book Now
@@ -59,24 +59,24 @@ const HeroSection = () => {
                                 <Github /> GitHub
                             </Link>
                         </Button>
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" size="icon" asChild>
                             <Link href="tel:0714955458">
-                                <Phone /> Phone
+                                <Phone />
                             </Link>
                         </Button>
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" size="icon" asChild>
                             <Link href="mailto:onyangophilip244@gmail.com">
-                                <Mail /> Email
+                                <Mail />
                             </Link>
                         </Button>
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" size="icon" asChild>
                             <Link href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
-                                <MessageSquare /> WhatsApp
+                                <MessageSquare />
                             </Link>
                         </Button>
                     </div>
                 </div>
-                <div className="flex flex-col items-center gap-6">
+                <div className="flex flex-col items-center gap-6 order-1 lg:order-2">
                     <ServicePackageCarousel />
                     <DigitalClock />
                 </div>
