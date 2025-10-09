@@ -33,45 +33,51 @@ const HeroSection = () => {
   return (
     <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
-       <div className="z-10 text-center flex flex-col items-center gap-6">
-            <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
-                <Image
-                    src="https://placehold.co/200x200.png"
-                    alt="Phillip Otieno"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint="professional headshot"
-                />
+       <div className="z-10 container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
+                    <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                        <Image
+                            src="https://placehold.co/200x200.png"
+                            alt="Phillip Otieno"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            data-ai-hint="professional headshot"
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <h1 className="font-headline text-4xl md:text-5xl font-bold">Phillip Otieno</h1>
+                        <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <Button variant="outline" asChild>
+                            <Link href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer">
+                                <Github /> GitHub
+                            </Link>
+                        </Button>
+                        <Button variant="outline" asChild>
+                            <Link href="tel:0714955458">
+                                <Phone /> Phone
+                            </Link>
+                        </Button>
+                        <Button variant="outline" asChild>
+                            <Link href="mailto:onyangophilip244@gmail.com">
+                                <Mail /> Email
+                            </Link>
+                        </Button>
+                        <Button variant="outline" asChild>
+                            <Link href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
+                                <MessageSquare /> WhatsApp
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center gap-6">
+                    <ServicePackageCarousel />
+                    <DigitalClock />
+                </div>
             </div>
-            <div className="space-y-2">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold">Phillip Otieno</h1>
-                <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
-            </div>
-             <ServicePackageCarousel />
-            <div className="flex flex-wrap items-center justify-center gap-4">
-                <Button variant="outline" asChild>
-                    <Link href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer">
-                        <Github /> GitHub
-                    </Link>
-                </Button>
-                 <Button variant="outline" asChild>
-                    <Link href="tel:0714955458">
-                        <Phone /> Phone
-                    </Link>
-                </Button>
-                <Button variant="outline" asChild>
-                    <Link href="mailto:onyangophilip244@gmail.com">
-                        <Mail /> Email
-                    </Link>
-                </Button>
-                 <Button variant="outline" asChild>
-                    <Link href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
-                        <MessageSquare /> WhatsApp
-                    </Link>
-                </Button>
-            </div>
-            <DigitalClock />
-        </div>
+       </div>
     </section>
   );
 };
