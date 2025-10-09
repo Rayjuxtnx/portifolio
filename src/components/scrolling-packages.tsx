@@ -1,7 +1,6 @@
 "use client";
 
 import { services } from "@/lib/services";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { CheckCircle2 } from "lucide-react";
 
@@ -25,25 +24,25 @@ const allPackages: ServicePackageInfo[] = Object.values(services).flatMap(
 ).filter(p => p.packageTitle);
 
 const PackageCard = ({ aPackage }: { aPackage: ServicePackageInfo }) => (
-    <Card className="w-[300px] h-[350px] shadow-lg bg-secondary/30 flex flex-col flex-shrink-0 mx-4 animate-glow">
-        <CardHeader className="p-4">
-           <Badge variant="outline" className="w-fit mb-2">{aPackage.serviceTitle}</Badge>
-          <CardTitle className="text-lg font-headline">{aPackage.packageTitle}</CardTitle>
-          <p className="font-semibold text-primary text-sm">{aPackage.price}</p>
-          <CardDescription className="text-xs italic">{aPackage.bestFor}</CardDescription>
-        </CardHeader>
-        <CardContent className="p-4 pt-0 flex-1 flex flex-col min-h-0">
+    <div className="w-[300px] h-[350px] flex-shrink-0 mx-4 p-4 rounded-lg bg-background/5 text-foreground/60 flex flex-col">
+        <div className="p-4">
+           <Badge variant="outline" className="w-fit mb-2 bg-background/20 border-foreground/20">{aPackage.serviceTitle}</Badge>
+          <h3 className="text-lg font-headline font-semibold">{aPackage.packageTitle}</h3>
+          <p className="font-semibold text-primary/80 text-sm">{aPackage.price}</p>
+          <p className="text-xs italic mt-1">{aPackage.bestFor}</p>
+        </div>
+        <div className="p-4 pt-0 flex-1 flex flex-col min-h-0">
             <h4 className="text-xs font-semibold mb-2">Includes:</h4>
-            <div className="flex-1 overflow-y-auto pr-3 text-xs text-muted-foreground space-y-2">
+            <div className="flex-1 overflow-y-auto pr-3 text-xs space-y-2">
                 {aPackage.includes.map((feature, index) => (
                     <div key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-green-500/70 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                     </div>
                 ))}
             </div>
-        </CardContent>
-    </Card>
+        </div>
+    </div>
 );
 
 export function ScrollingPackages() {
