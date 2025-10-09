@@ -32,6 +32,11 @@ const HeroSection = () => {
   return (
     <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
+       
+       <div className="absolute inset-0 blur-sm opacity-10 dark:opacity-5">
+        <ScrollingPackages />
+       </div>
+
        <div className="z-10 container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 order-2 lg:order-1">
@@ -76,10 +81,7 @@ const HeroSection = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="flex flex-col items-center gap-6 order-1 lg:order-2 w-full max-w-sm lg:max-w-md mx-auto relative overflow-hidden group">
-                   <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-background to-transparent z-10"></div>
-                    <ScrollingPackages />
-                    <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-background to-transparent z-10"></div>
+                <div className="flex flex-col items-center gap-6 order-1 lg:order-2 w-full max-w-sm lg:max-w-md mx-auto">
                     <DigitalClock />
                 </div>
             </div>
