@@ -352,6 +352,57 @@ export const services: Record<string, Service> = {
       },
     ]
   },
+  "system-development": {
+    slug: "system-development",
+    title: "System Development",
+    icon: CodeXml,
+    description: "End-to-end design and development of custom software systems tailored to your business needs.",
+    details: "I architect and build complete software systems from the ground up, including custom business logic, data processing, and user management, to solve your unique challenges.",
+    packages: [
+      {
+        title: "🟢 Basic System Package",
+        price: "Ksh 80,000 - 150,000",
+        bestFor: "Small businesses or startups needing a custom internal tool or application.",
+        includes: [
+          "Requirement analysis and system design",
+          "Custom application with a focused feature set",
+          "Database design and implementation",
+          "User authentication and basic roles",
+          "Deployment to a single server environment",
+          "1 month of post-launch support",
+        ],
+      },
+      {
+        title: "🟡 Standard System Package",
+        price: "Ksh 160,000 - 300,000",
+        bestFor: "Growing businesses needing a more complex system with integrations.",
+        includes: [
+          "Everything in Basic +",
+          "Advanced feature development",
+          "Integration with third-party services (payment, email, etc.)",
+          "Admin dashboard for system management",
+          "Automated testing and QA",
+          "Scalable architecture design",
+          "2 months of post-launch support",
+        ],
+      },
+      {
+        title: "🔵 Premium System Package",
+        price: "Ksh 320,000+",
+        bestFor: "Enterprises requiring a robust, scalable, and secure software solution.",
+        includes: [
+          "Everything in Standard +",
+          "Microservices architecture",
+          "High availability and load balancing",
+          "Comprehensive security audit and implementation",
+          "CI/CD pipeline for automated deployment",
+          "Advanced monitoring and logging",
+          "Detailed technical documentation",
+          "3 months of premium support and maintenance",
+        ],
+      },
+    ],
+  },
   "digital-marketing": {
     slug: "digital-marketing",
     title: "Digital Marketing",
@@ -407,7 +458,6 @@ export const services: Record<string, Service> = {
           ],
       },
     ],
-    pricing: "Contact for Quote"
   },
   "seo": {
     slug: "seo",
@@ -461,6 +511,53 @@ export const services: Record<string, Service> = {
       },
     ],
   },
+   "sem": {
+    slug: "sem",
+    title: "Search Engine Marketing (SEM)",
+    icon: Rocket,
+    description: "Driving targeted traffic and generating leads through paid search engine advertising campaigns.",
+    details: "I specialize in creating, managing, and optimizing paid advertising campaigns on platforms like Google Ads to maximize your return on investment and reach the right audience.",
+    packages: [
+      {
+        title: "🟢 Basic SEM Package",
+        price: "Ksh 15,000 - 30,000/month",
+        bestFor: "Small businesses new to paid advertising.",
+        includes: [
+          "Keyword research and selection",
+          "Campaign setup on Google Ads",
+          "Ad copywriting for up to 2 ad groups",
+          "Budget management recommendations",
+          "Monthly performance reporting",
+        ],
+      },
+      {
+        title: "🟡 Standard SEM Package",
+        price: "Ksh 35,000 - 70,000/month",
+        bestFor: "Businesses looking to optimize and scale their ad spend.",
+        includes: [
+          "Everything in Basic +",
+          "A/B testing for ad copy and landing pages",
+          "Conversion tracking setup",
+          "Negative keyword management",
+          "Ad extension optimization",
+          "Bi-weekly performance reports and analysis",
+        ],
+      },
+      {
+        title: "🔵 Premium SEM Package",
+        price: "Ksh 80,000+/month",
+        bestFor: "Companies with a significant ad budget requiring comprehensive management.",
+        includes: [
+          "Everything in Standard +",
+          "Advanced campaign strategies (RLSA, Dynamic Search Ads)",
+          "Landing page optimization and creation",
+          "Competitor ad analysis",
+          "Google Analytics integration and analysis",
+          "Weekly performance calls and strategy sessions",
+        ],
+      },
+    ],
+  },
   "event-dj": {
     slug: "event-dj",
     title: "Event DJ",
@@ -472,7 +569,7 @@ export const services: Record<string, Service> = {
       { title: "Corporate Events", description: "Professional DJ services for company parties, conferences, and functions.", price: "Contact for Quote", icon: Briefcase },
       { title: "Private Parties", description: "Bringing the energy to birthdays, anniversaries, and private gatherings.", price: "Contact for Quote", icon: PartyPopper },
     ],
-    pricing: "Starting at $400"
+    pricing: "Contact for Quote"
   },
   "event-decoration": {
     slug: "event-decoration",
@@ -516,3 +613,5 @@ export const services: Record<string, Service> = {
     pricing: "Contact for Quote"
   }
 };
+
+    
