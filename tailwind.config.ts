@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -165,13 +166,13 @@ export default {
         },
         'word-glow': {
           '0%, 100%': {
-            textShadow: '0 0 5px hsl(var(--primary) / 0), 0 0 10px hsl(var(--primary) / 0), 0 0 20px hsl(var(--primary) / 0)',
-            color: 'hsl(var(--foreground))'
+            color: 'hsl(var(--foreground))',
+            textShadow: 'none',
           },
-          '25%, 75%': {
-            textShadow: '0 0 5px hsl(var(--primary) / 0.8), 0 0 10px hsl(var(--primary) / 0.6), 0 0 20px hsl(var(--primary) / 0.4)',
-            color: 'hsl(var(--primary-foreground))'
-          }
+          '50%': {
+            color: 'hsl(var(--primary-foreground))',
+            textShadow: '0 0 8px hsl(var(--primary)), 0 0 16px hsl(var(--primary) / 0.5)',
+          },
         },
       },
       animation: {
@@ -182,7 +183,7 @@ export default {
         'star-shimmer': 'star-shimmer 25s linear infinite',
         'glow': 'glow 3.5s ease-in-out infinite',
         'marquee': 'marquee 120s linear infinite',
-        'word-glow': 'word-glow 3s ease-in-out infinite var(--glow-delay, 0s)',
+        'word-glow': 'word-glow 4s ease-in-out infinite',
       },
     },
   },

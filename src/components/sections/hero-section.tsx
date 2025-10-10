@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -9,6 +10,23 @@ import { Github, Phone, Mail, MessageSquare, Calendar } from "lucide-react";
 import Link from "next/link";
 import { ScrollingPackages } from "../scrolling-packages";
 import { cn } from "@/lib/utils";
+
+const AnimatedName = ({ name }: { name: string }) => {
+    return (
+      <>
+        {name.split('').map((letter, index) => (
+          <span
+            key={index}
+            className="animate-word-glow"
+            style={{ animationDelay: `${index * 0.15}s` }}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </span>
+        ))}
+      </>
+    );
+};
+
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -34,7 +52,7 @@ const HeroSection = () => {
     <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
        
-       <div className="absolute inset-0 opacity-10 dark:opacity-[0.05]">
+       <div className="absolute inset-0 opacity-[0.07]">
         <ScrollingPackages />
        </div>
 
@@ -52,11 +70,10 @@ const HeroSection = () => {
                     </div>
                     <div className="space-y-2">
                         <h1 className={cn(
-                          "text-4xl md:text-5xl font-bold",
+                          "text-4xl md:text-5xl font-bold tracking-widest",
                           isDarkTheme ? "font-code" : "font-headline"
                         )}>
-                          <span className="animate-word-glow [--glow-delay:0s]">Phillip</span>
-                          <span className="animate-word-glow [--glow-delay:1.5s] text-primary">Otieno</span>
+                            <AnimatedName name="Phillip Otieno" />
                         </h1>
                         <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
                     </div>
