@@ -45,7 +45,7 @@ const DigitalClock = () => {
   const { hours, minutes, seconds } = formatTime(time);
 
   return (
-    <div className={`flex items-center justify-center font-code text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest ${isDarkTheme ? 'text-primary animate-hacker-glitch' : 'text-primary'}`}>
+    <div className={`flex items-center justify-center font-code text-5xl md:text-7xl lg:text-8xl font-bold tracking-widest text-primary`}>
       <span>{hours}</span>
       <span className="animate-pulse">:</span>
       <span>{minutes}</span>
