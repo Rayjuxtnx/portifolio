@@ -162,7 +162,17 @@ export default {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
-        }
+        },
+        'word-glow': {
+          '0%, 100%': {
+            textShadow: '0 0 5px hsl(var(--primary) / 0), 0 0 10px hsl(var(--primary) / 0), 0 0 20px hsl(var(--primary) / 0)',
+            color: 'hsl(var(--foreground))'
+          },
+          '25%, 75%': {
+            textShadow: '0 0 5px hsl(var(--primary) / 0.8), 0 0 10px hsl(var(--primary) / 0.6), 0 0 20px hsl(var(--primary) / 0.4)',
+            color: 'hsl(var(--primary-foreground))'
+          }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -172,6 +182,7 @@ export default {
         'star-shimmer': 'star-shimmer 25s linear infinite',
         'glow': 'glow 3.5s ease-in-out infinite',
         'marquee': 'marquee 120s linear infinite',
+        'word-glow': 'word-glow 3s ease-in-out infinite var(--glow-delay, 0s)',
       },
     },
   },

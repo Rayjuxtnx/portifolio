@@ -34,7 +34,7 @@ const HeroSection = () => {
     <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
        
-       <div className="absolute inset-0 blur-sm opacity-5 dark:opacity-[0.03]">
+       <div className="absolute inset-0 opacity-10 dark:opacity-[0.05]">
         <ScrollingPackages />
        </div>
 
@@ -55,8 +55,8 @@ const HeroSection = () => {
                           "text-4xl md:text-5xl font-bold",
                           isDarkTheme ? "font-code" : "font-headline"
                         )}>
-                          <span className="text-accent">Phillip</span>
-                          <span className="text-primary">Otieno</span>
+                          <span className="animate-word-glow [--glow-delay:0s]">Phillip</span>
+                          <span className="animate-word-glow [--glow-delay:1.5s] text-primary">Otieno</span>
                         </h1>
                         <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
                     </div>
