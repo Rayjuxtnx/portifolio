@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Code, Bot } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SettingsComponent } from "./settings-component";
 import { Button } from "./ui/button";
-import { AiAssistant } from "./ai-assistant";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,7 +21,6 @@ const navLinks = [
 
 const Header = () => {
   const pathname = usePathname();
-  const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
 
   const NavItems = () => (
     <>
@@ -63,7 +61,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <AiAssistant open={isAiAssistantOpen} onOpenChange={setIsAiAssistantOpen} />
     </>
   );
 };
