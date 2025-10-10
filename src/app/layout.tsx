@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -32,7 +33,7 @@ export default function RootLayout({
         >
           <InteractiveModeProvider>
             <Header />
-            <main className="flex-1 overflow-y-auto pt-16 pb-16 md:pb-0 flex flex-col">{children}</main>
+            <main className="flex-1 overflow-y-auto pt-16 flex flex-col">{children}</main>
             <Footer />
             <Toaster />
           </InteractiveModeProvider>

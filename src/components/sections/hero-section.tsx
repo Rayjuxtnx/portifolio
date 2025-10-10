@@ -56,7 +56,7 @@ const HeroSection = () => {
 
   if (!mounted) {
     return (
-        <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden">
+        <section id="home" className="w-full flex-1 flex min-h-full items-center justify-center bg-background relative overflow-hidden py-8">
              <div className="z-10 text-center flex flex-col items-center gap-4">
                 <DigitalClock />
             </div>
@@ -65,7 +65,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className="w-full h-full flex-1 flex items-center justify-center bg-background relative overflow-hidden p-4">
+    <section id="home" className="w-full flex-1 flex min-h-full items-center justify-center bg-background relative overflow-hidden p-4 py-8">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
        
        <div className="absolute inset-0 opacity-[0.07]">
