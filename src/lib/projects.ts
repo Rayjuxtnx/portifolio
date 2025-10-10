@@ -94,5 +94,17 @@ export const projects = [
       imageHint: "AI code",
       tags: ["Web Developer", "AI Developer"],
       link: "https://sunny-kitten-7e360d.netlify.app/chat",
+    },
+    {
+      slug: "school-management-system",
+      title: "School Management System",
+      role: "Full-Stack Developer",
+      description: "Designed and developed a comprehensive school management system to streamline administrative tasks. The platform includes modules for student information, grades, attendance, and parent-teacher communication.",
+      tools: ["Next.js", "React", "Node.js", "MongoDB", "Socket.IO", "Tailwind CSS"],
+      results: "Improved administrative efficiency by 60% and enhanced parent-teacher communication through a dedicated portal.",
+      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlZHVjYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc1ODExMDQ5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      imageHint: "education technology",
+      tags: ["Web Developer", "Product Manager"],
+      link: "https://school-management-s-c0cd79.netlify.app/",
     }
   ];
