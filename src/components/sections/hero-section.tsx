@@ -34,7 +34,7 @@ const AnimatedSubtitle = ({ text }: { text: string }) => {
           <span
             key={index}
             className="animate-letter-pulse"
-            style={{ animationDelay: `${index * 0.1}s`, display: 'inline-block' }}
+            style={{ animationDelay: `${15 + index * 0.1}s`, display: 'inline-block' }}
           >
             {letter === ' ' ? '\u00A0' : letter}
           </span>

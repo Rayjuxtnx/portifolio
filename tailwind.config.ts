@@ -152,12 +152,10 @@ export default {
         },
         'glow': {
           '0%, 100%': {
-            filter: 'drop-shadow(0 0 2px hsl(var(--primary)))',
-            transform: 'scale(1)',
+            opacity: '0.8',
           },
           '50%': {
-            filter: 'drop-shadow(0 0 8px hsl(var(--primary)))',
-             transform: 'scale(1.05)',
+            opacity: '1',
           },
         },
         marquee: {
@@ -165,21 +163,21 @@ export default {
           '100%': { transform: 'translateX(-100%)' },
         },
         'word-glow': {
-          '0%, 100%': {
+          '0%, 100%, 50%': {
             color: 'hsl(var(--foreground))',
             textShadow: 'none',
           },
-          '30%, 70%': {
+          '25%, 75%': {
             color: 'hsl(var(--primary-foreground))',
             textShadow: '0 0 8px hsl(var(--primary)), 0 0 16px hsl(var(--primary) / 0.5)',
           },
         },
         'letter-pulse': {
-          '0%, 100%': {
+          '0%, 100%, 50%': {
             transform: 'scale(1)',
             color: 'hsl(var(--muted-foreground))',
           },
-          '50%': {
+          '75%': {
             transform: 'scale(1.1)',
             color: 'hsl(var(--accent))',
           },
@@ -191,10 +189,10 @@ export default {
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'hacker-glitch': 'hacker-glitch 2s ease-in-out infinite',
         'star-shimmer': 'star-shimmer 25s linear infinite',
-        'glow': 'glow 3.5s ease-in-out infinite',
+        'glow': 'glow 8s ease-in-out infinite',
         'marquee': 'marquee 120s linear infinite',
-        'word-glow': 'word-glow 15s ease-in-out infinite',
-        'letter-pulse': 'letter-pulse 10s ease-in-out infinite',
+        'word-glow': 'word-glow 30s ease-in-out infinite',
+        'letter-pulse': 'letter-pulse 30s ease-in-out infinite',
       },
     },
   },
