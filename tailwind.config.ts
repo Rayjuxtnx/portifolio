@@ -174,6 +174,16 @@ export default {
             textShadow: '0 0 8px hsl(var(--primary)), 0 0 16px hsl(var(--primary) / 0.5)',
           },
         },
+        'letter-pulse': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            color: 'hsl(var(--muted-foreground))',
+          },
+          '50%': {
+            transform: 'scale(1.1)',
+            color: 'hsl(var(--accent))',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -184,6 +194,7 @@ export default {
         'glow': 'glow 3.5s ease-in-out infinite',
         'marquee': 'marquee 120s linear infinite',
         'word-glow': 'word-glow 15s ease-in-out infinite',
+        'letter-pulse': 'letter-pulse 10s ease-in-out infinite',
       },
     },
   },

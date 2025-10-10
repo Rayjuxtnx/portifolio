@@ -27,6 +27,22 @@ const AnimatedName = ({ name }: { name: string }) => {
     );
 };
 
+const AnimatedSubtitle = ({ text }: { text: string }) => {
+    return (
+      <>
+        {text.split('').map((letter, index) => (
+          <span
+            key={index}
+            className="animate-letter-pulse"
+            style={{ animationDelay: `${index * 0.1}s`, display: 'inline-block' }}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </span>
+        ))}
+      </>
+    );
+};
+
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -75,7 +91,9 @@ const HeroSection = () => {
                         )}>
                             <AnimatedName name="Phillip Otieno" />
                         </h1>
-                        <p className="text-muted-foreground text-lg md:text-xl">Full-Stack Developer & Digital Strategist</p>
+                        <p className="text-muted-foreground text-lg md:text-xl">
+                            <AnimatedSubtitle text="Full-Stack Developer & Digital Strategist" />
+                        </p>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-2">
                         <Button asChild>
