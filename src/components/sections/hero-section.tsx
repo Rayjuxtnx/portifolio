@@ -73,7 +73,7 @@ const HeroSection = () => {
        </div>
 
        <div className="z-10 container mx-auto px-4">
-            <div className="flex flex-col items-center text-center gap-8">
+            <div className="flex flex-col items-center text-center gap-8 px-4">
                 <div className="flex flex-col items-center gap-6">
                     <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
                         <Image
@@ -86,7 +86,7 @@ const HeroSection = () => {
                     </div>
                     <div className="space-y-2">
                         <h1 className={cn(
-                          "text-4xl md:text-5xl font-bold tracking-widest",
+                          "text-3xl sm:text-4xl md:text-5xl font-bold tracking-widest",
                           isDarkTheme ? "font-code" : "font-headline"
                         )}>
                             <AnimatedName name="Phillip Otieno" />
