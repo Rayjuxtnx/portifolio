@@ -18,7 +18,7 @@ const AnimatedName = ({ name }: { name: string }) => {
           <span
             key={index}
             className="animate-word-glow"
-            style={{ animationDelay: `${index * 0.15}s` }}
+            style={{ animationDelay: `${index * 0.5}s` }}
           >
             {letter === ' ' ? '\u00A0' : letter}
           </span>

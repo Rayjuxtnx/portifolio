@@ -169,7 +169,7 @@ export default {
             color: 'hsl(var(--foreground))',
             textShadow: 'none',
           },
-          '50%': {
+          '30%, 70%': {
             color: 'hsl(var(--primary-foreground))',
             textShadow: '0 0 8px hsl(var(--primary)), 0 0 16px hsl(var(--primary) / 0.5)',
           },
@@ -183,7 +183,7 @@ export default {
         'star-shimmer': 'star-shimmer 25s linear infinite',
         'glow': 'glow 3.5s ease-in-out infinite',
         'marquee': 'marquee 120s linear infinite',
-        'word-glow': 'word-glow 4s ease-in-out infinite',
+        'word-glow': 'word-glow 15s ease-in-out infinite',
       },
     },
   },
