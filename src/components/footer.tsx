@@ -40,15 +40,6 @@ const Footer = () => {
                       <span>{label}</span>
                   </Link>
               ))}
-               <a
-                  href="https://sunny-kitten-7e360d.netlify.app/chat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center gap-1 w-full h-full text-xs font-medium transition-colors text-muted-foreground hover:text-primary"
-                >
-                  <Bot className="w-5 h-5" />
-                  <span>AI Assistant</span>
-                </a>
           </div>
       </nav>
     </>

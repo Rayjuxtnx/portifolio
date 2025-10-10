@@ -51,7 +51,7 @@ const Header = () => {
             <NavItems />
           </nav>
           <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
+              <Button variant="outline" size="sm" asChild>
                 <Link href="https://sunny-kitten-7e360d.netlify.app/chat" target="_blank" rel="noopener noreferrer">
                     <Bot />
                     Phillip Virtual Assistant
