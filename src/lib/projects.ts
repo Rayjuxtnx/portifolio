@@ -69,6 +69,7 @@ export const projects = [
       image: "https://images.unsplash.com/photo-1734255026082-82fdc81991f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxlY29tbWVyY2UlMjBhZnJpY2F8ZW58MHx8fHwxNzU2NzQ3NTYzfDA&ixlib.rb-4.1.0&q=80&w=1080",
       imageHint: "ecommerce africa",
       tags: ["Web Developer", "Product Manager"],
+      link: "https://shop-za-africa-cyrd.vercel.app/",
     },
     {
       slug: "sma-trent-nexus-hub",
