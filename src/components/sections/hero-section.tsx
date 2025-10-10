@@ -66,7 +66,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="w-full flex-1 flex min-h-full items-center justify-center bg-background relative overflow-hidden p-4 py-8">
-       {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg"></div>}
+       {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg opacity-30"></div>}
        
        <div className="absolute inset-0 opacity-[0.07]">
         <ScrollingPackages />
