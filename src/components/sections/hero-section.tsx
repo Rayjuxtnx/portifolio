@@ -108,7 +108,7 @@ const HeroSection = () => {
                         </Button>
                          <Button variant="outline" asChild>
                             <a href="/placeholder-resume.pdf" download>
-                                <Download /> Download CV
+                                <Download /> CV
                             </a>
                         </Button>
                     </div>
