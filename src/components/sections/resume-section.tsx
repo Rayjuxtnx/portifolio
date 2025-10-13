@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Download, FileText, FileCode, FileType, MapPin, Phone, Mail, Linkedin, Laptop } from "lucide-react";
+import { Download, FileText, FileCode, FileType, MapPin, Phone, Mail, Laptop } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -25,10 +25,9 @@ const ResumeSection = () => {
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground mt-2 text-sm">
                         <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Nairobi, Kenya</div>
                         <a href="tel:0714955458" className="flex items-center gap-2 hover:text-primary"><Phone className="h-4 w-4" /> +254 714955458</a>
-                        <a href="mailto:phillipotieno@email.com" className="flex items-center gap-2 hover:text-primary"><Mail className="h-4 w-4" /> phillipotieno@email.com</a>
+                        <a href="mailto:onyangophilip244@gmail.com" className="flex items-center gap-2 hover:text-primary"><Mail className="h-4 w-4" /> onyangophilip244@gmail.com</a>
                     </div>
                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground mt-1 text-sm">
-                        <a href="https://linkedin.com/in/phillipotieno" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Linkedin className="h-4 w-4" /> linkedin.com/in/phillipotieno</a>
                         <a href="https://shopzakenya.co.ke" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary"><Laptop className="h-4 w-4" /> shopzakenya.co.ke</a>
                     </div>
                 </div>
@@ -99,7 +98,7 @@ const ResumeSection = () => {
                     <h2 className="font-headline text-2xl font-semibold mb-4 border-b pb-2">Experience</h2>
                     <div className="space-y-6">
                         <div>
-                            <h3 className="text-lg font-semibold">Digital Marketer – Clean Sparkle Outlook</h3>
+                            <h3 className="text-lg font-semibold">🧩 Digital Marketer – Clean Sparkle Outlook</h3>
                             <p className="text-sm text-muted-foreground">2024 – Present</p>
                             <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1">
                                 <li>Designed and launched a modern cleaning services website using HTML, CSS, and JavaScript.</li>
@@ -108,7 +107,7 @@ const ResumeSection = () => {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold">Digital Marketer & Web Designer – Shop Za Kenya</h3>
+                            <h3 className="text-lg font-semibold">🛍️ Digital Marketer & Web Designer – Shop Za Kenya</h3>
                             <p className="text-sm text-muted-foreground">2023 – Present</p>
                             <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1">
                                 <li>Designed a full e-commerce brand connecting local Kenyan sellers with buyers.</li>
@@ -117,7 +116,7 @@ const ResumeSection = () => {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold">Freelance Web & Graphic Designer</h3>
+                            <h3 className="text-lg font-semibold">🖥️ Freelance Web & Graphic Designer</h3>
                             <p className="text-sm text-muted-foreground">2019 – 2023</p>
                             <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1">
                                 <li>Created websites and digital identities for SMEs and startups.</li>
@@ -131,10 +130,10 @@ const ResumeSection = () => {
                 <section>
                     <h2 className="font-headline text-2xl font-semibold mb-4 border-b pb-2">Projects</h2>
                      <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                        <li><span className="font-semibold text-foreground">Wi-Fi Billing System:</span> Designed architecture for MPesa-integrated hotspot billing.</li>
-                        <li><span className="font-semibold text-foreground">E-commerce Website:</span> Built full shopping platform with cart, checkout, and authentication (FastAPI backend).</li>
-                        <li><span className="font-semibold text-foreground">Python Chatbot:</span> AI assistant capable of performing tasks like playlist arrangement, computation, and basic conversation.</li>
-                        <li><span className="font-semibold text-foreground">Snake & Football Games:</span> Designed interactive Python games with advanced graphics and physics.</li>
+                        <li><span className="font-semibold text-foreground">🧠 Wi-Fi Billing System:</span> Designed architecture for MPesa-integrated hotspot billing.</li>
+                        <li><span className="font-semibold text-foreground">🛒 E-commerce Website:</span> Built full shopping platform with cart, checkout, and authentication (FastAPI backend).</li>
+                        <li><span className="font-semibold text-foreground">🤖 Python Chatbot:</span> AI assistant capable of performing tasks like playlist arrangement, computation, and basic conversation.</li>
+                        <li><span className="font-semibold text-foreground">🎮 Snake & Football Games:</span> Designed interactive Python games with advanced graphics and physics.</li>
                      </ul>
                 </section>
 
@@ -143,7 +142,7 @@ const ResumeSection = () => {
                         <h2 className="font-headline text-2xl font-semibold mb-4 border-b pb-2">Education</h2>
                         <div>
                             <h3 className="font-semibold">Diploma in Information Technology</h3>
-                            <p className="text-sm text-muted-foreground">Kenya Institute of Software Engineering</p>
+                            <p className="text-sm text-muted-foreground">East Africa Institute of certified Studies</p>
                         </div>
                     </section>
                     <section>
