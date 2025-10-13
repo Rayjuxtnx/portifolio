@@ -6,7 +6,7 @@ import DigitalClock from "@/components/digital-clock";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Phone, Mail, MessageSquare, Calendar, Download } from "lucide-react";
+import { Github, Phone, Mail, MessageSquare, Calendar, Download, FileText } from "lucide-react";
 import Link from "next/link";
 import { ScrollingPackages } from "../scrolling-packages";
 import { cn } from "@/lib/utils";
@@ -107,9 +107,9 @@ const HeroSection = () => {
                             </Link>
                         </Button>
                          <Button variant="outline" asChild>
-                            <a href="/placeholder-resume.pdf" target="_blank" rel="noopener noreferrer">
-                                <Download /> CV
-                            </a>
+                            <Link href="/resume" target="_blank" rel="noopener noreferrer">
+                                <FileText /> CV
+                            </Link>
                         </Button>
                     </div>
                 </div>
