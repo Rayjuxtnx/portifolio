@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -48,14 +49,14 @@ const ResumeSection = () => {
     <section id="resume" className="w-full flex-1 py-12 bg-muted/20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
               <div>
                   <h1 className="font-headline text-4xl font-bold">PHILLIP OTIENO</h1>
                   <p className="text-primary font-semibold text-lg">Full-Stack Developer & Digital Strategist</p>
               </div>
                <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="default" className="w-full md:w-auto mt-2 md:mt-0">
+                        <Button variant="default" className="w-full md:w-auto">
                             <Download className="mr-2 h-4 w-4"/>
                             Download CV
                         </Button>
@@ -102,7 +103,7 @@ const ResumeSection = () => {
                         <CardTitle>Skills Breakdown</CardTitle>
                     </CardHeader>
                     <CardContent>
-                       <ChartContainer config={{}} className="w-full h-[250px]">
+                       <ChartContainer config={{}} className="w-full h-[250px] sm:h-[300px]">
                          <RadarChart data={skillsData} margin={{ top: 20, right: 30, bottom: 20, left: 30 }}>
                             <PolarGrid />
                             <PolarAngleAxis dataKey="subject" />
@@ -119,10 +120,10 @@ const ResumeSection = () => {
                         <CardTitle>Tools & Technologies</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <ChartContainer config={chartConfig} className="w-full h-[250px]">
-                            <RechartsBarChart layout="vertical" data={toolsData} margin={{ left: 20 }}>
+                        <ChartContainer config={chartConfig} className="w-full h-[250px] sm:h-[300px]">
+                            <RechartsBarChart layout="vertical" data={toolsData} margin={{ left: 10, right: 10 }}>
                                <XAxis type="number" hide />
-                               <YAxis dataKey="name" type="category" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} width={110} />
+                               <YAxis dataKey="name" type="category" tickLine={false} axisLine={false} tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }} width={100} />
                                 <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
                                <Bar dataKey="level" radius={5} background={{ fill: 'hsl(var(--muted))', radius: 5 }} />
                             </RechartsBarChart>
@@ -222,5 +223,7 @@ const ResumeSection = () => {
 };
 
 export default ResumeSection;
+
+    
 
     
