@@ -4,7 +4,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Download, Briefcase, GraduationCap, MapPin, Phone, Mail, Laptop, Star, BrainCircuit } from "lucide-react";
+import { Download, Briefcase, GraduationCap, MapPin, Phone, Mail, Laptop, Star, BrainCircuit, ExternalLink } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -17,6 +17,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Bar, BarChart as RechartsBarChart, XAxis, YAxis, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from "recharts";
 import Link from "next/link";
 import { FileText, FileType, FileCode } from "lucide-react";
+import { projects } from "@/lib/projects";
 
 
 const skillsData = [
@@ -91,7 +92,7 @@ const ResumeSection = () => {
                      <CardContent className="space-y-3 text-sm">
                         <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-primary" /> <span>Nairobi, Kenya</span></div>
                         <a href="tel:0714955458" className="flex items-center gap-3 hover:text-primary"><Phone className="h-4 w-4 text-primary" /> <span>+254 714955458</span></a>
-                        <a href="mailto:onyangophilip244@gmail.com" className="flex items-center gap-3 hover:text-primary"><Mail className="h-4 w-4 text-primary" /> <span>onyangophilip244@gmail.com</span></a>
+                        <a href="mailto:onyangophilip244@gmail.com" className="flex items-center gap-3 hover:text-primary"><Mail className="h-4 w-4 text-primary" /> <span className="truncate">onyangophilip244@gmail.com</span></a>
                         <a href="https://shopzakenya.co.ke" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary"><Laptop className="h-4 w-4 text-primary" /> <span>shopzakenya.co.ke</span></a>
                     </CardContent>
                 </Card>
@@ -185,12 +186,19 @@ const ResumeSection = () => {
                         <CardTitle className="flex items-center gap-2"><BrainCircuit className="text-primary"/> Key Projects</CardTitle>
                     </CardHeader>
                     <CardContent>
-                         <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                            <li><span className="font-semibold text-foreground">Wi-Fi Billing System:</span> Designed architecture for MPesa-integrated hotspot billing.</li>
-                            <li><span className="font-semibold text-foreground">E-commerce Website:</span> Built full shopping platform with cart, checkout, and authentication (FastAPI backend).</li>
-                            <li><span className="font-semibold text-foreground">Python Chatbot:</span> AI assistant capable of performing tasks like playlist arrangement, computation, and basic conversation.</li>
-                            <li><span className="font-semibold text-foreground">Snake & Football Games:</span> Designed interactive Python games with advanced graphics and physics.</li>
-                        </ul>
+                        <div className="space-y-4">
+                            {projects.slice(0, 5).map((project) => (
+                                <div key={project.slug}>
+                                    <Link href={`/projects/${project.slug}`} className="group">
+                                        <h4 className="font-semibold text-foreground group-hover:text-primary group-hover:underline flex items-center gap-2">
+                                            {project.title}
+                                            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        </h4>
+                                    </Link>
+                                    <p className="text-sm text-muted-foreground">{project.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </CardContent>
                 </Card>
 
@@ -214,3 +222,5 @@ const ResumeSection = () => {
 };
 
 export default ResumeSection;
+
+    
