@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -17,7 +18,7 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem
 } from "@/components/ui/dropdown-menu"
-import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star, Palette, Sparkles, Accessibility } from "lucide-react"
+import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star, Palette, Sparkles, Accessibility, Mail } from "lucide-react"
 import { Label } from "./ui/label"
 import { useInteractiveMode } from "./interactive-provider"
 import { Switch } from "./ui/switch"
@@ -127,6 +128,12 @@ export function SettingsComponent() {
                 <Link href="/testimonials">
                     <Star />
                     <span>Testimonials</span>
+                </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+                <Link href="/contact">
+                    <Mail />
+                    <span>Contact</span>
                 </Link>
             </DropdownMenuItem>
              <DropdownMenuItem asChild>

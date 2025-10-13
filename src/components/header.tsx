@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -14,9 +15,6 @@ const navLinks = [
   { href: "/skills", label: "Skills" },
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
-  { href: "/resume", label: "Resume" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const Header = () => {
