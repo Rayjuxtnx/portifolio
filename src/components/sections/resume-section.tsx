@@ -4,7 +4,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Download, FileText, FileType, FileCode, MapPin, Phone, Mail, Laptop, Briefcase, GraduationCap, Code, Star, BarChart, Settings, BrainCircuit } from "lucide-react";
+import { Download, Briefcase, GraduationCap, MapPin, Phone, Mail, Laptop, Star, BrainCircuit } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -13,9 +13,11 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
-import { Badge } from "../ui/badge";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { Bar, BarChart as RechartsBarChart, XAxis, YAxis, ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from "recharts";
+import { Bar, BarChart as RechartsBarChart, XAxis, YAxis, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from "recharts";
+import Link from "next/link";
+import { FileText, FileType, FileCode } from "lucide-react";
+
 
 const skillsData = [
   { subject: 'Technical', A: 90, fullMark: 100 },
@@ -212,5 +214,3 @@ const ResumeSection = () => {
 };
 
 export default ResumeSection;
-
-    
