@@ -6,7 +6,7 @@ import DigitalClock from "@/components/digital-clock";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Phone, Mail, MessageSquare, Calendar } from "lucide-react";
+import { Github, Phone, Mail, MessageSquare, Calendar, Download } from "lucide-react";
 import Link from "next/link";
 import { ScrollingPackages } from "../scrolling-packages";
 import { cn } from "@/lib/utils";
@@ -106,20 +106,10 @@ const HeroSection = () => {
                                 <Github /> GitHub
                             </Link>
                         </Button>
-                        <Button variant="outline" size="icon" asChild>
-                            <Link href="tel:0714955458">
-                                <Phone />
-                            </Link>
-                        </Button>
-                        <Button variant="outline" size="icon" asChild>
-                            <Link href="mailto:onyangophilip244@gmail.com">
-                                <Mail />
-                            </Link>
-                        </Button>
-                        <Button variant="outline" size="icon" asChild>
-                            <Link href="https://wa.me/254714955458" target="_blank" rel="noopener noreferrer">
-                                <MessageSquare />
-                            </Link>
+                         <Button variant="outline" asChild>
+                            <a href="/placeholder-resume.pdf" download>
+                                <Download /> Download CV
+                            </a>
                         </Button>
                     </div>
                 </div>
