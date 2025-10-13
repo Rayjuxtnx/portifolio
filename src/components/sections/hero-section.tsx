@@ -6,10 +6,11 @@ import DigitalClock from "@/components/digital-clock";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Phone, Mail, MessageSquare, Calendar, Download, FileText } from "lucide-react";
+import { Github, FileText } from "lucide-react";
 import Link from "next/link";
 import { ScrollingPackages } from "../scrolling-packages";
 import { cn } from "@/lib/utils";
+import { Calendar } from "lucide-react";
 
 const AnimatedName = ({ name }: { name: string }) => {
     return (
@@ -91,7 +92,7 @@ const HeroSection = () => {
                         )}>
                             <AnimatedName name="Phillip Otieno" />
                         </h1>
-                        <p className="text-muted-foreground text-lg md:text-xl">
+                        <p className="text-muted-foreground text-base md:text-lg lg:text-xl">
                             <AnimatedSubtitle text="Full-Stack Developer & Digital Strategist" />
                         </p>
                     </div>
