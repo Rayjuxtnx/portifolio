@@ -55,7 +55,9 @@ const Header = () => {
                     Phillip Virtual Assistant
                 </Link>
               </Button>
-              <SettingsComponent />
+              <div className="hidden md:block">
+                <SettingsComponent />
+              </div>
           </div>
         </div>
       </header>

@@ -4,7 +4,6 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,16 +17,18 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem
 } from "@/components/ui/dropdown-menu"
-import { Settings, Moon, Sun, Shield, FlaskConical, Baseline, FileText, Star, Palette, Sparkles, Accessibility, Mail } from "lucide-react"
-import { Label } from "./ui/label"
+import { Settings, Baseline, Sparkles, Shield, FileText, Star, Mail, FlaskConical, Palette } from "lucide-react"
 import { useInteractiveMode } from "./interactive-provider"
 import { Switch } from "./ui/switch"
+import { useSettings } from "./settings-provider"
+import { Button } from "./ui/button"
 
 export function SettingsComponent() {
   const { setTheme, theme } = useTheme();
   const { isInteractive, toggleInteractive } = useInteractiveMode();
   const [fontSize, setFontSize] = React.useState(16);
   const [mounted, setMounted] = React.useState(false);
+  const { isSettingsOpen, setSettingsOpen } = useSettings();
 
   React.useEffect(() => {
     setMounted(true);
@@ -72,7 +73,7 @@ export function SettingsComponent() {
   }
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={isSettingsOpen} onOpenChange={setSettingsOpen}>
         <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon">
                 <Settings className="h-[1.2rem] w-[1.2rem]"/>
@@ -111,7 +112,7 @@ export function SettingsComponent() {
                     </DropdownMenuItem>
                 </DropdownMenuSubContent>
             </DropdownMenuSub>
-             <DropdownMenuItem onSelect={handleInteractiveToggle}>
+             <DropdownMenuItem onSelect={(e) => { e.preventDefault(); toggleInteractive(); }}>
                 <Sparkles />
                 <span>Interactive Mode</span>
                 <Switch checked={isInteractive} className="ml-auto pointer-events-none" />

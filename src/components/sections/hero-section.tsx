@@ -66,7 +66,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className="w-full flex-1 flex min-h-full items-center justify-center bg-background relative overflow-hidden p-4 py-8">
+    <section id="home" className="w-full flex-1 flex min-h-full items-center justify-center bg-background relative overflow-hidden p-4 py-4 md:py-8">
        {isDarkTheme && <div className="absolute inset-0 bg-black bg-opacity-50 star-bg opacity-30"></div>}
        
        <div className="absolute inset-0 opacity-[0.07]">
@@ -74,7 +74,7 @@ const HeroSection = () => {
        </div>
 
        <div className="z-10 container mx-auto px-4">
-            <div className="flex flex-col items-center text-center gap-8 px-4">
+            <div className="flex flex-col items-center text-center gap-4 md:gap-8 px-4">
                 <div className="flex flex-col items-center gap-6">
                     <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-lg">
                         <Image
@@ -108,13 +108,13 @@ const HeroSection = () => {
                             </Link>
                         </Button>
                          <Button variant="outline" asChild>
-                            <Link href="/resume" target="_blank" rel="noopener noreferrer">
+                            <Link href="/resume">
                                 <FileText /> CV
                             </Link>
                         </Button>
                     </div>
                 </div>
-                <div className="flex flex-col items-center gap-6 w-full max-w-sm lg:max-w-md mx-auto">
+                <div className="flex flex-col items-center gap-2 md:gap-6 w-full max-w-sm lg:max-w-md mx-auto">
                     <DigitalClock />
                 </div>
             </div>

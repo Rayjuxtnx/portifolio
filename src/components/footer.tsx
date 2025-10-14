@@ -1,9 +1,10 @@
 "use client";
 
-import { Code, Home, User, Briefcase, Star, Mail, Bot, Layers } from "lucide-react";
+import { Code, Home, User, Briefcase, Star, Mail, Bot, Layers, Settings } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils";
+import { useSettings } from "./settings-provider";
 
 const navItems = [
     { href: "/", label: "Home", icon: Home },
@@ -16,6 +17,7 @@ const navItems = [
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const pathname = usePathname();
+  const { toggleSettings } = useSettings();
 
   return (
     <>
@@ -40,6 +42,12 @@ const Footer = () => {
                       <span>{label}</span>
                   </Link>
               ))}
+               <button onClick={toggleSettings} className={cn(
+                    "flex flex-col items-center justify-center gap-1 w-full h-full text-xs font-medium transition-colors text-muted-foreground hover:text-primary"
+                  )}>
+                      <Settings className="w-5 h-5" />
+                      <span>More</span>
+                  </button>
           </div>
       </nav>
     </>

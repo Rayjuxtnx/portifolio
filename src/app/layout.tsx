@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { InteractiveModeProvider } from '@/components/interactive-provider';
+import { SettingsProvider } from '@/components/settings-provider';
 
 export const metadata: Metadata = {
   title: 'PO FOLIO',
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="httpshttps://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Literata:opsz,wght@24..144,400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </head>
@@ -31,12 +32,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <InteractiveModeProvider>
-            <Header />
-            <main className="flex-1 overflow-y-auto pt-16 flex flex-col">{children}</main>
-            <Footer />
-            <Toaster />
-          </InteractiveModeProvider>
+          <SettingsProvider>
+            <InteractiveModeProvider>
+              <Header />
+              <main className="flex-1 overflow-y-auto pt-16 flex flex-col">{children}</main>
+              <Footer />
+              <Toaster />
+            </InteractiveModeProvider>
+          </SettingsProvider>
         </ThemeProvider>
       </body>
     </html>
