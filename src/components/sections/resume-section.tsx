@@ -52,7 +52,7 @@ const ResumeSection = () => {
                     <p className="text-primary font-semibold text-lg">Full-Stack Developer & Digital Strategist</p>
                 </div>
                 <Button asChild className="w-full md:w-auto">
-                    <a href="/placeholder-resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/placeholder-resume.md" download="resume.md">
                         <Download className="mr-2 h-4 w-4"/>
                         Download CV
                     </a>
@@ -242,3 +242,5 @@ const ResumeSection = () => {
 };
 
 export default ResumeSection;
+
+    
