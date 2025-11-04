@@ -1,6 +1,7 @@
+
 "use client";
 
-import { Code, Home, User, Briefcase, Star, Mail, Bot, Layers, Settings } from "lucide-react";
+import { Code, Home, User, Briefcase, Star, Mail, Bot, Layers, Settings, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils";
@@ -12,6 +13,7 @@ const navItems = [
     { href: "/skills", label: "Skills", icon: Star },
     { href: "/projects", label: "Projects", icon: Briefcase },
     { href: "/services", label: "Services", icon: Layers },
+    { href: "/blog", label: "Blog", icon: BookOpen },
 ];
 
 const Footer = () => {
