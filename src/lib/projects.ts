@@ -1,6 +1,18 @@
 
 export const projects = [
     {
+      slug: "kawady-mildsteel-company",
+      title: "Kawady Mildsteel Company",
+      role: "Web Developer & Digital Consultant",
+      description: "Developed a professional website for a leading mildsteel company offering welding and fabrication services in Kenya and the USA. The site showcases their portfolio, services, and facilitates customer inquiries.",
+      tools: ["React", "Next.js", "Tailwind CSS", "Node.js", "Formspree"],
+      results: "The new digital presence helped the company attract 30% more corporate clients within six months and expanded their reach into new markets.",
+      image: "https://images.unsplash.com/photo-1516391456245-207a9a13a728?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWxkaW5nJTIwZmFicmljYXRpb258ZW58MHx8fHwxNzU4NzM4NTg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageHint: "welding fabrication",
+      tags: ["Web Developer", "Digital Marketer"],
+      link: "https://kawady.com/",
+    },
+    {
       slug: "hidden-tasty-grill",
       title: "Hidden Tasty Grill",
       role: "Full-Stack Developer",
@@ -109,3 +121,6 @@ export const projects = [
     }
   ];
 
+
+
+    
