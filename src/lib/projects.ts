@@ -13,6 +13,18 @@ export const projects = [
       link: "https://kawady.com/",
     },
     {
+      slug: "seo-scout-and-skills-hub",
+      title: "SEO Scout & Digital Skills Hub",
+      role: "Creator & Full-Stack Developer",
+      description: "Developed a comprehensive platform combining a live SEO tracking tool with a digital skills educational hub. The tool provides real-time SEO analytics, while the educational section offers courses on digital marketing.",
+      tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "SEO APIs"],
+      results: "Launched a dual-function platform that serves both SEO professionals and digital marketing learners. The tool has been praised for its intuitive interface, and the educational content has seen high engagement rates.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzZW8lMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzU4NzM4NTg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageHint: "seo dashboard",
+      tags: ["Web Developer", "Product Manager"],
+      link: "https://seo-scout-roan.vercel.app/",
+    },
+    {
       slug: "hidden-tasty-grill",
       title: "Hidden Tasty Grill",
       role: "Full-Stack Developer",
