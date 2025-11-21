@@ -102,11 +102,6 @@ const HeroSection = () => {
                                 <Calendar /> Book Now
                             </Link>
                         </Button>
-                        <Button variant="outline" asChild>
-                            <Link href="https://github.com/Rayjuxtnx" target="_blank" rel="noopener noreferrer">
-                                <Github /> GitHub
-                            </Link>
-                        </Button>
                          <Button variant="outline" asChild>
                             <Link href="/resume">
                                 <FileText /> CV
