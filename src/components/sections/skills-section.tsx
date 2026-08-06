@@ -25,7 +25,7 @@ const skills = {
   },
   "Basic Tech": {
     icon: <Code className="w-8 h-8 text-primary" />,
-    items: ["HTML", "CSS", "JavaScript", "Python", "React", "Tailwind", "Node.js", "Next.js", "APIs", "Databases"],
+    items: ["HTML", "CSS", "JavaScript", "Python", "Swift", "Java", "React", "Tailwind", "Node.js", "Next.js", "APIs", "Databases"],
   },
   "Cyber Security": {
     icon: <ShieldCheck className="w-8 h-8 text-primary" />,

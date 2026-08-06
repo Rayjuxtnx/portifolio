@@ -6,7 +6,7 @@
 
 ## PROFILE SUMMARY
 
-Creative and tech-driven Digital Marketer, Web Designer, and Python Developer with strong experience in building websites, digital systems, and marketing strategies that connect brands to customers. Skilled in combining design, coding, and analytics to deliver modern business solutions — from e-commerce platforms to Wi-Fi billing systems. Passionate about leveraging technology to grow African businesses.
+Creative and tech-driven developer with experience building modern web apps, mobile applications, and digital products. Skilled in combining design, coding, and product thinking to deliver solutions ranging from e-commerce platforms and business websites to mobile experiences like Scriptures Flow. Passionate about building useful technology for African businesses and communities.
 
 ---
 
@@ -14,7 +14,8 @@ Creative and tech-driven Digital Marketer, Web Designer, and Python Developer wi
 
 ### 💻 Technical & Development Skills
 - **Python:** FastAPI, Django, Flask
-- **Web:** HTML, CSS, JavaScript
+- **Web:** HTML, CSS, JavaScript, React, Next.js
+- **Mobile:** Swift, Java
 - **Databases:** Database Design (PostgreSQL, MySQL)
 - **APIs:** API Integration (MPesa Daraja, Payment APIs)
 - **Systems:** System Design (Wi-Fi Billing, Authentication Systems)
@@ -60,10 +61,10 @@ Creative and tech-driven Digital Marketer, Web Designer, and Python Developer wi
 
 ## PROJECTS
 
+- **📖 Scriptures Flow:** Built a mobile app and website for daily scripture reading, devotional content, and user-friendly access on both the Play Store and web.
 - **🧠 Wi-Fi Billing System:** Designed architecture for MPesa-integrated hotspot billing.
 - **🛒 E-commerce Website:** Built full shopping platform with cart, checkout, and authentication (FastAPI backend).
 - **🤖 Python Chatbot:** AI assistant capable of performing tasks like playlist arrangement, computation, and basic conversation.
-- **🎮 Snake & Football Games:** Designed interactive Python games with advanced graphics and physics.
 
 ---
 

@@ -49,11 +49,11 @@ export function SettingsComponent() {
     }
   }, [fontSize, mounted]);
 
-  const increaseFontSize = (e: React.MouseEvent) => {
+  const increaseFontSize = (e: Event) => {
     e.preventDefault();
     setFontSize(prev => Math.min(prev + 2, 24))
   };
-  const decreaseFontSize = (e: React.MouseEvent) => {
+  const decreaseFontSize = (e: Event) => {
     e.preventDefault();
     setFontSize(prev => Math.max(prev - 2, 12))
   };

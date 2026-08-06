@@ -24,8 +24,8 @@ const skillsData = [
 ];
 
 const toolsData = [
-    { name: "Python/FastAPI", value: 90, fill: "var(--color-python)" },
-    { name: "JS/React/Next", value: 85, fill: "var(--color-react)" },
+    { name: "Python/FastAPI", value: 88, fill: "var(--color-python)" },
+    { name: "Swift/Java/React", value: 90, fill: "var(--color-react)" },
     { name: "Databases", value: 80, fill: "var(--color-db)" },
     { name: "Design Tools", value: 88, fill: "var(--color-design)" },
     { name: "Marketing Tools", value: 82, fill: "var(--color-marketing)" },
@@ -34,7 +34,7 @@ const toolsData = [
 const chartConfigTools = {
     value: { label: "Proficiency" },
     python: { label: "Python/FastAPI", color: "hsl(var(--chart-1))" },
-    react: { label: "JS/React/Next", color: "hsl(var(--chart-2))" },
+    react: { label: "Swift/Java/React", color: "hsl(var(--chart-2))" },
     db: { label: "Databases", color: "hsl(var(--chart-3))" },
     design: { label: "Design Tools", color: "hsl(var(--chart-4))" },
     marketing: { label: "Marketing Tools", color: "hsl(var(--chart-5))" },
@@ -49,7 +49,7 @@ const ResumeSection = () => {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
                 <div className="flex-1">
                     <h1 className="font-headline text-4xl md:text-5xl font-bold">PHILLIP OTIENO</h1>
-                    <p className="text-primary font-semibold text-lg">Full-Stack Developer & Digital Strategist</p>
+                    <p className="text-primary font-semibold text-lg">Full-Stack Developer & Mobile App Developer</p>
                 </div>
                 <Button asChild className="w-full md:w-auto">
                     <a href="/placeholder-resume.md" download="resume.md">
@@ -123,7 +123,7 @@ const ResumeSection = () => {
                         </CardHeader>
                         <CardContent>
                             <p className="text-muted-foreground leading-relaxed">
-                                Creative and tech-driven Digital Marketer, Web Designer, and Python Developer with strong experience in building websites, digital systems, and marketing strategies that connect brands to customers. Skilled in combining design, coding, and analytics to deliver modern business solutions — from e-commerce platforms to Wi-Fi billing systems. Passionate about leveraging technology to grow African businesses.
+                                Creative and tech-driven developer with experience building modern web apps, mobile applications, and digital products. Skilled in combining design, coding, and product thinking to deliver solutions ranging from e-commerce platforms and business websites to mobile experiences like Scriptures Flow. Passionate about building useful technology for African businesses and communities.
                             </p>
                         </CardContent>
                     </Card>

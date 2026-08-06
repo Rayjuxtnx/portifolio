@@ -53,13 +53,29 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <p className="text-muted-foreground">{project.results}</p>
             </div>
           </CardContent>
-          {project.link && (
-            <CardFooter>
-              <Button asChild>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  View Live Site <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
+          {(project.link || project.website || project.playStore) && (
+            <CardFooter className="flex flex-wrap gap-3">
+              {project.website && (
+                <Button asChild>
+                  <a href={project.website} target="_blank" rel="noopener noreferrer">
+                    Visit Website <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
+              {project.playStore && (
+                <Button asChild variant="secondary">
+                  <a href={project.playStore} target="_blank" rel="noopener noreferrer">
+                    Open Play Store <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
+              {project.link && !project.website && (
+                <Button asChild>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    View Live Site <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
             </CardFooter>
           )}
         </Card>

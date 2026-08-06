@@ -1,6 +1,31 @@
 
 export const projects = [
     {
+      slug: "scriptures-flow",
+      title: "Scriptures Flow",
+      role: "Mobile & Web Developer",
+      description: "Built a modern scriptures app and website for daily Bible reading, devotional content, and audio/reading experiences. The project includes a mobile app available on the Play Store and a companion website for broader access.",
+      tools: ["Swift", "Java", "React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
+      results: "Delivered a polished spiritual engagement experience across mobile and web, making scripture content easier to access and interact with on a daily basis.",
+      image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiaWJsZSUyMHNjdXJwdHVlcyUyMG1vYmlsZXxlbnwwfHx8fDE3NTgwMjA4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageHint: "bible scripture",
+      tags: ["Mobile Developer", "Web Developer"],
+      website: "https://www.scripturesflow.org/",
+      playStore: "https://play.google.com/store/apps/details?id=org.scripturesflow.app&pcampaignid=web_share",
+    },
+    {
+      slug: "jeditours-dubai",
+      title: "Jeditours Dubai",
+      role: "Web Developer & Travel Solutions Developer",
+      description: "Developed a modern travel and tours website for Jeditours Dubai, showcasing tour packages, destinations, and booking-friendly content for potential travelers.",
+      tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      results: "Delivered a polished travel website experience that makes the company’s services and offers easier to discover online.",
+      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0cmF2ZWwlMjBkdWJhaXxlbnwwfHx8fDE3NTgwMjA4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      imageHint: "travel dubai",
+      tags: ["Web Developer", "Travel Tech"],
+      link: "https://www.jeditravelandtours.com/",
+    },
+    {
       slug: "kawady-mildsteel-company",
       title: "Kawady Mildsteel Company",
       role: "Web Developer & Digital Consultant",
