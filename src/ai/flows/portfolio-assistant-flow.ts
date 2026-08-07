@@ -1,37 +1,13 @@
 'use server';
 /**
- * @fileOverview An AI assistant for the portfolio website.
+ * @fileOverview A local portfolio assistant for the website.
  *
- * - askPortfolioAssistant - A function that answers questions about Phillip Otieno.
- * - PortfolioAssistantInput - The input type for the askPortfolioAssistant function.
- * - PortfolioAssistantOutput - The return type for the askPortfolioAssistant function.
+ * This keeps the experience available without pulling Genkit or other
+ * server-side AI packages into the build.
  */
 
-import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 import { projects } from '@/lib/projects';
-
-const portfolioContext = `
-Phillip Otieno is a results-driven digital marketing and creative professional with a strong foundation in SEO, social media strategy, web development, and visual content creation. With hands-on experience in sales, graphic design, and professional in app development, system development, database integration and APIs, he brings a multidisciplinary approach to solving problems and delivering impactful digital experiences.
-
-Skills:
-- Product Management Tools: Trello, Notion, Jira, Miro
-- User Research & UX: Figma, Adobe XD, surveys, usability testing
-- Prototyping & Wireframing: Figma, Canva
-- Data-Driven Decision Making: Google Analytics, Meta Ads Manager
-- Marketing & Growth: SEO, email campaigns, social media strategy
-- Basic Tech: HTML, CSS, JavaScript, Python, React, Tailwind, Node.js, Next.js, APIs, Databases
-
-Projects:
-Each project is listed with its title, a description of the project, the role Phillip played, the tools used, and the results achieved.
-${projects.map(p => `- Title: ${p.title}\n  Description: ${p.description}\n  Role: ${p.role}\n  Tools: ${p.tools.join(', ')}\n  Results: ${p.results}`).join('\n\n')}
-
-Contact Information:
-- Email: onyangophilip244@gmail.com
-- Phone: 0714955458
-- WhatsApp: +254714955458
-- GitHub: https://github.com/Rayjuxtnx
-`;
 
 const PortfolioAssistantInputSchema = z.object({
   question: z.string().describe("The user's question about Phillip Otieno."),
@@ -41,37 +17,35 @@ export type PortfolioAssistantInput = z.infer<typeof PortfolioAssistantInputSche
 const PortfolioAssistantOutputSchema = z.string();
 export type PortfolioAssistantOutput = z.infer<typeof PortfolioAssistantOutputSchema>;
 
+function buildPortfolioAnswer(question: string): string {
+  const normalized = question.toLowerCase();
+
+  if (normalized.includes('project')) {
+    const featured = projects.slice(0, 3).map((project) => project.title).join(', ');
+    return `Phillip has worked on projects such as ${featured}. He combines strategy, design, and development to deliver practical digital solutions.`;
+  }
+
+  if (normalized.includes('skill') || normalized.includes('expertise') || normalized.includes('experience')) {
+    return 'Phillip brings experience across SEO, content strategy, web development, UI/UX thinking, and digital marketing. He is comfortable working across both creative and technical parts of a product.';
+  }
+
+  if (normalized.includes('service') || normalized.includes('offer')) {
+    return 'Phillip helps businesses with web development, digital strategy, SEO, and product-focused creative work. He can support both the build and the messaging behind it.';
+  }
+
+  if (normalized.includes('contact') || normalized.includes('email') || normalized.includes('phone') || normalized.includes('whatsapp')) {
+    return 'You can reach Phillip via email at onyangophilip244@gmail.com or WhatsApp at +254714955458.';
+  }
+
+  if (normalized.includes('seo')) {
+    return 'Phillip has a strong SEO background and enjoys turning search insights into clear growth strategies for brands and websites.';
+  }
+
+  return 'I can help with Phillip’s background, projects, skills, services, and contact details.';
+}
+
 export async function askPortfolioAssistant(
   input: PortfolioAssistantInput,
 ): Promise<PortfolioAssistantOutput> {
-  return portfolioAssistantFlow(input);
+  return buildPortfolioAnswer(input.question);
 }
-
-const prompt = ai.definePrompt({
-  name: 'portfolioAssistantPrompt',
-  input: { schema: PortfolioAssistantInputSchema },
-  output: { schema: PortfolioAssistantOutputSchema },
-  prompt: `You are a helpful AI assistant for Phillip Otieno's portfolio website. Your name is Phillip Virtual Assistant.
-  You ONLY answer questions based on the context provided below.
-  If the user asks a question that cannot be answered with the context, you MUST respond with: "I'm sorry, I am only designed to answer questions based on my creator."
-  Be friendly and concise in your answers.
-
-  Context:
-  ${portfolioContext}
-
-  User Question:
-  {{{question}}}
-  `,
-});
-
-const portfolioAssistantFlow = ai.defineFlow(
-  {
-    name: 'portfolioAssistantFlow',
-    inputSchema: PortfolioAssistantInputSchema,
-    outputSchema: PortfolioAssistantOutputSchema,
-  },
-  async (input) => {
-    const { output } = await prompt(input);
-    return output!;
-  }
-);
